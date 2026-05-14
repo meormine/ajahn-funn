@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. The Fires of Greed, Anger, and Delusion</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="14._Listen_Inwardly.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(14)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="16._The_Path_to_True_Happiness.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(16)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Funn-Acaro-Dhammatalks/15.%20The%20Fires%20of%20Greed%2C%20Anger%2C%20and%20Delusion.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>15. The Fires of Greed, Anger, and Delusion</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<p>August 9, 1963</p>
+<p><em>Greed much, often lose gain;</em><br />
+<em>Want much, become unable.</em><br />
+<em>Want to eat much, get but a pinky's share;</em><br />
+<em>Want to eat little, get a thumb's share.</em></p>
+<p>Now, all of you, reflect on this. Greed leads to ruin. We often want many things, so we end up not getting anything. Why is it that those who want to eat much get only as much as a pinky? Those who want to eat little get as much as a thumb? Which is bigger, the pinky or the thumb? Why is it the reverse? Those who say they want much end up getting only as little as a pinky, while those who are content with little get much. This is how it is for those who are extremely greedy.</p>
+<p>Do we want to be ruined? Do we all desire ruin? If so, then be very greedy, very angry, very deluded. Because greed, anger, and delusion are fires. Greed is a fire, anger is a fire, delusion is a fire. Each of these fires burns beings, causing them distress, suffering, and torment. Beings are ruined because of the fires of <em>lobha</em> (greed), <em>dosa</em> (anger), and <em>moha</em> (delusion). This is nothing far away. All of you, reflect so that you know and understand. We are practitioners of meditation (<em>kammaṭṭhāna</em>). What shall we establish as our foundation? Greed, anger, and delusion are the roots of the unwholesome (<em>akusala</em>), leading to decline and ruin for oneself. Non-greed, non-anger, and non-delusion are the roots of the wholesome (<em>kusala</em>), leading to prosperity and growth for oneself. <em>Ekamūlā</em> — all things have a single root. Greed, anger, and delusion have this mind as their root. Non-greed, non-anger, and non-delusion also have this very same mind as their root cause. Hence they are called <em>ekamūlā</em> — having a single root cause, namely the mind. If the mind is not greedy, then nothing is greedy. If the mind is not angry, then nothing is angry. If the mind is not deluded, then nothing is deluded. A dead person without breath — that is a person without a mind. You don't see a dead person greedily wanting anything. You don't see a dead person raging with anger at anyone. You don't see a dead person deluded about anything. Only those who still have this mind — they still have deluded love and deluded hate.</p>
+<p>As for progress, do we want it? If we wish and desire progress, then we should extinguish the fires by contemplating the basic meditation subjects (<em>mūla-kammaṭṭhāna</em>). Hasn't everyone who ordained been taught by their preceptor (<em>upajjhāya</em>)? <em>Kesā</em> (hair of the head), <em>lomā</em> (hair of the body), <em>nakhā</em> (nails), <em>dantā</em> (teeth), <em>taco</em> (skin) — contemplate these five basic subjects in direct and reverse order (<em>anuloma-paṭiloma</em>), seeing them as they truly are, as repulsive (<em>paṭikūla</em>) since forever. Do not mistakenly see them, through perverted perception (<em>saññāvipallāsa</em>), as beautiful, pleasant, desirable, and agreeable — which are the root causes of unwholesome consciousness (<em>akusalacitta</em>). Apply yourself to contemplating your own body, penetrating it with clear understanding: this body of ours is nothing but <em>asuci</em> (impure), <em>asubhaṃ</em> (unattractive), it is filthy. When our mind sees in this way, what lust or desire would we have? What part of it is beautiful or attractive? Why are we all deluded by this filthy form? Try to peel off the skin completely and see what it is like. Is the skin a being or a person? Is it fitting that we have lust, desire, and delight in skin that is filthy, foul-smelling, nauseating, and extremely ugly and loathsome?</p>
+<p>When we contemplate and see in this way, our mind is not deluded, does not have lust or desire for forms (<em>rūpa</em>), because it sees according to reality, according to true understanding. It does not cling or grasp, does not fall into <em>ahaṅkāra</em> (I-making) or <em>mamaṅkāra</em> (my-making) — it is not "me" or "mine," not "him" or "his." Contemplate in terms of <em>paṭibhāga</em> (counterpart, analysis): separate out, break down, scatter away. When our mind contemplates and sees in this way, that is right view (<em>sammādiṭṭhi</em>), it is excellent view, of high value. Like a tree: as long as it remains standing as a trunk and boughs, what value or price does it have? Only when someone takes it, cuts it, splits it, carves it, polishes and smooths it, modifies and assembles it into a useful tool, does it become something of value and price, something everyone wishes and desires to have. We must understand this further. Let us all contemplate this body by way of <em>paṭibhāga</em> — separate it from being a being, from a person, from a self, from an ego, from male, from female, from convention (<em>sammuti</em>) and popular opinion. Separate the head-hairs as just head-hairs; these head-hairs are not a being, not a person, not me, not mine, not him, not his, no one's at all. Likewise, body-hairs, nails, teeth, skin are merely phenomena. These five basic meditation subjects (<em>mūla-kammaṭṭhāna</em>) are things we can all see with our eyes, every day, all the time. Thus the Teacher taught us to contemplate them so as not to be deluded by the mistaken perception that they are beautiful and lovely — a cause for delight and aversion.</p>
+<p>In the <em>Dhammacakkappavattanasutta</em> (the first sermon), the Buddha taught: <em>"Dve me, bhikkhave"</em> — "Monks, you should not pursue two extremes." That is, love and hate. Practice the middle way (<em>majjhimāpaṭipadā</em>) — neither love nor hate. Because love, desire, and delight springing from lust are the fire of <em>rāga</em>. When this fire of <em>rāga</em> ignites within anyone's mind, it burns that person's mind, causing distress, struggling and writhing without peace, wandering under the power of love until they lose mindfulness, become insane, lack the wisdom and skillful means to protect themselves, lose restraint and caution, have no <em>hiri</em> (moral shame) and <em>ottappa</em> (moral dread) — no shame or fear of wrongdoing in their mind. They then engage in evil, unwholesome deeds that bring suffering and harm, that bring danger and mental distress upon themselves. This is the result of love and the fire of <em>rāga</em>. Monks, you should not pursue this one extreme — the side of love — which is suffering, harmful, and fraught with various dangers.</p>
+<p>The other extreme that you, as renunciants, should not pursue is hate — the fire of <em>dosa</em>. When the fire of <em>dosa</em> ignites in the mind-continuum (<em>citta-santāna</em>) of anyone, it burns that person, causing them to think maliciously and do evil, base deeds. They have no <em>hiri</em> and <em>ottappa</em> — no shame or fear of wrongdoing. That evil they have done brings suffering, harm, and danger, causing mental distress upon themselves. This is the result of the extreme that monks should not pursue — that is, hate. As for not loving and not hating — that is the <em>majjhimāpaṭipadā</em>, the middle way of practice that monks should all follow and observe. This middle way, this <em>paṭipadā</em>, is a path free from peril and danger. Just as when we travel, if we step to the left we encounter only thorns and brambles, and if we step to the right we also encounter thorns. Or like a car that leaves the road onto the left shoulder — it gets stuck and overturns; if it goes onto the right shoulder — it also falls and overturns, causing danger and damage to itself. If the car stays right on the road without veering off, it can travel comfortably and safely reach its destination. In the same way, a monk who delights in progress and desires only happiness and prosperity for himself should completely avoid pursuing these two extremes. He should apply himself to practicing the <em>majjhimāpaṭipadā</em>, the middle way, free from love and hate, which are the root causes of <em>abhijjhā</em> (covetousness) and <em>domanassa</em> (displeasure).</p>
+<p>One who practices this middle way must be restrained and mindful of the mind, guarding the mind so that it does not give rise to <em>abhijjhā</em> — delight in agreeable, desirable things — nor to <em>domanassa</em> — aversion towards ugly, loathsome objects. One must have a mind of <em>samādhi</em> that is complete, fully endowed with mindfulness and clear comprehension (<em>satisampajañña</em>), firmly established within the boundary (<em>parimaṇḍala</em>) of the Dhamma. Where is the boundary of the Dhamma? Measured from where to where? The Teacher said: the boundary of the Dhamma is a span in width, a fathom in length, a handbreadth in thickness. That is, below from the tip of the hair down to the soles of the feet; above from the soles of the feet up to the tip of the hair; on the right side to the tip of the right hand; on the left side to the tip of the left hand; in front to the breastbone; behind to the backbone. This is the boundary of the Dhamma — only this much. It is not elsewhere, far away. The Dhamma is in this very body of ours. When people say the Dhamma is in Sri Lanka, it's not that Sri Lanka; the "city" is this body of ours. Let us meditate and contemplate this body until we achieve <em>kāyapassaddhi</em> (tranquillity of the body) and <em>cittapassaddhi</em> (tranquillity of the mind) — that is, bodily seclusion (<em>kāyaviveka</em>) and mental seclusion (<em>cittaviveka</em>).</p>
+<p>When we train ourselves in <em>kāyaviveka</em> and <em>cittaviveka</em>, developing and cultivating them diligently with non-negligence (<em>appamāda</em>) in the practice of bodily and mental seclusion, then we will attain <em>upadhiviveka</em> (seclusion from the substrata of existence), which is the supreme peace. We should practice in this way, on the <em>majjhimāpaṭipadā</em> — i.e., practice the middle way. Then our mind will not be deluded and attached to the <em>kāmaloka</em> (realm of sense-desire), <em>rūpaloka</em> (realm of form), or <em>arūpaloka</em> (realm of formlessness) — the three realms of existence (<em>bhava</em>) where beings wander, still deluded and attached to sense-objects (<em>kāmārammaṇa</em>), form-objects (<em>rūpārammaṇa</em>), and formless-objects (<em>arūpārammaṇa</em>). Among the beings that wander and take birth in the <em>kāmaloka</em>, there are forms, sounds, smells, tastes, and tactile objects — the sense-objects that serve as their dwelling. Beings who are negligent, intoxicated, delighting in and deludedly attached to any kind of object — they are born through that object. Their aging is through that object, their sickness is through that object, their death is through that object to which they are attached. As long as this defilement of delusion (<em>moha</em>) exists, birth and death, death and birth, cycling and revolving without end will not cease. As long as birth after birth and death after death continue in this way, all the sufferings that arise dependent on birth, aging, sickness, and death — called <em>jātidukkhā</em> (suffering of birth), <em>jarādukkhā</em> (suffering of aging), <em>byādhidukkhā</em> (suffering of sickness), <em>maraṇadukkhā</em> (suffering of death) — will keep tormenting beings in every realm and every existence, with no possibility of ending.</p>
+<p>Therefore, when we see that birth, aging, sickness, and death exist within ourselves, that we ourselves are immersed in the mass of suffering dominated by birth, aging, sickness, and death — is it fitting that we remain deluded and negligent, not quickly striving on the path that leads away from suffering, the middle way (<em>majjhimāpaṭipadā</em>)? We should practice and follow it, and we should avoid the two extremes that monks should not pursue — love and hate — and instead dwell in seclusion (<em>viveka</em>): bodily seclusion (<em>kāyaviveka</em>), mental seclusion (<em>cittaviveka</em>), and seclusion from the substrata of existence (<em>upadhiviveka</em>). Let us all develop and cultivate these kinds of seclusion thoroughly, with skillful means and non-negligence (<em>appamāda</em>). Practicing in this way every day, at all times, we will have only happiness and peace, constantly and forever.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="14._Listen_Inwardly.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">14</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">14. Listen Inwardly</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="16._The_Path_to_True_Happiness.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">16</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">16. The Path to True Happiness</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

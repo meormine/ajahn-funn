@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07. The Mind and Its Refuge</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="06._Measuring_One’s_Own_Mind.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(06)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="08.The_Heart_of_Kammaṭṭhāna.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(08)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Funn-Acaro-Dhammatalks/07.%20The%20Mind%20and%20Its%20Refuge.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>07. The Mind and Its Refuge</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong> </p>
+<p>January 21, 1978.</p>
+<p>So, what is the mind like? There is the mind of a villain, the mind of a prisoner. There is the mind that is miserable and poor. There is the mind of an animal, the mind of a ghost or a hell-being. There is the mind of Indra or Brahmā, the mind of a great king or emperor, the mind of a wealthy millionaire, the mind of a beautiful person, a rich and fortunate person, someone who is neither poor nor suffering. There is the mind of a military officer, a general, a field marshal. The mind can be any of these. What can you say? Choose for yourself. You have come here – what do you want? The Dhamma is like this. The Buddha taught about our refuge. We have ordained, we have listened. In our ordination we received the precepts, and he told us what our refuge is. He didn’t say anything else. He didn’t say, “Possessions, money, and gold – <em>saraṇaṃ gacchāmi</em>.” “Parents and siblings – <em>saraṇaṃ gacchāmi</em>.” “Buildings and houses – <em>saraṇaṃ gacchāmi</em>.” No one ever takes refuge in that way, right? There is only “<em>Buddhaṃ saraṇaṃ gacchāmi, Dhammaṃ saraṇaṃ gacchāmi, Saṅghaṃ saraṇaṃ gacchāmi</em>” – that’s it, isn’t it? Then “<em>dutiyampi</em>” – the second time, “<em>tatiyampi</em>” – the third time, “<em>saraṇa-gamanaṃ niṭṭhitaṃ</em>” – finished. This is our refuge. Apart from this, there is none. Relying on this or that is useless. Possessions, money, gold, buildings, houses – you can’t rely on them. Father, mother, grandparents – you can’t rely on them. Rice, water, food – you can’t rely on them. Not to mention the eyes, ears, nose – even our own body we cannot rely on. Without the Buddha alone, you can’t rely on anything. Without “<em>Buddho</em>” – the Buddha alone – what can you rely on? Why can’t you rely? Without “<em>Buddha</em>” you can’t rely. <em>Buddha</em> means “knowing.” Without knowledge, what can you rely on? If we can do something, then we can rely on it. If we don’t practice, we can’t rely on it. If we want something, we don’t get it. Why can’t we rely on it? Because we haven’t practiced it. <em>Buddha</em> is knowledge. Without knowledge, you can’t rely. It’s like a dead person. Have you ever seen a dead person? A dead person can’t do anything; you can’t rely on them because they have no <em>Buddha</em>. Understand this point: without the Buddha alone – even though you have eyes, ears, a mouth – the ears are just like pot ears, the mouth like a basket mouth. So what? What can you do? This is <em>Buddho</em>. Do you remember?</p>
+<p><em>Buddho</em>, <em>Dhammo</em>, <em>Saṅgho</em> are our refuge. All of us here want to gain merit and wholesome qualities. Do you know merit yet? Have you gained merit? Do you see merit? Or don’t you know at all? You’ve come from far, far away, with great hardship and difficulty. If you don’t know merit, where will you get it? Does merit lie in this hall? In this forest? Haven’t you got it yet? It must be <em>opanayiko</em> – to be brought inside oneself, <em>paccattaṃ</em> – to be known personally. Merit is like this: the characteristic of merit is that our mind is good, our mind is happy, our mind is at ease, cool-hearted, free from suffering, heat, turmoil, and trouble. That is merit. Do you have it yet? Is your mind good yet? Look at your mind. If the mind is not good, how can you get merit? Is your mind good yet? Look. Look at your own mind. Alright, from now on listen to the Dhamma. Don’t just listen to the sound; listen to its source. Listen to the Dhamma.</p>
+<p>Sitting listening to the Dhamma, gaining merit and wholesome qualities, we come to examine our own merit. Sit comfortably. Place your right leg over your left, your right hand over your left. Keep your body straight. Assume a dignified, radiant posture with a bright smile. When your body is at ease, recollect your refuge: the virtues of the Buddha, the Dhamma, and the Noble Saṅgha as your shelter, your recollection, your object of respect, veneration, and homage. Recollect that the Buddha is in your heart, the Dhamma is in your heart, the Noble Saṅgha is in your heart. Be firmly confident in that, then recite the meditation word: “<em>Buddho, Dhammo, Saṅgho; Buddho, Dhammo, Saṅgho; Buddho, Dhammo, Saṅgho</em>” three times, then merge it into just “<em>Buddho, Buddho</em>.”</p>
+<p>Close your eyes. Shut your mouth. Recollect inwardly: “<em>Buddho</em>” – knowing. Recollect inside your mind. Don’t move your tongue. Recollect in your mind: “<em>Buddho</em>” – where is that knowing? Then establish mindfulness right there. Let your eyes gaze there, your ears listen there. Why do you look? Why do you listen? We want to hear, we want to know, we want to see what merit and wholesomeness are like, what evil is like, what happiness is like, what suffering is like. This is what we want to know. We have come to do merit – have we gained merit? Look. This mind of ours is the <em>Buddha</em> – the knower. Let everyone determine: know where the knower is, then set mindfulness there. Gaze there. When the mind becomes calm and good, happy and at ease, cool-hearted, free from suffering, heat, turmoil, and trouble – this brings happiness and prosperity in the present and in the future. Look at your mind like this. We came here wanting happiness and prosperity, wanting ease and comfort. It is like this. The reason is none other: happiness is none other than our mind being happy; ease is none other than our mind being at ease. Listen. Listen to know, listen to understand, all of you. This is how it is.</p>
+<p>What is unwholesome? It is that the mind is not calm, the mind is not good. When the mind is not good, it becomes miserable, troubled, turbulent, and distressed. This leads beings to fall into suffering and poverty in the present and in the future. Let everyone investigate. Some people suffer losses, become bankrupt, fall into debt – why? Some people work and don’t succeed, seek things and don’t get them – why? Look. Where is it not good? This is how people are. The country is not good, it’s chaotic. Look at the earth, sky, weather, mountains, and forests – they don’t have any problem. Sit and look. Whatever we do for a living ends in loss and ruin. Seeking anything brings suffering and hardship. What suffers? What is difficult? Is it possessions, money, gold? What suffers? What is difficult? Sit and look. In the past we had no opportunity to make merit and wholesome qualities. Now we can do it fully, completely. Look – what hinders you? What lacks or falls short? Learn to examine your own heart. The reason for loss and ruin is this: our mind is not good. When our mind is not good, we are miserable, troubled, turbulent, and distressed. When the mind is like this, it causes loss and ruin. When the mind is not good, whatever you do is not good, whatever you seek is not good, your work is not good, your livelihood is not good, your government service is not good, your business is not good, your family is not good, your neighbors and marketplace and nation are not good. Your mind is just not good. Look – husband and wife quarrel. The mind is not good. What do you say? Look. Look so that you know. This is because of this cause. Look. When the mind is not good, know it and think “<em>Buddho, Buddho</em>” – cut it off. Now, what about happiness and prosperity? Our mind is good, happy and at ease, cool-hearted, free from suffering, heat, turmoil, and trouble. This produces happiness and prosperity. When our mind is good, everything we do is good. Business is good, livelihood is good, study is good, whatever we do is good. Family is good, neighbors, marketplace, and the nation are good. It is like this. Let everyone come to know. When our mind is good and thinks good, we are happy. Sitting is happy, lying down is happy, walking is happy, standing is happy. The mind is happy, the mind is at ease. When the mind is at ease, everything you do is easy, everything you seek is easy, everything you take is easy, business is easy, government service is easy, family is easy, parents and siblings are easy, neighbors and marketplace are easy, the nation is easy. Look – what do you say, all of us?</p>
+<p>Now, from now on, each person should gaze and look at their own heart. To explain further would be excessive. This is what we call this kamma or that kamma. Some people have pain here or ache there – why? Do you want to get rid of it? From now on, if you want to get rid of it, then come together to sit in meditation here. Make the mind calm. When the mind is calm, when our mind is good, then all diseases will disappear. Illness and danger will vanish, curses and misfortunes will vanish, faults and sorrow will vanish, suffering and poverty will vanish, hunger and want will vanish completely. Because we have said “<em>Buddho</em>” – our mind is expansive, our mind is bright. “<em>Buddho</em>” – the mind is clear, pure, free from suffering, free from faults, free from danger. Now each of you sit down. Gaze and look at your heart. Maintain your perception. Whatever sounds you hear, know that they are not dangerous, and don’t be distressed. Just make your mind at ease. Some people have this kamma or that kamma. Where does that kamma come from? Kamma does not come from the sky, the air, trees, or mountains. Kamma comes from action, from speech, from thoughts. It is bodily kamma, verbal kamma, mental kamma. It arises right from this mind of ours.</p>
+<p>Therefore, we must first examine our own heart. Otherwise we won’t know how to correct it. Old kamma is not yet exhausted, and new kamma keeps adding on. When we suppress kamma, we cause our mind to become calm, still, and neutral – not sending it forward, not to the left, right, above, or below. Only awareness remains. Investigate: is it good or not? Where is it stuck? Where is it caught? What is lacking or deficient? Then we cleanse and rectify it. This is the practice to attain virtue and Dhamma, to attain the religion. Religion is a tool for ending suffering. Religion exists for the sake of suffering. Now, where does suffering come from? We must listen and observe to see the suffering in our own mind. Suffering – why? Suffering because of delusion. When our mind is not calm, it suffers. When our mind is not good, it suffers.</p>
+<p>For this reason, you must know right down to its root. It is like a gardener tending his orchard. He must nurture the tree, fertilize it, water it. If the tree is good, you don’t need to tell or force the branches – it will produce beautiful flowers and fruit. If the tree is good, its fruit will be abundant. This simile is given for you to see. If the tree is not good, it will have no flowers, no fruit. Just so with our mind. If our mind is good, then everything we do is good, everything we seek is good, everything we take is good. Do you doubt this point? Look – is it good yet? If it is not good, we have not gained merit. Know this. From now on, we will not be confused. We will conduct ourselves and practice. When our mind is good, everything we do is good, everything we seek is good, our work is good – as explained. Our family is good, our siblings are good, our country and nation are good, without turmoil and distress. Whatever we say, we understand each other. Now, all of you – do you want turmoil and distress? Do you want things that are good? What is not good? To put it briefly: our mind is not good. When our mind is not good, everything we do is not good, our work is not good – as explained before. Family is not good, siblings are not good, neighbors and marketplace, even the nation, are in turmoil. All because the hearts of these people are not good.</p>
+<p>Moreover, we come to make merit and wholesome qualities, to do good deeds, so that we receive happiness and ease. When our mind receives happiness and ease, then there are no issues, no problems. Our country becomes peaceful and calm. This is why you must learn to reach the heart and understand. If we are good, even if others are not good – all people, every single one, even the tiny red ant or the little insect – all want goodness. Those who behave badly, who do evil, cannot survive. It is because of this goodness that things are that way. Now, anyone who tries to destroy a good person will themselves be ruined – the destroyer himself. When in our country everyone has virtue and Dhamma, everyone has merit and wholesomeness, everyone is happy, the mind happy and at ease, then evil will dissolve by itself. It is like lighting a fire: the darkness disappears on its own. Those wrong-doers who bring other countries to destroy us – the earth will swallow them up. Just watch. We have taken the Buddha as our refuge. If we go taking other things as refuge and recollection, and just keep trying to revolt and force each other, will it work? Anyone who persecutes the Buddha – the earth really swallows them. So it is. The sacred things of the whole world exist already: the Buddha, the Dhamma, the Saṅgha. These are sacred and powerful. In the three worlds, the Buddha is supreme over all. <em>Sabbabuddhānubhāvena</em> – by the power of the Buddha. <em>Sabbadhammānubhāvena</em> – by the power of the Dhamma. <em>Sabbasaṅghānubhāvena</em> – by the power of the Noble Saṅgha. Consider this, all of you. Be people who understand. <em>Buddho me nātho, Dhammo me nātho</em>. <em>Nātha</em> means the great refuge. I see no other thing with greater power. <em>Natthi me saraṇaṃ aññaṃ</em> – I have no other refuge. In the three worlds, there is nothing else to rely on. Only the Buddha is the excellent refuge. <em>Buddho me saraṇaṃ varaṃ</em> – only the Buddha, Dhamma, and Saṅgha are the excellent refuge. Now that you have all listened to this exhortation and instruction – the Dhamma, the teaching of the Buddha, which has been explained and demonstrated to this extent – it is enough as a basis for practice. Having understood the essential points of the Buddha’s teaching, you see that this body and mind are the foundation of the religion, the foundation of the Path and its Fruition. Having heard this, apply wise attention (<em>yoniso manasikāra</em>), determine and remember it, then take it into practice, training yourselves in accordance with the Dhamma teaching of the Supreme Perfectly Enlightened Buddha, to achieve the ultimate result, which is the quality of non-negligence (<em>appamāda dhamma</em>). When you all possess non-negligence, from now on you will meet only with happiness and prosperity. And so it is.</p>
+<p><em>Cattāro dhammā vaḍḍhanti – āyu, vaṇṇo, sukhaṃ, balaṃ.</em></p>
+<p>[The four things that increase: longevity, beauty, happiness, and strength.]</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="06._Measuring_One’s_Own_Mind.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">06</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">06. Measuring One’s Own Mind</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="08.The_Heart_of_Kammaṭṭhāna.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">08</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">08.The Heart of Kammaṭṭhāna</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

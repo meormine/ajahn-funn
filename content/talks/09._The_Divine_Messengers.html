@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09. The Divine Messengers</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="08.The_Heart_of_Kammaṭṭhāna.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(08)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="10._Knowing_the_One_Mind.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(10)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Funn-Acaro-Dhammatalks/09.%20The%20Divine%20Messengers.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>09. The Divine Messengers</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<p>June 27, 1973 </p>
+<p>We all dwell with the Divine Messengers (devadūta) every day, every moment, every minute. What are the <em>devadūta</em>? They are birth, aging, sickness, and death. These are what we see. We all wish to be free from suffering. Suffering is nothing else. The Buddha taught us to see these <em>devadūta</em>.</p>
+<p>When a person sees the <em>devadūta</em> and knows the <em>devadūta</em>, that person will be freed from suffering. Suffering is not something else. Suffering is not about having no place to live, not about lacking material goods or money, not about having no rank or status. That is not it. The Buddha did not call those things suffering. Suffering is already inherent in everyone: we cannot escape birth, cannot escape aging, cannot escape sickness, cannot escape death. It is already there. The way to escape it, the Buddha taught a refuge: take the Buddha as refuge, take the Dhamma and the Noble Saṅgha as refuge, as a place of refuge to pay homage and worship every day. When we reach the Buddha, we will be freed. If we do not take the Buddha as refuge, we cannot be freed. Let us all pay homage every day. After paying homage, go to the monastery. Look at the Buddha-refuge of ours, the Dhamma-refuge of ours, the Saṅgha-refuge of ours. Then go to the monastery. Do we yet know the monastery? Nowadays people do not know the monastery, which is why they are troubled and distressed. If each person went to the monastery, there would be no trouble. What monastery? The monastery of looking at ourselves. It is not the monastery of the Buddha or the monks. Our monastery is present in everyone every day. Pay homage to the Buddha, Dhamma, and Saṅgha three times. Then sit and look at our own mind. Recollect the Buddha within the mind, the Dhamma within the mind, the Noble Saṅgha disciples within the mind. Recite the meditation words: <em>buddho</em>, <em>dhammo</em>, <em>saṅgho</em> three times, then gather into one: <em>buddho</em> alone in our mind. Our mind focuses on <em>buddho</em>, <em>buddho</em>. Close your eyes, close your mouth, recollect within the mind. The tongue does not move. Our mind focuses on the recollection <em>buddho</em>. Our ears listen to the recollection <em>buddho</em>. <em>Buddha</em> means the one who knows. Focus on knowing why we are born and suffer, why we are happy, where suffering is, where happiness is. The Buddha thus established <em>buddha</em> as the one who knows. This is our refuge. Focus on knowing thoroughly. Birth is suffering. When we know, we do not give rise to birth. Some people ask: after death, will there be rebirth? Just sit and see who can prevent it. No one can prevent this birth. The Buddha taught us to cultivate <em>sīla</em>, <em>samādhi</em>, <em>paññā</em> as the foundation of the Buddhist teachings. Cultivating <em>sīla</em> means restraining body, speech, and mind to be calm and proper. We restrain the body, compose our body, speech, and mind to be proper. If we do no wrong, great or small, by body, speech, or mind, then when we are reborn we will not be deformed or disabled. We will be born with complete body, complete speech, complete mind. This is what we want. Keeping <em>sīla</em> is nothing else; it is keeping body, speech, and mind. Just this. Keeping it so that we ourselves may escape from falling into misery and difficulty, so that our body is not deformed or disabled, our mind is not deranged. Keep right here.</p>
+<p>This is the path to escape from suffering. Let us all do this. <em>Sammā-samādhi</em> – make the mind steady. Do not let it go and produce <em>bhava</em> and <em>jāti</em>, produce <em>kamma</em> and enmity. The mind is peaceful because of <em>samādhi</em>; the mind is established, steady, upright. The mind does not waver or vacillate in forms, sounds, smells, tastes, or tactile objects. When it goes out, it goes out to produce great and small <em>bhava</em> and <em>jāti</em>. Therefore, we should go to the monastery and look. We enter <em>samādhi</em>, we establish it firmly. If it goes out in front, we know; if it goes out behind, we know; if it goes out left, right, below, above, our mind knows along with it. This is practicing <em>samādhi</em> to make our mind steadfast. The reason we suffer is because it is not steadfast; it is <em>anicca</em>, impermanent. Whatever is <em>anicca</em>, impermanent, that is <em>dukkha</em>, suffering. Whatever is <em>dukkha</em>, that is not self. Making the mind steady and unshakable is called <em>samādhi</em>. Whatever we seek to do, we should seek what is permanent and true, not what is changeable and shifting. That is why we must practice <em>samādhi</em> – then we will know.</p>
+<p>When we know, then <em>paññā</em> arises. It is nothing far away: it is the thorough knowledge of the conditioned formations, the concoctings and fabrications. Therefore we must go to the monastery and listen to the Dhamma so that we know: when a fabrication is wholesome, it is wholesome – we are joyful, we are <em>buddho</em>, we have brightness, the mind is not defiled, the mind is not vexed. The mind is <em>buddho</em>, the mind is joyful, the mind is <em>buddho</em>, the mind knows. This is what we should all know. If an unwholesome fabrication arises, it makes the mind defiled, the mind distracted and vexed. Lust, greed, hatred, delusion arise. This is how it is when one performs unwholesome actions. It makes beings fall into misery and difficulty. Having heard this, bring it inside and contemplate in our own heart. The Buddha established the teaching right here: the existence of <em>sīla</em>, <em>samādhi</em>, <em>paññā</em>. <em>Sīla</em> is nothing else; it is our own self as <em>sīla</em>. Restraining body, speech, and mind to be proper. <em>Sīla</em> is right here, not elsewhere. <em>Sīla</em> is not with the Buddha, <em>sīla</em> is not with the monks. <em>Sīla</em> is with ourselves. A person who restrains himself properly, doing no wrong great or small, making body, speech, and mind proper, harmless and non-dangerous – when standing, it is <em>sīla</em>; when walking, it is <em>sīla</em>; when sitting or lying down, it is <em>sīla</em>; wherever one goes, it is <em>sīla</em>. If we do not commit the five wrong actions – <em>pāṇātipātā</em> (killing), <em>adinnādānā</em> (stealing), <em>kāmesumicchācārā</em> (sexual misconduct), <em>musāvādā</em> (false speech), <em>surāmerayamajjapamādaṭṭhānā</em> (intoxicants) – then wherever we are, it is <em>sīla</em>. In the forest, in the jungle, in the village, in the city, on the roadside – it is <em>sīla</em>.</p>
+<p>When we do not commit those wrongs, then those wrongs do not exist. No one among us desires those five wrongs, no one wants them. Let us all restrain and guard ourselves so that they do not arise within us. Those five are: killing, stealing, sexual misconduct, lying, drinking alcohol and fermented liquor. If we do not do them, then there is no offense, no <em>kamma</em>, no sin, no evil. In whatever realm or birth we are born, we will be beautiful and handsome, with proper body, proper speech, proper mind. We will have happiness and ease. Why do we have happiness and ease? Because we have abandoned those five wrongs. <em>Sīlena sugatiṃ yanti</em>, <em>sīlena bhogasampadā</em> – by virtue one goes to a happy destiny, by virtue there is achievement of wealth. One has happiness and ease, one has material wealth and possessions, one is not suffering or poor. Why is one not suffering or poor? Because one is born complete. Our body is complete, our speech is complete, our mind is complete. Whatever we study, there is no obstruction; whatever work we do, there is no obstruction because there is no offense in us. We prosper because there is no obstruction, there is convenience. The Buddha taught us to do this, for people to believe in the Buddha. He did not establish the teaching in trees, mountains, hills, caves, jungles, villages, cities, roads, or in halls, monasteries, or Dhamma halls. He established the teaching right here in each of us: that is <em>sīla</em>, <em>samādhi</em>, <em>paññā</em>. This has been explained. Restrain our body, speech, and mind. Our body is the Buddha's teaching; our speech is the Buddha's teaching; our mind is the Buddha's teaching. The Buddha responded to our body, our speech, our mind. He taught us to do good, not to do evil, to leave it empty. You all have studied much. You already know what is wrong and what is right. Do not do what is bad. If we do not do it, then bad things will not come to us. If we do it, then those things necessarily come. We practice <em>samādhi</em>, make the mind steadfast, look at our mind. Where is our mind? The mind is the one that thinks, that remembers, that concocts, that fabricates. Who is it that does merit and demerit, produces <em>bhava</em> and <em>jāti</em>, produces <em>kamma</em> and enmity? The Buddha taught us to be steadfast so that we may end demerit and <em>kamma</em>, end all misfortunes. The mind is <em>samādhi</em>, the mind is steadfast. When the mind is peaceful, all things are peaceful. If this mind does not go to produce <em>bhava</em> and <em>jāti</em>, who will go to produce them? When the mind does not produce them, then birth does not exist. Where would aging come from? When aging does not exist, where would sickness and disease come from? When sickness and disease do not exist, where would death come from? When death does not exist, where would birth come from? It is like this. This is how we wander in saṃsāra, dying and being reborn, being reborn and dying, dying and being reborn, for countless aeons and eons, for infinite time. If we look steadily at the mind, we see that it is we ourselves who produce <em>bhava</em> and <em>jāti</em>. If we stop, then it is the deathless, it is something permanent and true, not changeable. Not going to produce <em>bhava</em> and <em>jāti</em>. When there is no <em>jāti</em> (birth), then there is no <em>jarā</em> (aging). When there is no <em>jarā</em>, then there is no <em>byādhi</em> (sickness). When there is no <em>byādhi</em>, then there is no <em>maraṇa</em> (death). This is how it is.</p>
+<p>Having heard this, then <em>opanayiko</em> – bring it inside and look within. Do people die and then get reborn? Look at ourselves: are we being reborn right now? Are we doing it right now? Is our mind staying still? Come on, bring the <em>opanayika</em> dhamma and look inside. Can our mind stay still? It is producing <em>bhava</em> and <em>jāti</em> – who knows how many <em>bhava</em>? It concocts, it fabricates, it produces there, it ceases here, produces there. It goes on like that. How many <em>bhava</em> has it been? Right now as we sit here, this birth – we cannot prevent it. That is why the Buddha taught us to contemplate <em>buddho</em>.</p>
+<p>At the same time, he taught us to contemplate these <em>devadūta</em>, bring them up within our own mind. Suffering, which is this birth, we must stop it. Wash away demerit and <em>kamma</em>, cut off demerit and <em>kamma</em>. We cannot wash it away with a knife or a sword, nor with water. Only by sitting in <em>samādhi</em> until the mind is peaceful. When the mind is peaceful, it is empty, nothing at all. There is only lightness and ease, cool body and cool mind, ending suffering and difficulty, ending trouble and vexation. Only <em>buddho</em>, the joy; <em>buddho</em>, the brightness; <em>buddho</em>, the clarity. All <em>kamma</em> ends, all evil ends. Only <em>buddho</em>, the joy. Therefore, our refuge must depend on this knowledge. When knowledge is lacking, we cannot find a refuge. In the <em>Saccakiriyā Gāthā</em> it is said: <em>Natthi me saraṇaṃ aññaṃ</em> – “I have no other refuge.” Relying on this or that, nothing can be relied upon; even our own self cannot be relied upon. Ordinary people, the country, the nation cannot be relied upon. Father, mother, grandparents, ancestors – none can be relied upon. Even ourselves cannot be relied upon. What then is our refuge? <em>Buddho me saraṇaṃ varaṃ</em> – “The Buddha is my excellent refuge.” Bring it inside and look: where is the Buddha right now?</p>
+<p><em>Opanayiko</em> – bring inside. <em>Buddha</em> means the knower. Consider: where is it right now? <em>Buddho, buddho</em> – it is within the mind. <em>Buddho</em> means knowing one's own mind as the knower. Lacking knowledge alone, there is no refuge at all. It is like a dead person. A dead person lacks knowledge; they cannot do a single thing. That is why we have come to remind our minds to have a refuge, a place of homage, of worship. Do not doubt or hesitate. In whatever realm or birth we are, we have been born. From now on, know the place of abiding. When we sit in <em>samādhi</em>, we go to our own abiding place. When the mind is peaceful, it is easy in body and mind, not suffering, not hot, not chaotic, not turbulent – at ease. That is our abiding place. When our mind is like that, it brings happiness and prosperity, in the present and in the future. Such a mind must lead to a happy destiny (<em>sugati</em>), because right now it has happiness; when it ceases with the aggregates, it will also have happiness. If our mind is unwholesome, suffering, chaotic, drowsy, sleepy, suffering in body and mind, then such a mind leads to an unhappy destiny (<em>dugati</em>). If it is born as a human, it is a human with suffering, low, vile. If not human, it could be a <em>peta</em>, an animal, or a hell being. Therefore, let us all understand.</p>
+<p>When we see these things as suffering and we do not want them, then let us all do <em>buddho, buddho</em> to dispel and drive them away. If asked: will we suffer if we do not want it? Who would want it? We must practice <em>opanayiko</em> – look and see: who sees suffering? It is not trees, mountains, or caves that suffer; not villages or cities that suffer; not roads that suffer. Our mind is the one that suffers. That is why we have come to remind our minds to meditate, to choose and refine our mind. If we do not choose and refine it, our mind cannot be used. Our mind has both good and bad. We must choose and refine it, just like a fish: it has both benefit and harm. A wise person takes only the flesh – it is easy. A foolish person eats the bones and gets them stuck in the throat and dies. Our mind has everything: <em>petas</em>, hell beings, the deaf, the blind, the mute, the insane, the deranged – all are there. Also good ears, good eyes, beauty – that is there. The mind of a king, a millionaire, a minister – all are there. Deva sons, devas, Sakka, Brahmās – all are there. Choose which one to take. If asked: how can we know the mind of a deva son, deva, Sakka, Brahmā? It is <em>buddho, buddho</em>. Our mind is joyful, our mind is bright, our mind is clear – that leads in this direction. Now the dark ones: our mind is defiled, the mind is not clear, the mind is dark and murky, chaotic, troubled. When suffering mind arises, it leads to an unhappy destiny. The mind that is happy and at ease leads to a happy destiny. This is the practice. Having heard this according to the teaching and instruction.</p>
+<p>It is said in the <em>Dhamma-guṇa</em> (qualities of Dhamma): <em>Ehipassiko</em> – one should invite beings to come and see the Dhamma. See what Dhamma? Wholesome Dhamma and unwholesome Dhamma. Wholesome Dhamma: our mind is good, our mind is wise, our mind has happiness and ease. Every piece of work we do, we want happiness and ease. That is wholesome Dhamma. What is unwholesome Dhamma? It is our mind being not good, suffering, chaotic, troubled. That is unwholesome Dhamma. Let us all know this. The Buddha taught us to invite beings to see this Dhamma. Try calling for suffering from the earth, sky, and weather – there is none. Apart from the mind that suffers, there is none. Happiness also is our mind. Apart from our mind being good, there is no other happiness elsewhere. Evil apart from our mind being evil – elsewhere there is none. Simply put, let us all know through practice. If our mind is not good, then everything becomes not good. If our mind is good, then everything becomes good. Parents, spouses, children ordinarily love each other very much, don't they? If the mind is not good, then everything seems not good, and quarrels arise. If our mind is good, then we do not quarrel.</p>
+<p>In summary, all the Dhammas – the 84,000 Dhamma aggregates – do not understand that they are elsewhere. They are right here with us. We depend on the Three Entities. What entities? The <em>Sutta</em>, the <em>Vinaya</em>, the <em>Paramattha</em>. The Buddha established the teaching right here.</p>
+<p>The 84,000 Dhamma aggregates are all contained within ourselves. We ourselves are the cabinet of the <em>Tipiṭaka</em>. Why? The <em>Suttapiṭaka</em>, <em>Vinayapiṭaka</em>, <em>Paramatthapiṭaka</em> – these three together are the <em>Tipiṭaka</em>. <em>Assāso</em> (in-breath) is the <em>Suttapiṭaka</em>; <em>passāso</em> (out-breath) is the <em>Vinayapiṭaka</em>; And <em>Nissāso</em> is the <em>Paramatthapiṭaka</em> – the knower within. These three maintain the life faculty (<em>jīvitindriya</em>) so that it does not break or disintegrate. This is what we depend on – these Three Entities. We must pay homage to them, we must practice them. If we abandon them, even a doctor cannot maintain our life. As long as these Three Entities still maintain us, the doctor can still treat. As long as there is breath, the doctor can treat. When breath ceases, the doctor cannot treat. See? Is it true or not? These are the Three Entities. We must practice, pay homage, and worship.</p>
+<p>These are the <em>Sutta</em>, the <em>Vinaya</em>, the <em>Paramattha</em>. <em>Dhammaṃ ve rakkhati dhammacāriṃ</em> – “Dhamma indeed protects the one who practices Dhamma.” That is the Three Entities. Therefore it is said that Dhamma protects the one who practices Dhamma. If any being practices Dhamma well, Dhamma brings goodness to them. If that being practices Dhamma badly, Dhamma brings badness to them. We who are sitting here are the same. What is it? We have a similar form, the same four elements, five aggregates, six sense-bases. But our forms are not identical: some are dark, some are white, some tall, some short. Why? Whoever practices well, Dhamma gives goodness to them. Whoever practices badly, Dhamma gives badness to them. It is not that parents caused us to be born blind. Parents cannot do that, doctors cannot do that. We did it ourselves. This is the practice.</p>
+<p>Having heard this, <em>opanayiko</em> – bring it inside, know it for oneself. This is the practice that has been brought to remind us. May it be a basis for listening, for the pāramī of wisdom for all of you. When you have heard it, practice <em>yoniso manasikāra</em> (wise attention). Let us all determine and remember it in our hearts, then practice and train ourselves in the Dhamma teachings as have been expounded. May you all have happiness and prosperity. <em>Evaṃ</em> – thus it is.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="08.The_Heart_of_Kammaṭṭhāna.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">08</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">08.The Heart of Kammaṭṭhāna</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="10._Knowing_the_One_Mind.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">10</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">10. Knowing the One Mind</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

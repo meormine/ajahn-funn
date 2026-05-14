@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Come & See</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="01._To_Be_a_Person_Is_to_Be_a_Māra.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(01)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="03._Entering_for_the_Rains.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(03)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Funn-Acaro-Dhammatalks/02.%20Come%20%26%20See.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>02. Come &amp; See</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<p><em>Asāḷha Pūjā, July 11, 1976</em></p>
+<p>You’re sitting around doing nothing. Meditate. I’d like you all to quiet your minds. Quiet for what purpose? To know.</p>
+<p>You’ve come to make merit, so you should acquaint yourselves with merit. Are your minds meritorious yet? Try to know. Where is merit? We want to gain merit, we want to gain happiness, we want to gain prosperity, but where exactly does happiness lie? I want everyone to get into position to meditate.</p>
+<p>Coming here, you’ve come through lots of hardships, lots of difficulties. You’ve come in search of goodness, in search of merit, in search of what’s skillful, in search of happiness and prosperity. So try to understand exactly what happiness is, what prosperity is, what goodness is. Try to acquaint yourselves with these things. Everyone who comes here wants goodness, so what do you do to make it good? Try to know. If you don’t know what’s good, you can search from dawn to dusk and not find what’s good. You can search the whole year ’round and not find what’s good, simply because you don’t recognize what’s good. If you recognize what’s good, it’s not hard. You can sit right now and find it. So look. Get into position and look.</p>
+<p>We depend on the teachings of the Buddha. To begin with, we’ve done a candle-circumambulation and made an offering to the Triple Gem. “Triple” means three. Which three? The gem of the Buddha, the gem of the Dhamma, the gem of the Saṅgha: These gems are our refuge.</p>
+<p>Now, the Buddha isn’t a gem. The Dhamma isn’t a gem. The Saṅgha isn’t a gem. They’re <em>like</em> gems. Gems are bright and clear, like a clear mirror. The Buddha’s heart was clear like a gem. That’s how he was able to know all levels of pleasure and pain. Heavens and hells, he saw them all—all levels of goodness and evil. That’s why he was able to set out the religion for all of us, lay and ordained.</p>
+<p>Those of us born in these latter days haven’t had the opportunity to see the Lord Buddha. We’ve met only with the Dhamma, the teachings he taught. What he taught wasn’t anywhere else far away. In the list of the virtues of the Dhamma, it says that the Dhamma is <em>ehipassiko:</em> It’s for calling all living beings to come and see. It’s not for calling them to <em>go</em> and see. He wants us to <em>come</em> and see the Dhamma. And so where do we come to see the Dhamma? Right here at our <em>rūpa-dhamma,</em> or physical phenomena, and our <em>nāma-dhamma,</em> or mental phenomena.</p>
+<p>“Physical phenomena” means our body. We should come and take a good look at it. Why? We want to look into this body that we hold onto as our self—a “being,” an “individual,” a “man,” or a “woman”—so as to contemplate it. We depend on it, we claim it as our self, and so he wants us to look at it. Why? So that we’re not deluded by it. He wants us to know this physical phenomenon so that we can abandon our pride, abandon our passion, aversion, and delusion, ignorance, craving, clinging, becomings, and births. If we don’t come and look at it, we’ll hold onto it as our self. But exactly where is it our self? Come and look.</p>
+<p>When the Buddha taught the Five Brethren, he taught them the Discourse on Setting the Wheel of Dhamma in Motion. In that discourse, he said, <em>Idaṁ kho pana bhikkhave dukkhaṁ ariya-saccaṁ:</em> “Monks, what is the truth of suffering? These four truths.” He told them to become acquainted with these truths:</p>
+<p><em>Jātipi dukkhā:</em> Birth is suffering. We don’t come to suffering from anything else. We suffer because of birth. So contemplate it. The Buddha taught the religion so that we can know this. We’ve already been born, so why do we still suffer? We suffer because of birth.</p>
+<p><em>Jarāpi dukkhā:</em> This is the second suffering. Once there’s birth, then aging, decay, and decrepitude come following in the body—and they’re suffering. Or as he said, nothing else suffers: It’s the heart that suffers. So he has us contemplate the matter. When we contemplate the Dhamma, we see that these things are always there in every person. Whether we have high status or low status, whether we’re tall or short, black or white, rich or poor, these things are true in each of us. We can’t stop them from happening. Nobody can stop these things from happening—except for the Buddha and the arahants who can stop them from happening in the future. But none of us are yet able to stop them, so we should contemplate them so that we know them.</p>
+<p>The third suffering follows: <em>Byādhipi dukkhā.</em> Illness, sickness, colds, coughs, fevers, aches, and pains: We do nothing but complain about them. Stomach aches, earaches, headaches, backaches, pains in the intestines, pains in our legs, pains in the eyes: We complain about these things. There’s no one who doesn’t suffer from them. That’s the way they are, so we should contemplate to see them for what they are.</p>
+<p>When illness oppresses us more and more heavily, we can’t stay any longer, which is why—<em>maraṇampi dukkhaṁ</em>—we die. We suffer to the point of death. Death comes regardless of whether we’re high class or low class, black or white, rich or poor. All of us sitting here will have to experience it.</p>
+<p>But in Pāli they don’t say, “die.” They say <em>cuti</em>—we move. When we leave here, why do we move? We can’t stay. Why can’t we stay? Because the four elements are no longer in harmony. We’re too hot, too cold, too heavy. These five aggregates are a heavy burden. They get so heavy that we’ve had enough—we can’t open our eyes, lift up our legs, get up and run. They get so heavy that we have to discard them.</p>
+<p>So when we discard the body, where will we go? What will we be able to take with us? This is why the Buddha set out the religion, so that we can give rise to goodness and take that as our refuge. This is our practice. This is why he taught generosity, taught virtue, taught meditation. So acquaint yourselves with these things. They’re our provisions for the journey. When you develop goodness, no matter who you are, that goodness will protect you and take you to a good destination. So understand this. This is why I said that the Buddha, Dhamma, and Saṅgha are our refuge. Whatever we haven’t come to know, we won’t be able to do. Whatever we haven’t done, we won’t be able to depend on. Only the things that we’ve known and done and practiced will we be able to depend on. That’s just the way it is. So try to know and understand these things. This is why the Buddha set out the religion—to support and nourish us. He set out generosity, virtue, and meditation as things we should practice.</p>
+<p>This is why we’ve come to make merit, to develop goodness. We’ve made donations to overcome the stinginess in our hearts. We’ve let go of some of our greed, our aversion, our delusion. The reward is that we’ll be rid of our poverty—because we’ve built up our merit. We’ve performed a generous act. Whether it was a lot or a little, it’s now ours. So dedicate your merit. You’ve made merit, so dedicate it in your heart.</p>
+<p>Now that you’ve done this, do your hearts have a sense of well-being? Do your hearts have a sense of ease? Look. You’ve already done good. If your mind has a sense of well-being, a sense of ease, cool and at peace, without any suffering, without any disturbance, then you have a <em>Buddho</em> heart: a peaceful heart, a happy heart, a heart at <em>ease.</em> This provides a sense of well-being and prosperity, now in the present and on into the future.</p>
+<p>So I want you to understand: Happiness doesn’t lie in anything else. Possessions aren’t happy, money isn’t happy, the weather isn’t happy. Our <em>heart</em> is what’s happy. Why is that? Because the heart is at peace. We’ve done something good.</p>
+<p>You’ve come here to do good. So is your goodness already good? Look into the matter. Try to understand. You’ve done something good. What you haven’t done, you can’t take as a refuge. So understand this as something to practice, for this is how things are.</p>
+<p>When we observe the precepts, we don’t observe them anywhere else far away. The Buddha established the religion for us to look after our actions, to look after our speech, to look after our hearts and to keep them in good order. Our actions are in good order; our speech is in good order; our heart is in good order. We haven’t done any harm, great or small, in our thoughts, words, or deeds. So whatever level of becoming we take birth in—as long as we haven’t gained release from suffering, as long as we’re still swimming around in death and rebirth—our actions will make us people in good order, our speech will make us people in good order. We won’t have any defects, great or small. This is why the Buddha has us observe the precepts.</p>
+<p>And what are the great and small kinds of harm? Killing, stealing, illicit sex, lying, taking intoxicants: These things are harmful. Our country is in turmoil at present because of these five kinds of harm. So be aware of the fact and understand it. When we haven’t done any of these five kinds of harm, we’ll be happy. Whatever level of becoming we take birth in, we’ll be happy—now and into the future. When we haven’t done any of the five kinds of harm, we’ll be healthy. We won’t suffer from poverty. We won’t be lacking. We won’t be put to hardships.</p>
+<p>So listen. And don’t just go through the motions of listening. Bring your heart into line with what you hear.</p>
+<p>When the Buddha taught the Five Brethren, when he explained these things to them, they reached the paths and their fruitions on hearing the Buddha’s Dhamma. Now, we’re five, too. Five what? Two legs, two arms, one head: They equal five. When the Five Brethren heard the Buddha’s Dhamma, whatever actions they had done with these five things, they abandoned them all. After that, the Buddha taught them the Discourse on the Not-self Characteristic. He set out form, feeling, perception, fabrications, and consciousness, and then he explained them. What did he explain?</p>
+<p><em>Rūpaṁ aniccaṁ:</em> He asked, “Is form constant or inconstant?”</p>
+<p>“Inconstant,” they replied.</p>
+<p>“And if something is inconstant, is it easeful or stressful?”</p>
+<p>“Stressful,” they answered.</p>
+<p>“And if something is inconstant and stressful, how can you say it’s self?”</p>
+<p><em>“No h’etaṁ bhante:</em> No way, lord.”</p>
+<p>So they let go of form.</p>
+<p>So the Buddha asked them about feeling. <em>Vedanā aniccā:</em> “Is feeling constant or inconstant?”</p>
+<p>“Inconstant,” they replied.</p>
+<p>“And if something is inconstant, is it easeful or stressful?”</p>
+<p>“Stressful,” they answered.</p>
+<p>“And if something is inconstant and stressful, how can you say it’s self?”</p>
+<p><em>“No h’etaṁ bhante:</em> No way, lord.”</p>
+<p>So they let go of feeling.</p>
+<p>Do you know what’s meant by “feeling” here? Feelings of pleasure; feelings of pain. The pleasures and pains we feel as we’re sitting here—aches here, aches there, feverish here, chilly there: That’s feeling. Do you see it? The body can’t be still. That’s feeling. Try to let go of it. Contemplate it. It’s what stress and suffering are—nothing else far away.</p>
+<p>The Buddha then asked them about perception. <em>Saññā aniccā:</em> “Is perception constant or inconstant?”</p>
+<p>“Inconstant,” they replied.</p>
+<p>“And if something is inconstant, is it easeful or stressful?”</p>
+<p>“Stressful,” they answered.</p>
+<p>“And if something is inconstant and stressful, how can you say it’s self?”</p>
+<p><em>“No h’etaṁ bhante:</em> No way, lord.”</p>
+<p>So they let go of perception.</p>
+<p>Then the Buddha asked them about fabrications. <em>Saṅkhārā aniccā:</em> “Are fabrications constant or inconstant?”</p>
+<p>“Inconstant,” they replied.</p>
+<p>“And if something is inconstant, is it easeful or stressful?”</p>
+<p>“Stressful,” they answered.</p>
+<p>“And if something is inconstant and stressful, how can you say it’s self?”</p>
+<p><em>“No h’etaṁ bhante:</em> No way, lord.”</p>
+<p>So they let go of fabrications.</p>
+<p>Then the Buddha asked them about consciousness. <em>Viññāṇaṁ aniccaṁ:</em> “Is consciousness constant or inconstant?”</p>
+<p>“Inconstant,” they replied.</p>
+<p>“And if something is inconstant, is it easeful or stressful?”</p>
+<p>“Stressful,” they answered.</p>
+<p>“And if something is inconstant and stressful, how can you say it’s self?”</p>
+<p><em>“No h’etaṁ bhante:</em> No way, lord.”</p>
+<p>So they let go of consciousness—they let go of everything. Their minds were solid and still, in a state of virtue and concentration. They had abandoned the preoccupations of perception, of defilement, craving, passion, greed, aversion, delusion, ignorance, clinging, becoming, and birth. That’s how they reached the paths and their fruitions. Their minds were at peace—after the Buddha had taught them nothing more than that.</p>
+<p>So try to understand these things, these things that we always have with us. Examine your body as it is right now. Examine your mind. What level of becoming are you living in right now? The level of sensuality? The level of form? The level of formlessness? Try to understand where your mind is dwelling. You’ve made merit, so is your mind meritorious yet? Or not? Look into the matter.</p>
+<p>What is a meritorious mind like? It’s a good mind, a mind with a sense of well-being, of being at <em>ease.</em> Peaceful and undisturbed, untroubled, <em>Buddho,</em> a blossoming mind at <em>ease,</em> free from difficulties, free from irritation: That’s what merit is. So many people do merit but then complain that they can’t see what kind of thing merit is. But how can it be a thing, merit? People want to know what kind of thing merit is. If it’s a thing, it’s the human body—every human body sitting here, with your black hair and bent necks. Each human body sitting here is a body of merit: You’ve done good, you feel happy, you feel at ease. Your heart and mind are blooming. This is what <em>Buddho</em> is like—free from difficulties, free from irritation.</p>
+<p>When the mind is good, everything else becomes good: our work, our efforts to make a living, our studies, our family, our neighbors, our nation. This is how our nation will become good. When each of us puts his or her mind at peace, there will be no enemies, no dangers, no animosities. That’s the way it is when we have <em>Buddho, Dhammo,</em> and <em>Saṅgho.</em></p>
+<p><em>Buddho</em> is when we’re aware. <em>Dhammo</em> is when we’ve done good. <em>Saṅgho</em> is when we’ve practiced well and straightforwardly. When that happens, all evils will dissolve away of their own accord. There will be nothing but brightness and clarity. Isn’t that what you want?</p>
+<p>Then look and observe. Where do enemies come from? Where do dangers and animosity come from? From nothing else far away. They come from passion, greed, aversion, and delusion. <em>Rāgagginā:</em> from the fire of passion. <em>Dosagginā:</em> from the fire of aversion. <em>Mohagginā:</em> from the fire of delusion. These fires burn at our hearts and create trouble throughout the country. So this is why we do what’s good and meritorious—to put out these fires, not to put out anything far away.</p>
+<p>For example, when you give a gift, you put out the fire of greed. However much greed you have, you give it all up. You observe the precepts to put out the fire of anger. When you feel anger, you have to bring your precepts to mind. Why should you bring your precepts to mind? You think, “Oh. When I’m angry like this, I’ll be reborn ugly, impoverished, deaf, dumb, and crazy.” When you think in this way, you can let go of the anger. Wherever anger arises, it can give rise to killings and stabbings, thefts and robberies. So we should all observe the precepts.</p>
+<p>When we observe the precepts, getting our thoughts, words, and deeds in good order—when we don’t create harm, great or small, with our bodies or minds—then none of these troubling things will happen. Wherever we’re reborn, we’ll be people in good order, not harming one another. So try to understand this. This is why the Buddha set out the religion here.</p>
+<p>We’re deluded. <em>Moha</em> means delusion. So the Buddha taught us to meditate: <em>Buddho, Dhammo, Saṅgho,</em> then <em>Buddho, Buddho.</em> Be mindful, and you won’t be deluded. When you’re not deluded, you won’t do evil. You’ll be afraid of evil, afraid of doing bad kamma, afraid of the difficulties these things cause. When you aren’t deluded, then when you sit, you’ll have <em>Buddho:</em> awareness. You’ll be alert. When you lie down, you’ll be alert. When you walk, you’ll be alert. When you stand, you’ll be alert. Wherever you go, you’ll be alert. While you’re sitting right here, right now, you’re alert to the fact that your heart is serene. <em>Buddho</em>—your heart is at peace, your heart is happy, your heart is at <em>ease.</em> Be aware of this.</p>
+<p>Whoever you ask will say that our nation is in turmoil. But where is the turmoil? Look right there. Wherever it’s in turmoil, solve the problem right there. That’s right. Solve it right there. We’ve all gathered here together—how many of us?—and yet when each person is quiet, there’s no problem. Everything is in good order. This is what merit and goodness are like. So understand this. Keep meditating often.</p>
+<p>Do you want to meditate now? Do you want to do something more, or have you heard enough Dhamma? Are you tired?</p>
+<p><em>[We’re afraid that you’re tired, Venerable Father.]</em></p>
+<p>If I’m the one who’s tired, then listen to the Dhamma some more. Get into position and listen to the Dhamma—not much, just 15 minutes. From the Dhamma I’ve taught, are your minds quiet or not? Get into position and sit with a sense of <em>ease.</em> Take a survey of yourself.</p>
+<p>Sit at your ease, your right leg on top of your left, your right hand on top of your left. Sit up straight. Be at your ease, at your <em>ease.</em> You’ve come here looking for happiness and <em>ease,</em> so put your body at ease and listen to the Dhamma. Listen to <em>rūpa-dhamma</em> and <em>nāma-dhamma.</em></p>
+<p>How do you listen to the Dhamma? When your body’s at ease, think about your heart. Tell yourself that the Buddha lies in your heart, the Dhamma lies in your heart, the noble Saṅgha lies in your heart. To think in this way, in the beginning you think of your meditation word. If you’ve never meditated before, think of that. For those of you who’ve already meditated, go ahead and be mindful of your heart, look directly at your awareness. For those of you who haven’t meditated, think <em>Buddho, Dhammo, Saṅgho; Buddho, Dhammo, Saṅgho; Buddho, Dhammo, Saṅgho</em>—three times—and then gather everything into one word, <em>Buddho, Buddho.</em> Close your eyes; close your mouth. Don’t move your tongue. Just be mindful in your heart.</p>
+<p>Why be mindful in your heart? Wherever you’re aware of <em>Buddho,</em> your awareness, establish mindfulness right there. Look right there. Listen right there. We want to hear what happiness is like. We want to see what happiness is like. So how about knowing yourself right there? Take your measure right there. Is your heart meritorious or the opposite? If it’s meritorious, what’s that like? Is your heart good or bad? What’s goodness like? When the heart is good, it’s good and peaceful—happy, at <em>ease.</em> Cool. Not hot and troubled. Not disturbed or in turmoil. <em>Buddho:</em> a cheerful heart. At <em>ease. Buddho:</em> The heart is bright. <em>Buddho:</em> The heart is clear—free from stress, free from harmfulness, free from danger, free from animosity, free from everything evil and vile, free from poverty, free from disease. Look at it.</p>
+<p>Your mind has quieted down. When it’s like this, it isn’t doing any bad kamma, so where will bad kamma come from? Your heart is clear and bright, and when the heart is clear and bright, you can see yourself, you can see others, you can see heavens, you can see hells, you can see merit, you can see evil. So look.</p>
+<p>What merit is like, I’ve already explained: The heart is happy. The heart is at <em>ease</em>. That’s merit. When you die, you’ll go to a place that’s happy and at ease. So understand this.</p>
+<p>What’s evil like? You’ve come to the monastery to listen to the Dhamma, so listen. Evil is when the heart isn’t well. The heart’s not good: suffering, disturbed, in turmoil. It leads living beings to fall into sufferings and difficulties, now and into the future. None of us wants this, right? When the heart isn’t well, then whatever you do won’t go well. Your work won’t go well, your studies won’t go well, your family won’t go well, the nation won’t go well. And when this happens, it’s not because anything else isn’t well. It’s not because the weather or the environment isn’t well. It’s because the heart isn’t well. So think of <em>Buddho</em> to disband that evil. Be aware of this right now.</p>
+<p>So. Now that you’ve listened to this, try looking at your heart. Try listening to your heart. Is it well or not? You’ll recognize it right here. Each of you, now that you’ve listened, look. Is your heart well or not? If you want it to be well, then look at it. I’ve already explained. If it isn’t well, then look at it. If you want it to be well, then <em>make</em> it well. No devas, no Brahmās, can make it well for you.</p>
+<p>Our nation is in turmoil, so what can we do? If each of us were to quiet the mind like this, the power of our merit would eliminate danger, eliminate animosity, eliminate poverty, eliminate everything lowly and vile. That’s the way things work: <em>Buddhānubhāvena—</em>through the power of the Buddha, the Dhamma, the Saṅgha. No other power can do it. That’s how our nation can live at peace and at ease. When our hearts are at peace and at ease, the nation is at peace and at ease. After all, the human heart is what creates nations, so the human heart can protect nations <em>(jāti).</em>[3] <em>Jāti</em>—birth—comes from the heart. It doesn’t come from anywhere else.</p>
+<p>For the religion to flourish, it depends on our meditating, sitting in concentration like this. So look inside for your mind to quiet down. When it’s quiet, it doesn’t do evil, it doesn’t do bad kamma. It does only happiness and ease. When the mind isn’t quiet, it creates turmoil and trouble. So when you see any of that inside you, quickly correct it, quickly wash it away. When each person is quiet within, everything is quiet and in good order.</p>
+<p>Whatever sounds you hear in the forest, I promise that they won’t pose a danger. You don’t have to worry. We won’t sit much longer—just 15 minutes. Wait for the sound of the clock to strike. Sit at your ease. Don’t gaze around you. Gaze at your heart. See if your heart is well and good.</p>
+<p>As I’ve already said, goodness doesn’t lie in the sky or the weather. It doesn’t lie in mountains; it doesn’t lie in buildings. Look into yourself to see where goodness lies. Suffering doesn’t lie in the weather. It doesn’t lie in possessions and money. It lies in the heart, doesn’t it? Wherever suffering lies, disband it right there. Wherever things aren’t good, correct them right there.</p>
+<p>So now listen inside. I won’t teach. If I keep teaching, some of you will simply listen to the sound of my voice. <em>Opanayiko:</em> Once you’ve listened, bring it inside you.</p>
+<p>Let the body be at ease. After all, you want ease. Make your mind empty. Make it still. Whatever it’s stuck on, whatever it’s snared by, disentangle it right now. When you die, you can’t disentangle things. When the time comes, you can’t disentangle things. But right now you can. When the harm of your actions comes to you, you can’t stop it. So counteract it now from the start. When the time comes, you’ll go running to this or that venerable old monk to show you some compassion. Whoever’s in trouble will go running to them, to ask for compassion. The problem is that you don’t show any compassion for yourself.</p>
+<p>So have some compassion for yourself. Look at yourself. When you’re sitting in meditation like this, you can’t get devas, Indras, or Brahmās to do your looking for you. So sit and look at yourself. Are you happy or miserable? Good or bad? Try to see for yourself. It’s not that the weather’s good or the weather’s bad. Look. When there’s suffering, it’s not that the weather’s suffering. It’s your heart. So look.</p>
+<p>If you don’t want to suffer, think <em>Buddho, Buddho,</em> to quiet the mind down. When the mind is really quiet, there’s no suffering. No hardship. No defilement. No evil luck—because this one thing isn’t doing anything evil, isn’t creating bad kamma, so where would these things come from? Look. When we don’t grab,[4] when we don’t do them, when we don’t create them, where would they come from? Bad kamma doesn’t come from the sky. It comes from our physical actions, our verbal actions, our mental actions. It comes from our thoughts, words, and deeds.</p>
+<p>Right now our physical actions are in good order; our verbal actions are in good order. We just have to work on our mental actions—the things we direct the mind to think about. What kinds of actions are we holding in mind? Good or bad, we’ll reap the results of those actions, now and into the future. How do we know if our mental actions are good? When the heart is quiet, with a sense of happiness and <em>ease,</em> that’s good mental action. And how about bad mental action? The heart isn’t well. It’s squirming and craving. It’s suffering. In difficulties. Troubled. That’s bad mental action, bringing trouble and pain now and into the future. So listen to your heart. Whatever it’s like, know it right here. Good or bad, examine the merit in your heart. You’ve come to make merit, so examine your heart. Just 15 minutes, that’s all. It’s not much. You’ve traveled a great distance and are tired. What other kind of merit can equal this? Giving donations 100 times, 1,000 times, can’t equal sitting in concentration just once. Its rewards are great. So keep making merit, doing what’s good, creating goodness so that our nation will be happy and at peace, in reliance on the Buddha’s teachings.</p>
+<p>What did the Buddha teach? He taught our body. He taught our heart to abandon evil. He was afraid we’d be suffering, afraid we’d be in trouble, afraid we’d be destitute, so he taught us to do good through our body, speech, and mind, so that we’d meet with happiness and prosperity.</p>
+<p>That’s the Dhamma he taught in his first discourse, Setting the Wheel of Dhamma in Motion. In short, the body and mind are the foundation for the Buddha’s teachings, the foundation for the paths and their fruitions, the foundation for happiness and prosperity. So now that you’ve listened to this, <em>yoniso manasikāra,</em> use appropriate attention, keep it in mind, and use it to practice, to train yourselves to act in line with the Buddha’s teachings, from now to the very end. <em>Appamādena:</em> When you’re not heedless, you’ll meet with happiness and prosperity as I’ve explained. <em>Evaṁ.</em></p>
+<p>So now receive your blessing.</p>
+<blockquote>
+<p><em>Yathā vārivahā pūrā</em><br>
+<em>Paripūrenti sāgaraṁ</em><br>
+<em>Evam-eva ito dinnaṁ</em><br>
+<em>Petānaṁ upakappati.</em><br>
+<em>Icchitaṁ patthitaṁ tumhaṁ</em><br>
+<em>Khippameva samijjhatu</em><br>
+<em>Sabbe pūrentu saṅkappā</em><br>
+<em>Cando paṇṇaraso yathā</em><br>
+<em>Maṇi jotiraso yathā.</em></p>
+<p>Just as rivers full of water fill the ocean full,<br>
+even so does that here given<br>
+benefit the dead (the hungry ghosts).<br>
+May whatever you wish or want<br>
+quickly come to be,<br>
+may all your aspirations be fulfilled,<br>
+as the moon on the fifteenth (full moon) day,<br>
+or as a radiant, bright gem.</p>
+<p><em>Sabbe te rogā sabbe te bhayā sabbe te antarāyā sabbe te upaddavā sabbe te dunnimittā sabbe te avamaṅgalā vinassantu.</em><br>
+<em>Āyu-vaḍḍhako dhana-vaḍḍhako siri-vaḍḍhako yasa-vaḍḍhako bala-vaḍḍhako vaṇṇa-vaḍḍhako sukha-vaḍḍhako hotu sabbadā.</em></p>
+<p>May all your diseases, all your fears, all your obstacles, all your dangers, all your bad visions, all your bad omens be destroyed.<br>
+May there always be an increase of long life, wealth, glory, status, strength, beauty, &amp; happiness.</p>
+<p><em>Sabbītiyo vivajjantu</em><br>
+<em>Sabba-rogo vinassatu</em><br>
+<em>Mā te bhavatvantarāyo</em><br>
+<em>Sukhī dīgh’āyuko bhava.</em><br>
+<em>Abhivādana-sīlissa</em><br>
+<em>Niccaṁ vuḍḍhāpacāyino</em><br>
+<em>Cattāro dhammā vaḍḍhanti</em><br>
+<em>Āyu vaṇṇo sukhaṁ, balaṁ.</em></p>
+<p>May all distresses be averted.<br>
+May every disease be destroyed.<br>
+May there be no dangers for you.<br>
+May you be happy &amp; live long.<br>
+For one of respectful nature who<br>
+constantly honors the worthy,<br>
+vFour qualities increase:<br>
+long life, beauty, happiness, strength.</p>
+</blockquote>
+<hr />
+<h3>Notes</h3>
+<ol>
+<li><em>Jāti</em> (pronounced <em>chaad</em> in Thai) has several meanings in Thai, including “nation” and “birth.”</li>
+<li>Another play on words. <em>Kam,</em> “grab,” is a homonym with <em>kamma</em> in Thai.</li>
+</ol>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="01._To_Be_a_Person_Is_to_Be_a_Māra.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">01</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">01. To Be a Person Is to Be a Māra</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="03._Entering_for_the_Rains.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">03</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">03. Entering for the Rains</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. Measuring One’s Own Mind</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="05._Listening_and_Practicing.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(05)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="07._The_Mind_and_Its_Refuge.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(07)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Funn-Acaro-Dhammatalks/06.%20Measuring%20One%E2%80%99s%20Own%20Mind.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>06. Measuring One’s Own Mind</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<p>November 1997</p>
+<p>We have come to this meeting – meeting both internally and externally. Having arrived at the monastery, let us all measure and observe our own minds. Is it inside the monastery or outside? For what purpose are we measuring? This very point: we rely on Buddhism. This religion is a tool for alleviating suffering and extinguishing suffering.</p>
+<p>The Buddha established the religion within the four assemblies – right here, not elsewhere. What are the four assemblies? <em>Bhikkhus</em>, <em>bhikkhunīs</em> – but at present there are no <em>bhikkhunīs</em>, only <em>bhikkhus</em>, <em>sāmaṇeras</em>, <em>upāsakas</em>, and <em>upāsikās</em>. The religion flourishes depending on these four; the religion declines depending on these four. Why does it decline? Because we do not conduct ourselves or practice in line with the qualities of the Buddha. We have no respect for the qualities of the Buddha, no respect for the qualities of the Dhamma, no respect for the qualities of the Noble Saṅgha, no respect for giving, no respect for virtue, no respect for meditation, no respect for mutual courtesy and hospitality. When we lack respect for these seven things, that causes the religion to decline. If we still have respect for these seven things, the religion will prosper and advance.</p>
+<p>The Buddha established the religion in the Tipiṭaka, in the Abhidhamma – He did not establish it elsewhere. Some of us say we have not studied the conventions (<em>paññatti</em>). We should come to know the conventions.</p>
+<p>He established the Dhamma and Vinaya, saying: <em>Cha paññattiyo – khandhapaññatti, āyatanapaññatti, dhātupaññatti, indriyapaññatti, puggalapaññatti</em>. He established the religion in this way. He laid them down for us to come to know and understand. <em>Khandhapaññatti</em> – He established the five <em>khandhas</em>. I have explained this before: He established <em>rūpa</em> (form), <em>vedanā</em> (feeling), <em>saññā</em> (perception), <em>saṅkhārā</em> (mental fabrications), <em>viññāṇa</em> (consciousness). Let us look into it: Where is <em>rūpa</em>? It is this sitting here – that is called the <em>rūpakkhandha</em>. Why did He establish the <em>khandhas</em>? So that we would know these things, how they exist. Are they happiness or suffering? Are they good or bad? As for the <em>vedanākkhandha</em> – painful feeling, pleasant feeling, neutral feeling – let us examine. This is exactly what He established. The <em>saññākkhandha</em> – recognition, labeling, memory of this and that – He established it here. The <em>saṅkhārakkhandha</em> – formation, composition. Look: right now, are we fabricating wholesome or unwholesome states? We should know, we should see. It is not that the sky or air fabricates wholesome or unwholesome states – how would we know that? In short: our mind is good, we have happiness and ease, coolness of heart – this is called <em>kusala dhamma</em>, which brings happiness, ease, coolness of heart, and brings prosperity in the present and the future. Unwholesome states (<em>akusala dhamma</em>) – the mind is not good, the mind is suffering, troubled, agitated. This dhamma leads beings to fall into suffering and difficulty, to ruin in the present and the future. This is how it is. As for the <em>viññāṇakkhandha</em> – this consciousness is the knower, and it will go to take rebirth in accordance with what we have fabricated. These kammas carry us to be fashioned – no one else fashions us; the Dhamma brings it about by itself.</p>
+<p>The Dhamma is right here. If you want to study Dhamma, to know Dhamma, come and look right here – look at <em>rūpa</em>, look at <em>vedanā</em>, look at <em>saññā</em>, look at <em>saṅkhārā</em>, look at this <em>viññāṇa</em>. Contemplate that <em>rūpa</em>. Why? Because He said we are deluded by <em>rūpa</em>. What is there in this <em>rūpa</em> that we are so gravely deluded? The Buddha therefore laid it down for us to contemplate this <em>rūpa</em>. <em>Āyatanapaññatti</em> – that is the source of good and evil. Internal <em>āyatanas</em> and external <em>āyatanas</em>. The internal <em>āyatanas</em> are our eyes, ears, nose, tongue, body. The external are forms, sounds, smells, tastes, tangibles, <em>dhammārammaṇa</em>. These things are all within this <em>rūpa</em>. <em>Dhātupaññatti</em> – the establishment of the elements: earth element, water element, wind element, fire element, which come together and are called a self, a being, a person – “us” and “them”. Since this is so, we must contemplate this <em>rūpa</em>. Establish mindfulness and focus on this <em>rūpa</em>. Why focus? So that we are not deluded. When we see and are not deluded by this <em>rūpa</em>, then we are said to know “<em>namo</em>”. The heart of our self can then be protected. But at present we do not know “<em>namo</em>”.</p>
+<p><em>Namo</em> means paying homage. <em>Na</em> means to bow down. What do we bow down to? That is earth and water. I have explained <em>na</em> – that it is not a self, not a being, not a person, not “us” or “them”. Previously I did not explain <em>na</em>, I only explained what <em>mo</em> is.</p>
+<p><em>Na</em> – that word means “not”. <em>Pittaṃ</em> – bile. Look: where is bile? Is it a person, a woman, a man? It’s called bile. <em>Semhaṃ</em> – phlegm. Is this a person or what? Where is it? <em>Pubbo</em> – pus. Is this a person or something? <em>Lohitaṃ</em> – blood. Is blood a person or something? Is it a woman or a man? <em>Sedo</em> – sweat. <em>Medo</em> – fat. <em>Assu</em> – tears. <em>Vasā</em> – oil. <em>Kheḷo</em> – saliva. <em>Siṅghāṇikā</em> – mucus. <em>Lasikā</em> – synovial fluid. <em>Muttaṃ</em> – urine. Are these things a person or what? Are they things to be kept or to be discarded? This is why it is called <em>na</em>, meaning “not a person” – all of them are to be discarded. Who would keep them? Where are these things? This is what we should contemplate. Then we will be able to abandon sensual desires (<em>kāmārammaṇa</em>) and attachment to forms (<em>rūpārammaṇa</em>). If we see like this, we should focus and look at these things so that we know and see, free from doubt. These things are not elsewhere – they are in our own body. We grasp this as a self, as an identity.</p>
+<p>Having explained this to you, you should go and sit, focus your attention. Sit down, focus so that you know and see. I have given this explanation. Many Dhamma talks have been given – Somdet himself teaches all day and all night. As for me, I am a country person, my teaching is not good, I have not studied much regarding these conventions (<em>paññatti</em>). So, put it into practice. If you don’t practice, you won’t see. Sit comfortably. Come to know the level of the religion, the essence of the religion. The Buddha established it right here, not elsewhere.</p>
+<p>The reason we have all come here today is that Somdet is concerned for our country. He has been spreading merit to offer to the King. All of us wish for our country to be at peace and happy, for our country to be stable and enduring, and for prosperity in the present and the future.</p>
+<p>So we must focus and look. The country arises from us ourselves. How does the religion decline? How does it prosper? The religion prospers when we do like this: we reach the qualities of the Buddha, the qualities of the Dhamma, the qualities of the Saṅgha. Reaching the qualities of the Buddha means reaching <em>buddha</em> – that is, this knowing. We make our body comfortable, then we recollect our knowing. If we do not know the dwelling place of <em>buddha</em> – that is, knowing – then we look: where is that knowing?</p>
+<p>To begin with, first recollect a meditation word. Whether you have done it before or not, recollect that the Buddha is in the heart, the Dhamma is in the heart, the Noble Saṅgha disciples are in the heart. Be confident of that, then recite the meditation word: <em>Buddho, Dhammo, Saṅgho</em> three times, then just <em>Buddho, Buddho</em>, a single word. Close your eyes, keep your mouth shut, don’t move your tongue. Recollect in the heart, knowing “<em>Buddho</em>”. Where is that feeling of knowing? Then establish mindfulness right there. Let your eyes focus there. Let your ears go down to listen at that place of knowing.</p>
+<p>This is how we will know whether the religion is declining or prospering. How does the religion decline? It is when our mind does not develop the <em>iddhipāda</em> (paths of accomplishment) and does not develop virtue (<em>sīla</em>), concentration (<em>samādhi</em>), and wisdom (<em>paññā</em>), which are the core of Buddhism. This is how it is. Virtue is the core of Buddhism. Look: what is virtue? In the Pāli it is said: <em>ādikalyāṇaṃ, majjhekalyāṇaṃ, pariyosānakalyāṇaṃ</em>.</p>
+<p><em>Kalyāṇa</em> means beauty – beautiful in the beginning, beautiful in the middle, beautiful in the end. What is beautiful in the beginning? Being a person of virtue. What is virtue? He said: restrain body, speech, and mind to be orderly. Look: our body is orderly, our speech is orderly, our mind is orderly. We have not committed any wrong, great or small, through body or mind. Then we are a person of virtue.</p>
+<p><em>Sīla</em> means normalcy of body and mind. Right now, is our mind normal? If it is normal, what is it like? It is not distorted, not agitated. Our body is normal, not distorted. Contemplate this: make the mind normal. <em>Sila</em> is like a stone. Like a rock: when the wind blows from all four directions, it does not tremble. Now we make the mind like a rock. No matter what anyone says, good or bad – it does not become what they say. Look: if we are not good and they say we are good, it is not good as they say. If we are good and they say we are not good, it does not become as they say. Look at this so that you see. This is it: our mind becomes virtue, we know it. That is what has been explained. Let us all come to know and understand.</p>
+<p>Now, <em>samādhi</em> – beautiful in the middle is <em>samādhi</em>. We make the mind steady and established. Now, is our mind established or not? Does it lean somewhere? Where is it stuck? Where is it caught? We just say: <em>samādhi</em> is the mind established. Try to establish it: is it established or not? If it is established, what is that like? It does not lean toward love or hate, does not become deluded by forms, sounds, smells, tastes, touches, or any mental objects. When it is established, whatever arises, we cease it. Then it reaches <em>samādhi</em>, the mind established. When the mind is calm and established, it becomes clear. This is <em>samatha kammaṭṭhāna</em> – know <em>samatha</em> as making the mind calm internally.</p>
+<p>When our mind is calm internally, it is like still water. Still water is clear. When clear, we see causes, see results, see merit and wholesomeness, see happiness, see suffering, see good, see evil. It is calm. This is our mind calm. Then when it is about to go out to the left or to the right, front or back, above or below, we know. So it is said to be established. This is focusing, establishing mindfulness right here. This is what we should know and understand further about the practice of <em>samādhi</em>.</p>
+<p>Now, when our mind sees like this – sees what arises within the <em>saṅkhārās</em> – then wisdom (<em>paññā</em>) arises, thorough knowledge of the heap of <em>saṅkhārās</em>. Who is the composer, who is the fashioner? No other thing composes or fashions. The bodily <em>saṅkhārā</em> and mental <em>saṅkhārā</em> – these are composed and fashioned from our own mind. This is what gives rise to <em>vipassanā</em>, the next step after <em>samatha</em>.</p>
+<p>Nowadays people say “<em>vipassanā, vipassanā</em>” a lot, but they do not know what <em>vipassanā</em> really is. <em>Samatha</em> is the basis for <em>vipassanā</em> – that is, when the mind is calm, then you see the origin of <em>saṅkhārā</em> and also see the cessation of <em>saṅkhārā</em>. This is how it is. Let us all know. Right now we do not know where something comes from, do not know its origin, do not know its cessation. How then could there be <em>vipassanā</em>?</p>
+<p><em>Vipassanā</em> is: when our mind is calm, we see the origin of <em>saṅkhārā</em> – oh, they arise from our mind. Then we cease the <em>saṅkhārā</em> at the mind. And we can cease them because we see the danger of <em>saṅkhārā</em>, see the peril of all <em>saṅkhārā</em>, see the suffering of all <em>saṅkhārā</em>. Then they can be ceased right here. When they are suffering and we see the danger, we cut them off. That is called <em>vipassanā</em> – clear knowing, seeing the truth, seeing <em>sacca-dhamma</em>. What is the real thing?</p>
+<p>When there are <em>saṅkhārā</em> – fabrications and compositions – then there is birth, there is delusion. When there is delusion, He said: <em>avijjāpaccayā saṅkhārā, saṅkhārapaccayā viññāṇaṃ</em> – it is like this. When ignorance (<em>avijjā</em>) exists, it is a condition for <em>saṅkhārā</em>. When <em>saṅkhārā</em> exist, they are a condition for consciousness (<em>viññāṇa</em>). This is how it is. When <em>viññāṇa</em> exists, it is a condition for mind-and-body (<em>nāmarūpa</em>). When <em>nāmarūpa</em> exists, it is a condition for the sense bases (<em>āyatana</em>). When <em>āyatana</em> exists, it is a condition for contact (<em>phassa</em>). When <em>phassa</em> exists, it is a condition for feeling (<em>vedanā</em>). When <em>vedanā</em> exists, it is a condition for craving (<em>taṇhā</em>). When <em>taṇhā</em> exists, it is a condition for clinging (<em>upādāna</em>). Contemplate like this. When <em>upādāna</em> exists, it is a condition for becoming (<em>bhava</em>), i.e., taking birth in a state of being. When <em>bhava</em> exists, it is a condition for birth (<em>jāti</em>). When <em>jāti</em> exists, it is a condition for aging (<em>jarā</em>). When <em>jarā</em> exists, it is a condition for disease (<em>byādhi</em>). When <em>byādhi</em> exists, it is a condition for death (<em>maraṇa</em>). When <em>maraṇa</em> exists, it is a condition for suffering (<em>dukkha</em>). This is why the Buddha taught contemplation of <em>paṭiccasamuppāda</em> (dependent origination) as the entanglement.</p>
+<p>Therefore He said: suffering (<em>dukkha</em>) should be comprehended, should be contemplated, leading to its origin (<em>samudaya</em>). We all know about <em>samudaya</em> – beings are sunk in the great ocean, as prey for fish. That is the case. <em>Pāpo pāpaṃ</em> – sunk in the great ocean, meaning deluded by conventions (<em>sammuti</em>). The Buddha investigated: where does suffering come from? He traced it back upstream. At first He contemplated: where does suffering come from? What are its causes and conditions? It comes from illness, disease, affliction. Where do those come from? They come from aging, decrepitude, deterioration. Where does that come from? From birth. Where does birth come from? From becoming (<em>bhava</em>) – that is, taking a state of being. Where does that becoming come from? He contemplated: it comes from clinging (<em>upādāna</em>). Wherever we cling, we take becoming there. Look: our becoming, small and large – becoming comes from clinging. Where does clinging come from? From craving (<em>taṇhā</em>). Where does craving come from? From feeling (<em>vedanā</em>) – painful feeling, pleasant feeling. Where do these feelings come from? From contact (<em>phassa</em>). Where does contact come from? From the sense bases (<em>āyatana</em>) – eye, ear, nose, tongue, body, mind. Where do these sense bases come from? From mind-and-body (<em>nāmarūpa</em>). Where does <em>nāmarūpa</em> come from? From consciousness (<em>viññāṇa</em>) – rebirth-linking consciousness. Where does consciousness come from? From <em>saṅkhārā</em>, fabrications. Where do <em>saṅkhārā</em> come from? From ignorance (<em>avijjā</em>).</p>
+<p>Thus He traced it back to this point, therefore: <em>avijjāpaccayā saṅkhārā</em>. We must study up to <em>avijjā</em>. Everyone is deluded by <em>avijjā</em>. We are not <em>opanayiko</em> (leading inward). Who is the knower of <em>avijjā</em>? We do not recollect it. There is a knower present, thus we know <em>avijjā</em>. We must make it clearly real within ourselves. This is the practice.</p>
+<p>Therefore, let us all come to know and understand. Do not be deluded. As we sit here right now, what are we deluded about? This is it. Come to know Buddhism. The religion will prosper depending on our practice and conduct. If we act like this, it can prosper. If we do not practice, do not conduct ourselves, the religion declines. That is how it is. It does not decline from anywhere else; it declines from individuals – because people do not practice, do not act. Nowadays some say there are no <em>arahants</em>, no <em>sotāpannas</em>, <em>sakadāgāmīs</em>, <em>anāgāmīs</em>. How could there be? For people who do not act, who do not practice, who do not polish and refine, who do not conduct themselves, who do not look. This is how it is.</p>
+<p>Now that we have heard this, <em>opanayiko</em> – look: where is the <em>sotāpanna</em>? The texts say: <em>sakkāyadiṭṭhi</em> (identity view), <em>vicikicchā</em> (doubt), <em>sīlabbataparāmāsa</em> (grasping at precepts and practices). That’s it. When anyone knows this, that person enters the path in the beginning and becomes a <em>sotāpanna</em>. <em>Sakkāyadiṭṭhi</em> – nowadays we grasp at a self. When we contemplate as explained above, it is not a self, not an identity. Then we abandon that view, abandon pride and egoism, the intoxication of holding to a self. When we do not hold, the mind lets go, releases. <em>Vicikicchā</em> – doubt about what is good, etc. We have already seen: our own mucus, saliva, blood, as explained. What else is there to doubt? Is it good or bad? It has been explained. Look, focus: <em>lohitaṃ</em> means blood. Focus on it – <em>kasiṇa</em> means focusing. Blood is red. Focus: what is the blood of oneself and others like? Focus. Can we abandon it or not? When we see blood like that, who would want it? Who needs it? Look at our own blood. Focus on the <em>kasiṇa</em>. It is <em>asubha</em> (unattractive). Focus so that you see. Having seen, our mind will have no doubt. It can remove <em>sakkāyadiṭṭhi</em>. It will not be <em>sīlabbataparāmāsa</em> – stroking and clinging to the idea that virtue, concentration, wisdom are somewhere else far away. They are inherent in our mind, in both happiness and suffering. This is what Buddhism teaches us to know.</p>
+<p>If <em>bhikkhus</em> and <em>sāmaṇeras</em> ordain and then study, learn, restrain themselves in their own training rules properly, knowing that our <em>bhikkhu</em> precepts are 227, the <em>sāmaṇera</em> precepts are 10 – we refrain and examine ourselves like this, then the religion will prosper. Nowadays it is not like that, so the religion declines. People look down on the religion, despise it, because we have no virtue, no concentration, no wisdom – only a shaven head and a yellow robe, and that is called a monk. What about the practices and duties? Look: the Buddha forbade many things, and we have ordained and studied. The Buddha taught everything – the 227 precepts to be refrained from, He taught them. Robing and wearing, He taught. Sitting and lying down, He taught. Walking and standing, He taught. Defecating and urinating, spitting, He taught. Even down to a morsel of rice, He taught – putting rice into the mouth, He taught. This is His thoroughness. He wanted beauty, goodness, restraint, and care. This is how it is.</p>
+<p>Now, as for <em>upāsakas</em> and <em>upāsikās</em>, He taught them to go for refuge in the Triple Gem (<em>Tisaraṇagamana</em>) – taking the Buddha, Dhamma, Saṅgha as the refuge, the recollection, the object of veneration and respect, not taking anything else as refuge. Thus it is said: <em>Natthi me saraṇaṃ aññaṃ</em> – “I have no other refuge.” That’s how it is. If we do not hold that, then our going for refuge is stained, the owner becomes sinful, cut off from Buddhism. Therefore, let us know and understand this further.</p>
+<p>For lay people practicing the religion, they do not need to pick and choose meals, days, or auspicious times. When working, do not pick days – “that day is not good, this day is not good.” Days do nothing to people. If a day is good, why do people die? If a day is not good, why are people still born? In the seven days – Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday – why are there only these? It is a convention (<em>sammuti</em>) that when we want to do any work together, whether we are ready or not, people pick a day to be together. Which day, what time? We set a meeting time. If we are ready, that day is good. Look for a day like this. If on any day we are not yet ready, do not do it. Whether getting married, building a house, or constructing buildings – know this: whichever day we are ready and well-prepared, we can do it, we can succeed. If not yet ready, there will be obstacles – that is called a bad day. That’s how people pick days. Understand this. I have explained briefly for you to hear. Avoid these things.</p>
+<p>And as for “good destiny” or “bad destiny” – people lie and deceive each other causing trouble and suffering. In Buddhism, look at destiny. It does not come from the sky or air. Look: what is good destiny? In short, good destiny means our mind is good, we have happiness and ease. When our mind is happy and at ease, then whatever we do is easy, work is easy, the country is at ease. That is called good destiny. Bad destiny means our mind is not good, our mind is suffering, troubled, agitated – that is bad destiny. Whatever we do is not good, whatever we seek is not good. Look right here. Why ask anyone else to look? Everyone sitting here – both monks, novices, laymen, laywomen – your good destiny is right here. Do not contemplate anything else. And do not join the sects of the <em>titthiyas</em> or <em>nigaṇṭhas</em>, those outside the religion. If you go and hold to that, you become cut off from Buddhism. This is how one who practices the religion must hold.</p>
+<p>Now, <em>upāsakas</em> and <em>upāsikās</em> should observe the five precepts. Do not kill buffalo or cattle. Do not think that the precepts are received from the monks. The precepts are with the monks? The monk says the precepts are with the Buddha. The religion is with the Buddha. If we do not consider them as our own, we become discouraged and disheartened. If we consider them as our own, we pay attention. With whom else would we receive them?</p>
+<p>The five precepts – I will explain. We have had them complete since birth: two legs, two arms, one head – that’s five. This is the body of the five precepts. Then do not use these five to commit the five wrongdoings. What are the five wrongdoings? <em>Pāṇātipāta</em> – that is a wrong. <em>Adinnādāna</em> – that is a wrong. <em>Kāmesu micchācāra</em> – that is a wrong. <em>Musāvāda</em> – that is a wrong. <em>Surāmeraya</em> – that is a wrong. All are wrongdoings. The troubles we have today are because of this. We fear being killed, fear thieves, fear sexual misconduct, fear lying, cheating, deceiving, fear drunkenness – alcohol, drugs, opium. These are the wrongdoings. If we refrain from these, He said: <em>sīlena sugatiṃ yanti</em> – they go to a happy state. <em>Sīlena bhogasampadā</em> – there is achievement of wealth. Understand this. Refrain from these five wrongdoings. Whether we formally receive the precepts or not, wherever we are, it is virtue. In a car, it is virtue. In the forest, in the jungle, in a village, in a city, on the road. If we do not commit these five wrongdoings, that is virtue. Now we go to the monks and receive them from the monks, thinking that if we don’t receive from the monks, it’s not virtue. That is not correct. We already know. Receiving from the monks: “<em>Pāṇātipātā veramaṇī</em>” – a mosquito bites, you slap it. All day long – will that be virtue? It can’t be virtue. From now on, know this. <em>Adinnādānā</em> – seeing someone else’s property, you steal it. Even if you say all day long, it’s not virtue. We should refrain from these five things. Let us all know.</p>
+<p>Now, I have explained both external and internal. So, turn inward. Now, where do these things come from? Let us all abstain, let us know. Now, from this point on, set your mind to look, focus right now. Where are the wrongdoings? Where is happiness? Where is suffering? Let us all know and understand. Where is our country troubled? Just like building a road: wherever there is an obstacle, we fix it. This mind of ours: where is it stuck? Where is it caught? We fix that. It’s not about sitting with eyes closed, just getting a sore back for no reason. We sit and look at ourselves. Right now, what level are we in? What plane of existence? Know your mind: is it wholesome or unwholesome? Know it. Is our mind calm or not? Is our mind good or not? Know this: <em>kāmāvacaraṃ kusalaṃ cittaṃ</em> – know our own mind. <em>Uppannaṃ hoti</em> – it arises from our own self. Now, from now on, each one of you, <em>opanayiko</em> – turn inward and look. This is it: contemplate, focus on our own heart. What are we attached to? What is our mind like? Our mind good – what is it like? Our mind good is like this: the mind is calm and good, it has happiness, ease, coolness of heart, no suffering, no fever, no turmoil, no disturbance. <em>Buddho</em> – the heart is cheerful, at ease. This is a good mind, bringing happiness and prosperity in the present and the future. We have come here seeking happiness and ease, seeking prosperity. If our mind is like this, then it is <em>sanditthiko</em> – we know it ourselves, see it ourselves. If the mind is not good, what is it like? The mind is not calm, not good, agitated, struggling. The mind is not good – suffering, troubled, disturbed, heavy, burdensome, drowsy, gloomy, dark, murky. This kind of mind leads beings to fall into suffering and difficulty in the present and the future. When the mind is like this, our country becomes troubled. It’s not something else that is troubled. It’s this heart of ours that is troubled. So measure it – what else is there? Husbands and wives love each other, children and parents, relatives love each other. If the mind is not good, they quarrel. If the mind is good, they don’t quarrel. What do you think? Try focusing: is it true or not? Look: you want to be rich, want to be beautiful, want to be handsome – why doesn’t it happen? Some people want to be rich – why aren’t they rich? Why doesn’t their salary increase? Why doesn’t their rank rise? Why? Look – it doesn’t rise because our mind is not good. We have not built up merit and goodness for the present and future. A bad mind leads to suffering, difficulty, poverty. This mind leads us to suffering and difficulty. Whatever we do doesn’t succeed, doesn’t make us rich. What is being rich? A good mind has happiness and ease. This mind brings happiness and prosperity in the present and the future. Now, I will not explain further.</p>
+<p>If I keep explaining like this, there’s no end. To sum up, it all comes down to this body and mind. Focus, contemplate: good and evil, both external and internal, have been explained so that you know. Now, <em>opanayiko</em> – is it real or not? Let us all focus: where is it stuck? Where is it caught? Where is it not yet resolved? Focus right there. Do not send it forward, backward, left, right, above, below. Set it right at the middle, at that which knows. This is it. Whatever it is like, we keep correcting it there, keep purifying it there. That is what is meant by looking – not looking at anything else. Look at our own mind, look at our own becoming, look at our own refuge. Look so that you know. Whether the seat is good or not, we must know right here. <em>Sanditthiko</em> – the practitioner knows for themselves, sees for themselves. If we don’t know, others can tell us but we won’t know. This is how the practice is. From now on, whatever sound you hear, remind yourself: that thing is harmless, we need not be troubled. Make your mind… I will not explain further. Let us become calm. Each one calm down. Let go, make yourself comfortable. We want happiness and ease, so that it becomes our merit and our spiritual potential, so that we transcend suffering. We all want to transcend suffering – look: transcending suffering means our mind is not suffering. When our mind does not suffer, then we have transcended suffering. It is not about transcending in the sky or air. Look: if it is still suffering, it has not transcended suffering. This is the merit and wholesomeness we are making – called <em>paṭipattipūjā</em>, the supreme, most excellent offering. It reaches the Dhamma, reaches the Vinaya, reaches Buddhism, reaches the core of the religion. When we do this, how could it not reach? I have already told you at the beginning: the Buddha established it right here – this body and mind, that’s all. Focus.</p>
+<p>You have been making merit for two or three days now. How has our mind been during this period? From now on, let us all know the peace of the country, the happiness and prosperity of ourselves in the present and the future, and our dwelling place in the present and the future. So, sit and look. After looking, what is it like? Our refuge, our dwelling place – let us know it. <em>Buddho</em> is our refuge. <em>Buddho</em> is the awakened one, radiant. All human beings are companions in birth, aging, sickness, and death. Everyone wants happiness, prosperity, and freedom from suffering. We have come here wanting happiness and ease. When we sit and look, is it happy? Is it at ease? This is what we should know and understand. When our mind is happy, then all our work becomes easy, throughout the whole country. The celestial beings, devas, Indra, Brahmā, the earth and sky, they protect human beings – so it has been said.</p>
+<p><em>Dhammo have rakkhati dhammacāriṃ</em> – Dhamma protects the one who lives by Dhamma. Beings depend on Dhamma; Dhamma depends on beings. If beings practice Dhamma well, Dhamma brings goodness to us. If we practice well, conduct ourselves well, Dhamma brings virtues and goodness, brings happiness and prosperity. If we practice badly, do bad deeds, Dhamma brings bad things in the present and the future. This merit and wholesomeness that we have made is called <em>paṭipattipūjā</em> – the supreme, most excellent offering. From now on, let us sit every day, come to the monastery every day, practice every day. I have explained it. Wherever there is an obstacle, wherever it is not good, we must correct it there. Some people say the mind is not staying – where does it go that it is not staying? Actually, the mind has been staying since birth. The idea that the mind is not staying comes from delusion due to ignorance (<em>avijjā</em>). It is deluded. We must sit and look at this “not staying” – where is it creating becoming? <em>Bhave bhavā sambhavanti</em> – it goes around creating small and large states of becoming. We must sit and look: is that becoming wholesome or unwholesome? Wholesome is happiness, ease, coolness of heart. Bad becoming: our mind is not good, suffering, troubled, agitated, leading to a bad destination (<em>duggati</em>) in the present and the future.</p>
+<p>Now that you have heard this exhortation and instruction, this Dhamma, this teaching brought as a reminder, condensed briefly as a practice to adorn your wisdom and perfection (<em>pāramī</em>). Having heard it, do <em>yoniso manasikāra</em> (wise attention). Remember it, then take it and practice, train yourselves to be in line with the Dhamma teaching. In summary, the essence is: this body and mind are the foundation of Buddhism, the foundation of the path and fruition. Having understood this, make an effort, strive to cause wholesome states to arise, to exist, to become within ourselves. The ultimate result is <em>appamāda dhamma</em> – heedfulness. When we are all heedful, from now on you will encounter only happiness and prosperity, as has been demonstrated. <em>Evaṃ</em> – thus it is.</p>
+<p><em>Abhivādanasīlissa, niccaṃ vuḍḍhāpacāyino, cattāro dhammā vaḍḍhanti – āyu, vaṇṇo, sukhaṃ, balaṃ.</em></p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="05._Listening_and_Practicing.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">05</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">05. Listening and Practicing</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="07._The_Mind_and_Its_Refuge.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">07</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">07. The Mind and Its Refuge</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

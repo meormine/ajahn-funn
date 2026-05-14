@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08.The Heart of Kammaṭṭhāna</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="07._The_Mind_and_Its_Refuge.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(07)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="09._The_Divine_Messengers.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(09)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>08. The Heart of Kammaṭṭhāna</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<p>Today, as we have gathered together, let us all observe our own minds. Get to know your own dwelling place, your own abiding. Having been born, we must seek a refuge for ourselves. If we have no refuge, no abode, then we have no place to stay. Therefore we must find a firm foundation; we must cultivate <em>kammaṭṭhāna</em> (meditation). Why is it called <em>kammaṭṭhāna</em>? <em>Kamma</em> means action, work; <em>ṭhāna</em> means place, foundation. At this moment, where is your mind established? In what realm? In what state of existence? If you want to know, you must determine the mind, bring it in. Recall your meditation word, get to know your own foundation. Whatever <em>parikamma</em> (preliminary) recitation you have done, whatever meditation word you have recollected, then recollect that very word. Focus and look at that mind: where is it abiding? Right now, is your mind happy or suffering? Is it peaceful or not? You want happiness, you want progress. Then make your mind peaceful, abiding in <em>kammaṭṭhāna</em>. This foundation – the Buddha laid it down. The core of the Buddha's teaching is virtue (<em>sīla</em>), concentration (<em>samādhi</em>), and wisdom (<em>paññā</em>) as the measure. As for virtue, all of us are already restrained. Body, speech, and mind are already normal, already calm and subdued. What remains is concentration. Concentration is the mind firmly established within. So try to establish it. What is a firmly established mind like? It does not send itself forward or backward, left or right, above or below. It is fixed right at knowing. Wherever knowing is, we focus and look right there. We don't need to search. Look at what is already present. It is present in the mind itself. However it is, look at it just like that. So that you may come to know your own state of being. If it is happy, you know it. If it is suffering, you know it. If it is neutral, you know it. If it is in <em>samādhi</em> – that is, empty of all perceptions and objects – you know that too. You know what level, what realm your mind has fallen into. For example, whether it has fallen into the sensual plane (<em>kāmāvacara</em>) or has transcended the sensual plane. Thus you know it.</p>
+<p>What is it like for the mind to transcend the sensual plane? When the mind is in the sensual plane, it roams among forms, sounds, smells, tastes, tactile objects, and mental phenomena (<em>dhammārammaṇa</em>) – that is its object. It is called one who delights in forms, sounds, smells, tastes, contacts, and various mental objects. This is called the mind abiding in the sensual-sphere realm (<em>kāmāvacara bhūmi</em>), in the existence called the sensual realm (<em>kāmabhava</em>).</p>
+<p>What is it like for the mind to transcend the sensual plane? It lets go of external forms, external sounds, external smells, external tastes, and the many contacts and mental objects. It sees only this individual body of ours. It contemplates this conditioned body of ours, fixed right on itself, not sending the mind elsewhere or far away. It sees only our own conditioned body – its deterioration, its decay, or sees the conditioned body exactly as it is: with hair, body hair, nails, teeth, skin. There is nothing else beyond this, nothing superior to this. Whether happiness or suffering, seeing deterioration and decay, or seeing breaking apart, the mind then abandons this form. <em>Nibbidā</em> arises – disenchantment with this form. Because this form has no core, no substance, no essence. We have taken it to be a self, a being, a person, a me, a him. When we contemplate the basic <em>kammaṭṭhāna</em> and see that it is not a being, not a person, not a self, not a soul, not me, not him – why is that said? Let us contemplate. Raise it up like this: <em>pittaṃ</em> (bile), <em>semhaṃ</em> (phlegm), <em>pubbo</em> (pus), <em>lohitaṃ</em> (blood), <em>sedo</em> (sweat), <em>medo</em> (fat), <em>assu</em> (tears), <em>vasā</em> (oil), <em>kheḷo</em> (saliva), <em>siṅghāṇikā</em> (snot), <em>lasikā</em> (synovial fluid), <em>muttaṃ</em> (urine). Where is the person here? None of this is woman or man, no one at all. It is simply that.</p>
+<p>When we see this, we can abandon <em>sakkāyadiṭṭhi</em> (personality belief). As for <em>vicikicchā</em> (doubt), the uncertainty whether it might be this or that – there is none. It is truly that way. Seeing that, our mind becomes empty, calms down. The matter is just like this. We can see it clearly. For example, how could snot be a person? How could saliva be a person? How could urine be a person? Contemplate and see. When we see clearly, truly, directly like that, we see that there is no self, no being, no person, no me, no him. Those things are not anything; they simply exist that way. We have been deluded, grasping them as a self, as a soul. When we contemplate, separating out the elements, analyzing them, we then see there is no self. And so <em>sakkāyadiṭṭhi</em> is abandoned. The idea of a being, a person is abandoned, let go. As for perceptions and mental objects, <em>vicikicchā</em> no longer exists. As for <em>sīlabbata-parāmāsa</em> (grasping at rites and rituals), the fondling that "this will be good, that will be good" – that no longer exists either. Thus it is abandoned.</p>
+<p>When the mind has abandoned, it lets go of form. Letting go of form, it reaches the formless realm (<em>arūpabhava</em>). What is the formless realm like? The mind is completely empty, nothing at all. Only the knower remains.</p>
+<p>This knowing is what is important. It is called "Buddha" – the one who knows.</p>
+<p>Therefore, we come to seek knowledge. Since we want knowledge, we practice that knowing, contemplate that knowing. This knowing is not darkness, not brightness, not light, not delusion. When it is deluded, we know it. When it is dark, we know it. When it is bright, we know it. When it is happy, it knows. When it is suffering, it knows. Thus.</p>
+<p>Therefore, you must determine this knowing so as to see it clearly, directly, within yourself. This knowing is extremely important. For example, when painful feeling (<em>dukkhavedanā</em>) arises, use contemplation to see clearly that feeling is just feeling. The knower does not become anything along with it, is not destroyed. It still knows. Same for pleasant feeling (<em>sukhavedanā</em>). When pleasure arises, know that pleasure has arisen. Know it just like that. Do not be deluded into thinking that pleasure is our self. When suffering arises, look at it, know it as having arisen. Do not grasp suffering as our self. When darkness arises, look at it, know it. When brightness arises, look at it, know it. This knowing is above everything – above the world, above all supramundane states (<em>lokuttara dhamma</em>). It is like that. Knowing – when something arises, it knows; when it breaks apart, it knows. But all of us, seeing arising, become deluded; seeing passing away, become deluded. In truth, it is not like that. When old age comes, we know old age; the knower does not grow old along with it. When sickness, disease comes, it knows; the knower does not become sick, does not become diseased along with it. When death comes, it knows; the knower does not die. In truth, it is like this.</p>
+<p>Therefore, let us all strive to practice meditation, to focus and look, to determine and observe. You don't need to find something elsewhere to observe. Observe what is yours. You already have everything within yourself. Emptiness is already there. Non-emptiness is already there. Happiness is already there. Suffering is already there. Everything is here right now. Observe what you have. However it is established, keep watching it just like that. Watch to know. And do not grasp this or that as a self, as a soul. The matter is simply that. We must all understand this point. That is why we come to do <em>kammaṭṭhāna</em> – <em>kamma</em> means action, what we do; <em>ṭhāna</em> means foundation, place. Establish it to abide. If it is empty, know it. If it is not empty, know it. To abandon, we must contemplate the basic <em>kammaṭṭhāna</em>. The teacher taught the basic <em>kammaṭṭhāna</em> so that we would know according to reality. He taught about hair so that we would know what hair is like. Is it a person? Is it something? Is this hair clean or unclean? This is the method to remove our lust, greed, hatred, and delusion, to remove our craving concerning self-identity. As for body hair – where is the person there? Nails like this – where is the person? Teeth like this – where is the person? Skin – where is the person? Flesh like this – where is the person? Tendons – where is the person? Bones – where is the person? Bone marrow – where is the person? Contemplate it. The heart-basis (<em>hadayavatthu</em>) – where is the person? Liver, kidneys, small intestines, large intestines, old food, new food – where is the person? Let us all focus and look at these things, see them as that, so that we may abandon the clinging and grasping (<em>upādāna</em>), so that we may abandon <em>sakkāyadiṭṭhi</em>. If we do not contemplate like this, we cannot abandon it, cannot let it go. If we see according to reality, then there is nothing to cling to, nothing to grasp as self. When the mind sees this, it releases itself, lets go by itself.</p>
+<p>Therefore, let us all determine, focus, look. Put down mental objects. Observe the in-breath and out-breath. Focus down. Watch and know: who is it that says "this is hair, this is body hair, this is nails, this is teeth, this is skin"? Hair is just hair, body hair is just body hair, nails are just nails, teeth are just teeth, skin is just skin. What remains? Look closely. You will see the self. The self is the one who knows: "this is hair, this is body hair, this is nails, this is teeth, this is skin." The self is the one who knows happiness, knows suffering, knows good, knows evil. That very one is the self. Gaze at it. Make it see for certain. That one is not anything – not hair, not body hair, not nails, not teeth, not skin. It is only the knower. The knower does not cease, does not disappear, does not break, does not perish, is not destroyed. When it is empty, it knows emptiness. When it is finished, it knows finished. But the knower itself never finishes. It has been that way from the beginningless past. If we are deluded and take the knower to mix and merge, to grasp something else, then that becomes the origin (<em>samudaya</em>), becomes existence (<em>bhava</em>), becomes birth (<em>jāti</em>). This is how it is. If we determine to know truly, then there is nothing, it is not anything. It is merely knowing. That is its nature. When birth occurs, it knows – but why would it need to be born? When old age occurs, it knows – why would it need to grow old? When sickness occurs, it knows – why would it need to be sick? When death occurs, it knows – why would it need to die? When delusion occurs, it knows – then why be deluded? Therefore it is said: "Buddha" – the one who knows. This knowing is extremely important. We must develop it further, make it further, contemplate it further, determine it further. You must focus on one thing only. When we determine the mind to be still on one thing, then all diseases are calmed and cease completely. Dangers cease completely. The defilements, craving, lust, greed, hatred, delusion cease by themselves. Because that mind is no longer anything – then who would become anything? Dangers and enmity cease by themselves. That one has no danger – where would danger come from? That one has no enmity – where would enmity come from? That one has no kamma – where would kamma come from? That one has no evil – where would evil come from? That one has no suffering – where would suffering come from? It is merely the knower. Make it know right now. See clearly, directly, with certainty. Knowing is not suffering, not danger, not enmity. Right now, if we grasp danger, it becomes danger. If we grasp enmity, it becomes enmity. If we grasp kamma, it becomes kamma. If we grasp suffering, it becomes suffering. Whatever you grasp, it becomes that.</p>
+<p>Therefore, the Teacher taught not to grasp anything at all. He taught to release, to let go, to abandon. In the <em>Dhammacakkappavattana Sutta</em>, he said: "Cāgo paṭinissaggo mutti anālayo." <em>Cāgo</em> means relinquishment, or abandoning, letting go, releasing. When our mind is unified, is <em>ekaṃ cittaṃ</em> – a single mind, and <em>ekaṃ dhammaṃ</em> – a single Dhamma, then all things become empty by themselves. Nothing remains. Completely empty. The mind abiding as a single Dhamma – that's it. No need to send it forward or backward, thinking of other things. If you will be freed from suffering, you are freed right there. Freedom from suffering occurs when the mind itself is not suffering. It is merely the knower. Knowing is not suffering. It knows by determining. Whatever arises, it knows just that. The Teacher said: <em>Paññā vipassanā kammaṭṭhāna</em> – wisdom, insight meditation – one knows the place of origination of conditioned things (<em>saṅkhāra</em>), knows the place of cessation of conditioned things, sees suffering, sees danger, sees peril in conditioned things. This is <em>vipassanā</em> – clear knowing, seeing the truth. The matter is just like this. This is why we should all strive to understand. Let us make virtue, concentration, and wisdom firm and certain. <em>Paññā</em> (wisdom) is the knowing of how our mind is. <em>Samādhi</em> (concentration) is the mind firmly established. When it is established, if it leans or inclines, we know. If it is straight, we know. If it is still, we know. All happiness arises from peace, which is <em>samādhi</em>. And wisdom arises from this very <em>samādhi</em>. If we can establish the foundation, then we have a root basis. Wisdom arises. As soon as the mind moves, we know – that is called wisdom. When the mind is still, we also know – that is called mindfulness (<em>sati</em>). Wisdom is right here, not anywhere far away. Let us all understand this. From now on, let us all be diligent in constantly practicing. We want to be free from suffering. Suffering is not in the sky or air, not in trees or mountains or forests. It is right at our own mind. When our mind is not suffering, what could possibly make it suffer? Then it is free right where the mind is not suffering. Where else would freedom be? If the mind is not suffering, that means it is free, my friend. If the mind still has suffering, that means it is not yet free. If the mind still has existence (<em>bhava</em>), that means it is not yet free from suffering. When the mind has no existence, it is finished with existence because it does not grasp anything, does not cling to anything. It is merely the knower. Where would it get existence from? Having heard this, you must reverse the current, turn inward. <em>Ehipassiko</em> – inviting all beings to come and see the Dhamma. See your own physical phenomena (<em>rūpa dhamma</em>) and mental phenomena (<em>nāma dhamma</em>). Physical phenomena are this individual body of ours. Mental phenomena are this mind of ours. Let us come and see. Is this Dhamma wholesome (<em>kusala</em>), unwholesome (<em>akusala</em>), or indeterminate (<em>abyākata</em>)? We must know. Wholesome Dhamma is happiness. Unwholesome Dhamma is suffering. Indeterminate Dhamma – neither happiness nor suffering, neither good nor evil, negating all.</p>
+<p>Therefore, when we all want freedom from suffering, we must know that freedom occurs when the mind is peaceful. When our mind is peaceful, then freedom is right there. No need to seek elsewhere. This is the practice.</p>
+<p>Therefore, let us all make our minds firm and steady. Establish the knower. That knower is not happiness, not suffering, not good, not evil. The knower is the Buddha. Let us reach the Buddha refuge (<em>Buddhasaraṇa</em>), the Dhamma refuge (<em>Dhammasaraṇa</em>), the Saṅgha refuge (<em>Saṅghasaraṇa</em>), obtaining the refuge, the shelter, firmly, truly, clearly, directly. There is no other refuge superior to this. Now that you have listened and heard this instruction, this teaching of Dhamma, which has been presented in brief, enough as a practice to adorn the perfections of mindfulness and wisdom, let us all do <em>yoniso manasikāra</em> (wise attention), determine, remember, take it to heart, practice and train yourselves to abide in virtue, to abide in the Dhamma teaching of the Supreme Perfectly Enlightened Buddha. Then you will meet only with happiness, progress, and growth, as has been set forth. <em>Evaṃ</em> – thus it is.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="07._The_Mind_and_Its_Refuge.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">07</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">07. The Mind and Its Refuge</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="09._The_Divine_Messengers.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">09</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">09. The Divine Messengers</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

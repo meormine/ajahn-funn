@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17. New Year's Day</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="16._The_Path_to_True_Happiness.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(16)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Funn-Acaro-Dhammatalks/17.%20New%20Year%27s%20Day.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>17. New Year's Day</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<p>January 1, 1976</p>
+<p>Today people regard it as New Year's Day, so they close up work, stop working, and go out touring. In truth, originally the closing of work was so that people could make merit, perform wholesome deeds, and cultivate virtue and goodness. Nowadays, people treat it as a time for amusement. They close up work and then go out to play. Each person will play, travel, gamble, or do whatever else – only seeking ruin for themselves. Therefore, our country has become chaotic and distressed. Really, it's a holiday so that we can approach virtue and goodness, go to monasteries, make merit, perform wholesome deeds, observe the precepts, and rest from the work we've been doing all year. We observe a day or two – for what purpose? We come to the monastery to measure and see: the work we've done for nearly a year, as long as this – some of it good, some not good – we come to know how it is. We come to the monastery to look at all things. What will we take along? We take what follows us. Measure and see.</p>
+<p>Now, we were born – what did we bring along? Some of us are wealthy. Wealthy in what? Some are prosperous, happy, and fortunate – not starving, not in want, not suffering, not struggling – beautiful and handsome. Some are starving, in want, suffering, struggling, mean-looking, ugly. Their bodies are deformed and impaired. Why? People are the same: the four elements, the five aggregates, the six sense spheres are equal. So why are they like that? Let's contemplate and see, all of us.</p>
+<p>This is it: lacking in action. We haven't cultivated virtue and goodness for many lives and many births, so we are born as people who suffer and are poor. As for cultivating virtue and goodness, the Buddha laid down the Dhamma and explained it clearly. It's nothing far away. We human beings born into this world all have three kinds of aspirations. The first kind: we want material things, possessions, money, and wealth in abundance – we all strive for that nowadays. The second kind: we want beautiful forms, good looks, long life, no disease, no danger. The third kind: we want wisdom, intelligence, cleverness – so we study and learn both inside and outside. But many people cannot achieve their aspirations.</p>
+<p>The Buddha, having fully awakened, explained why this is so. Having contemplated, he saw that beings do not achieve their aspirations because they lack action and lack practice. Therefore, he laid down this Dhamma. The Dhamma he laid down was not placed anywhere else; it was placed on our very selves. He formulated the Dhamma not elsewhere: the formulation of the aggregates (khandha-paññatti), the formulation of the sense spheres (āyatana-paññatti), the formulation of the elements (dhātu-paññatti), the formulation of the faculties (indriya-paññatti), the formulation of persons (puggala-paññatti). See, he formulated the Dhamma right here. He didn't formulate it anywhere else. The formulation of the aggregates – formulated from the aggregates: form, feeling, perception, mental formations, consciousness. This is what we dwell in, what we regard as a person. It's just the four elements. That's it: the five aggregates.</p>
+<p>Then, the six sense spheres: eye, ear, nose, tongue, body, mind. The Dhamma he formulated relies on these: eye for seeing, ear for hearing, nose for smelling, tongue for tasting, body for touching, mind paired with mental objects. He formulated it like this. The arising of suffering and happiness – all arise from these. The four elements – earth, water, fire, wind – come together. The earth element: hair, body hair, nails, teeth, skin, flesh, tendons, bones, liver, kidneys, small intestine, large intestine, old food, new food – whatever is hard in our body is called the earth element. The water element: bile, phlegm, sweat, lymph, mucus, saliva – whatever is liquid in our body is called the water element. The wind element: in-breath, out-breath, wind moving upward, wind moving downward, wind moving throughout the body – that is classed as the wind element. The fire element: that which warms our body, digests food, or ages and deteriorates the body – that is called the fire element.</p>
+<p>When these four come together, it's called a person, a self. When there is a self, everyone has the four elements, the five aggregates, and the six sense spheres together. So why are people not the same? Some are low, some are dark or fair, some are big, some are small – not the same, not equal. Why? For this reason: they differ in virtue and qualities. This is it: we lack action. Those who are prosperous, happy, fortunate, wealthy, beautiful – those are people who have given, who have cultivated virtue and goodness, who have charity (dāna), morality (sīla), and meditation (bhāvanā). That is, they have built, done, given, and accumulated over many lives and births, not just this life. In this life, some of us don't enter the monastery, don't bow to the Buddha, don't observe the sabbath days, don't keep the holy days. When work is closed, we go out to play, enjoy ourselves, and do not cultivate virtue and goodness. That we come here like this is called coming to cultivate ourselves, to nurture ourselves. The result of this – we are born as people who do not suffer, are not poor. It follows us and leads us through many lives and births. This becomes ingrained as a habit. The result of this is that it makes a person prosperous, happy, and fortunate – not suffering, not poor – because we have done it. It's like a farmer: if he has farmed, he won't starve. If he wants rice to fill his barn and granary, it's full. If he hasn't farmed, even if he wants rice to fill his barn and granary, there is none.</p>
+<p>So it is with us: we were born wanting to be rich, but we haven't done the deeds. <em>Pubbe kata puññatā</em> – previously done merit; <em>pubbe</em> (in the past), <em>kāla</em> (time), <em>puñña</em> (merit), <em>kata</em> (done) – if one hasn't done it, <em>paṇidhi</em> – we haven't set ourselves rightly, haven't cultivated only what is good – then it's not auspicious. Those who have <em>pubbe kata puññatā</em> – have done merit in past times – and <em>paṇidhi</em> – have set out rightly, cultivating only what is good – <em>etaṃ maṅgalamuttamaṃ</em> – that is the highest blessing. See? Contemplate this. That's one aspect. The second aspect: wanting beautiful forms, long life – everyone wants that. For this, the Buddha teaches us to keep the precepts. How do we keep the precepts? We keep our body, keep our speech, keep our mind in order. If we don't commit wrongs, great or small, through body, speech, and mind, then when we are born we will be orderly in body, orderly in speech – not deformed, not impaired, without disease and danger – and we will be beautiful and handsome. Understand it this way.</p>
+<p>Having come here, we keep the precepts. We keep ourselves – we don't keep anything else. This wholesome deed leads to results for us over many lives and births. Those who are mean and ugly – it's because they didn't keep the precepts. Look at the present: how many hundreds, thousands, or how many people are staying at this monastery? And those who go out touring? Look – oh, just count them – it's tens of thousands. You couldn't even get a fraction. Think about it. Those who enter the monastery like this – count them: how many people? Everyone should know and understand. The next aspect is the benefit of being born with wisdom. Everyone wants it. But if we haven't practiced meditation, we don't get it. The Buddha teaches us to practice meditation. To be born with wisdom and intelligence, he teaches us to meditate on <em>Buddho</em>, <em>Dhammo</em>, <em>Saṅgho</em> – to recollect them in the mind. Contemplate and select your own heart. The heart has many states: good heart, bad heart; happy heart, suffering heart; hell-heart, hungry-ghost heart, animal heart; mute heart, mad heart, deranged heart – there are many hearts in a person. There is the heart of a divine being, a celestial nymph, Indra, Brahmā; the heart of a great king; the heart of a wealthy householder; the heart of a prosperous, happy person; the heart of a captain, a general, a field marshal. So what do you want? Choose! Now, are you going to choose? The sermon could go on all day.</p>
+<p>Now, sit down. Sit in meditation. Sit comfortably. Arrange your posture and demeanor with dignity, with a bright, smiling face. When you have made the body comfortable, recollect our refuge. What is our refuge? The Buddha, the Dhamma, the Saṅgha – these are our refuge. Recollect the Buddha in your mind, the Dhamma in your mind, the noble Saṅgha disciples in your mind. Have confident faith in that way. Then recite the meditation phrase: <em>Buddho, Dhammo, Saṅgho; Buddho, Dhammo, Saṅgho; Buddho, Dhammo, Saṅgho</em> – three times. Then consolidate it into just <em>Buddho, Buddho</em> – one word. Close your eyes, close your mouth. Recollect it inwardly. Don't wiggle your tongue. We want to know what is lacking in ourselves – what is good, what is not good, so that we know. We want to know whether it is good or bad. What level are we on? In what realm? Why have we done something and not achieved our aspiration? For what reason? Look and see. How will we know? Recollect <em>Buddho, Buddho</em> – wherever awareness arises, set up mindfulness and look intently at that knowing. Let the ear listen there as well; let everything look there. Don't look elsewhere. Know how your mind is. Is it good or bad? If it is good, know what that's like. It is good like this: our mind is peaceful and good, happy and at ease, cool of heart, not suffering, not agitated, not disturbed, not chaotic. <em>Buddho</em> – the mind is cheerful, comfortable in heart, light in body, light in mind. <em>Buddho</em> – the mind is cheerful continuously. The mind is at ease. Whatever you do, you are at ease. Lying down you are at ease, walking you are at ease, standing you are at ease. When you pass away, you go to a happy, comfortable place. But if the mind is not good – suffering, struggling, disturbed, distressed – beings fall into trouble both in the present and in the future.</p>
+<p>When the mind is not good, whatever you do is not good. Your work is not good. If you run for office, it's not good. If you trade, it doesn't work. Whatever you do, it's not good, see? Your family is not good, your siblings are not good, the neighborhood and market are not good, the country is not good. What more can be said? Do you want this? If you don't want it, where does it come from? It comes from our own mind. Then when you pass away, you are born in a bad place. Whatever a person is going to be, you must know now, see now, right now. No need to deceive anyone. Let each of us look. You may criticise: "I can't do that" or "I am not like this." But look and see clearly, truly, directly. What we call "kamma is one's own" – "my destiny is bad" – where is this bad destiny? Is it in the sky or the atmosphere? A good destiny – look: a good destiny is when we sit, our mind is peaceful and good, happy and comfortable in heart. That is a good destiny. Whatever you do, it's good. That is a good destiny. What is a bad destiny? The mind is disturbed, distressed – that is a bad destiny. When the mind is not good, whatever you do is not good, whatever you seek is not good, whatever you take is not good.</p>
+<p>So when it's like this, quickly recollect <em>Buddho</em> and cut it off. That is why they say "cut off kamma, cut off enmity, wash away defilements and kamma" – not cut with a knife or sword, but use our mindfulness, <em>Buddho</em>, to cut it. "Wash away defilements and kamma" – how can it be washed? Not with water or soap. Rely on sitting in meditation; when our mind becomes peaceful, if our mind is not kamma, where could kamma come from? That's the explanation. <em>Kammassako'mhi</em> – "I am the owner of my kamma." <em>Kalyāṇaṃ vā pāpakaṃ vā</em> – whether good or evil, wholesome or unwholesome – <em>tassa dāyādā bhavissanti</em> – "I will inherit the results of that kamma." See? We will inherit the results of kamma. How will we know good kamma? <em>Kalyāṇaṃ</em> – good kamma. Summarized briefly: our mind is good, happy, comfortable in heart. That is called good kamma. We receive the result of goodness. <em>Pāpakaṃ</em> – bad kamma: the mind is not good, suffering, struggling, disturbed, distressed. That is evil. It does not come from the sky, the air, trees, mountains, or forests. It comes from our own heart. When you see this, quickly extinguish it.</p>
+<p>We enter insight meditation. We see the origination of formations, see the cessation of formations, see the suffering and danger of formations, see the peril in formations – then extinguish them. Why keep something bad? Know, see – this is crucial. This is what everyone should know and see from now on.</p>
+<p>When we do this kind of merit, it is called <em>paṭipatti pūjā</em> – the most excellent and supreme offering. Giving charity, making merit – anything else compares to sitting in meditation like this? Now, look closely. Don't you know what is good? Don't you know when your own mind is not good? You want to be good, but your mind is not good – what will make you good? Therefore, as for merit and demerit, whatever they are, the mind comes first. The Pāli says: <em>Manopubbaṅgamā dhammā, manoseṭṭhā manomayā</em> – "Mind precedes all mental states; mind is their chief; they are mind-made." Merit and demerit – whatever they are – mind comes first. It is accomplished with the heart. Don't keep criticising that this is not good, that is not good. Look and purify it now. From now on, when our mind is good, we receive the results of goodness in the present and in the future. When our mind is not good, we receive the results in the present and in the future. What will the future be like? They say: just look. Want to run for office? Will you get it? They say: just look. Will you get it or not? You will get it if your mind is upright, cool, calm, comfortable in heart. How could you not get it? If your mind is disturbed and distressed, then you won't get it. That's the way it is. This Dhamma is <em>sandiṭṭhiko</em> – to be seen for oneself by the practitioner, known for oneself. How could you not know your own mind? Will you get it or not? Good or not good? Will you be rich or not rich? Just look. Are you beautiful or not? Just look. When our mind is good, we have beauty and handsomeness. When the mind is not good, we are mean and ugly. Just look. Now, from now on, each person look at their own mind. It won't take long – maybe thirty minutes. Give it a try.</p>
+<p>Being born as a human being is exceedingly difficult, and human life does not have much time.</p>
+<p>Having been born to encounter the Buddha's Dhamma is counted as a supreme blessing.</p>
+<p>The Buddha taught not to be heedless, to practice diligently.</p>
+<p>Right view (sammādiṭṭhi) is the first important gateway. If you do not resolve and decide, you remain slow and hesitant because you are deluded by the manners and gestures of the mind.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="16._The_Path_to_True_Happiness.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">16</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">16. The Path to True Happiness</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

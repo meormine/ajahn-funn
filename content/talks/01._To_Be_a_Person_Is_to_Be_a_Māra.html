@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. To Be a Person Is to Be a Māra</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="02._Come_&_See.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(02)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Funn-Acaro-Dhammatalks/01.%20To%20Be%20a%20Person%20Is%20to%20Be%20a%20M%C4%81ra.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>01. To Be a Person Is to Be a Māra</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Tham Khaam, Sakon Nakorn, Thailand</strong></p>
+<p><em>June 15, 1972</em></p>
+<p>When you see all four of these noble truths, that’s when you truly become a monk. If you don’t see them, then no matter how much else you may know, it’s all just book-knowledge. But once you see the four noble truths, you see the Dhamma. You can’t keep on living in this world anymore. What would you live for? There’d be nothing at all that you would gain. Think about it. Birth and aging: They’re nothing but suffering.</p>
+<p>Birth is suffering. When you arise in your mother’s womb, it’s painful—as I explained last night. When you get old, worn down, and decrepit, it’s another heap of suffering. That makes two heaps. Pains and illnesses are a third heap of suffering. And then there’s the fourth: death. You suffer to the point where you have to die. You can’t live in this world any longer.</p>
+<p>People for the most part don’t make the effort to contemplate how to escape from these sufferings. They just keep spinning back in, looking for more suffering, looking for status, looking for wealth, looking for something to depend on, looking for a place to live. They build this and that, they build homes, they build mansions: They’re just looking for suffering. The Buddha didn’t build. He let go—because he had seen through these things, that they lead to enormous sufferings, sufferings beyond measure.</p>
+<p>All of our sufferings: He didn’t say that suffering lay in lack of status, or in having no home or in having no wealth. These weren’t what he identified as suffering. Instead, he said, “<em>Idaṁ kho pana bhikkhave dukkhaṁ ariya-saccaṁ:</em> Listen, monks, this is the truth of suffering. <em>Jātipi dukkhā:</em> Birth is suffering. <em>Jarāpi dukkhā:</em> Aging is suffering. Illness is suffering. <em>Maraṇampi dukkhaṁ:</em> Death is suffering.” These are all heaps of suffering. These are things we all experience, each and every one of us, without exception. Whether you have high status or no status, whether you’re black or white, that’s the way it is with this lump, this body. It can’t be otherwise. It tends toward birth, tends toward aging, tends toward illness, tends toward death: It tends toward suffering.</p>
+<p>So when illness arises—when we have a pain in the head, or wherever the aches and pains may be—the Dhamma warns us. We say that the head is ours, but how can it be ours? Focus in and examine it carefully until you understand. Why is that happening to your head? Why can’t you tell it what to do? Why can’t you exert full control over it?</p>
+<p>This being the case, it’s not really yours. It tends toward illness. When we’re born, we assume that we don’t already have any illnesses. Doctors tell us that illnesses come from this or that thing outside, but the Buddha’s teachings tell us about the illnesses that already fill the body down to every pore.</p>
+<p>Why do they say that? <em>Cakkhu-rogo:</em> The eye has its illnesses. <em>Sota-rogo:</em> The ear has its illnesses. There are diseases in the ear. <em>Ghāna-rogo:</em> illnesses in the nose<em>. Jivhā-rogo:</em> illnesses in the tongue. <em>Kāya-rogo:</em> illnesses in the body. <em>Mano-rogo:</em> illnesses in the heart—angina, tightness in the heart, the heart when it’s enlarged or its valves leak. Think about it. <em>Hattha-rogo:</em> illnesses in the hands. <em>Pāda-rogo:</em> illnesses in the feet. They run into this or that, get scrapes, get cut open and bleed. That’s an illness. Do you see? <em>Kesa-rogo:</em> illnesses in the hair on your head. It falls out or your scalp itches. <em>Nakha-rogo:</em> illnesses in the nails. <em>Danta-rogo:</em> illnesses in the teeth. They get eaten away with decay; they wiggle and get loose. <em>Taca-rogo:</em> illnesses in the skin. Every part of the body has its illnesses and malfunctions. <em>Maṅsa-rogo:</em> Muscles have their illnesses. They get sore and sprained. <em>Nhāru-rogo</em>: Tendons have their illnesses—what do you say to that? Everything can get ill and malfunction. <em>Aṭṭhi-rogo</em>: Bones have their illnesses. <em>Aṭṭhimiñja-rogo:</em> Bone marrow has its illnesses.</p>
+<p>So think about it. There are illnesses, there’s malfunctioning everywhere in the body. You can’t find a single part that doesn’t have its illnesses—simply that they haven’t come out of hiding and acted up. There’s illness down to every pore. The Buddha said that the body itself is made of germs.</p>
+<p>This is what we get when we come to live in this world. That’s why the Buddha taught us to want to get out of the world, why he laid down the principles of generosity, virtue, and meditation, or virtue, concentration, and discernment. He taught the religion so that we could contemplate and see these four noble truths. When we see these four noble truths, we won’t be deluded by the world. We’ll be able to escape from it.</p>
+<p>It’s really dismaying when you think about it. No matter where you go in the world, there’s nothing you can really gain. We say that we get this or gain that, but these things don’t really stay. That’s the way they are.</p>
+<p>The Buddha taught virtue, concentration, and discernment. When we observe the precepts, we create no animosity or danger. Our thoughts, words, and deeds are composed and in good order. We create no harm, great or small. When there’s no harm, great or small, we create no animosity. That frees us from danger and suffering. It’s because our hearts at the moment <em>don’t</em> have virtue that we find ourselves in danger, as we see all around us.</p>
+<p>The “heavenly messengers” are constantly warning us. If we sit for a long time, they give their warning. If we stand for a long time, walk for a long time, lie down for a long time, they give their warning. No matter what our posture, they warn us—“pain, pain, pain, pain, pain”—but we don’t listen. These are heaps of pain, but we don’t listen. When there are aches and pains from sitting long, we change our position. We keep pushing things off for later like this, but if we keep following that strategy, we’ll reach the point where it runs out. That’s the way it is. If we lie down for a long time, there’s pain again. Try lying down for a whole day or a whole night—it’s painful, no matter which way you lie down. You turn over on this side, turn over on that, but you keep running into pain everywhere. If you walk for a long time, there’s pain again. Stand for a long time, there’s pain again. Every posture is painful. That’s why the body is called a heap of suffering.</p>
+<p>It’s neither big nor small, suffering. It isn’t in all the different material things. It’s just in this body that there’s suffering. However big or small, it’s just our body—a cubit wide, a fathom long, a span thick. That’s our heap of sufferings: neither big nor small. It goes up only as far as the head, down as far as the feet, back to the back, to the right as far as the right arm, left as far as the left arm, up front as far as the chest. That’s it, the borders of our suffering. The Buddha taught his Dhamma and Vinaya for right here. He placed the religion right here—hell is right here; the paths and their fruitions are placed right here—so that we can separate things out and make our choice.</p>
+<p>We do that by sitting in concentration and contemplating right here. Concentration is a mind established firmly, established constantly, established upright. It doesn’t waver in line with the ways of the world <em>(loka-dhamma).</em> It’s genuine and constant. As for unbinding <em>(nibbāna),</em> that’s really constant—and, speaking of unbinding, it’s not up in the sky. It’s to be found right here, too.</p>
+<p>So concentration is a mind firmly established. Discernment is all-around knowledge of the affairs of fabrication <em>(saṅkhāra).</em> And what is it that fabricates, that gives rise to becoming and birth? To kamma, animosity, and danger? What is it that goes to these things? <em>We’re</em> the ones who give rise to them. That’s what discernment sees. You need all-around knowledge of fabrication for it to count as discernment. The problem is that we’re deluded by fabrication. That’s why there’s so much trouble and suffering as we build up becoming and birth, build up kamma, animosity, and all kinds of dangers.</p>
+<p>So when you hear this, <em>opanayiko</em>—bring it inwards and ask yourself: Is this what you want, all this death? Is there anyone who really wants it? Nobody at all. We don’t want to be sick without any doctors or medicine. And yet we keep nourishing these things that belong to Māra: the Māras of the aggregates, the Māras of defilement, the Māras of mental fabrications, the Māras of death. No matter how much we try to nourish and protect them, they don’t lie under anyone’s control—for anyone at all. That’s the way things are.</p>
+<p>This is why we should all contemplate these things, to separate them out and make our choice. We’ve managed to gain birth, but who is it that takes birth? We’ll discover that <em>we’re</em> the ones who take birth. If we don’t take birth, where will these things come from? If we don’t take birth, where will aging come from? When there’s no aging, where will illness come from? When there’s no illness, where will death come from? When there’s no death, where will suffering come from?</p>
+<p>Sit in concentration so that it’s constant. At the moment, it’s not yet constant. There’s birth and then there’s aging, then there’s illness. When there’s illness, then there’s dying. When there’s dying, then there’s suffering, spinning around in the cycles of wandering-on <em>(saṁsāra)</em> without ever coming to an end. How many eons? Countless births. For how many states of becoming have you been worried about this and that? You come into this world alone, but then you get worried about what will happen to this person or that. You tie yourself down. Try to find a way out—so what if it kills you? What’s wrong with finding a way out? What are you still attached to? What are you still infatuated with? Try to be more resolute! We come into this world alone and we go alone. So who is it that dies? What leads us back to birth? Be done with it! Develop your goodness. That’s better than dying in a heap of suffering. Better than dying in worries—dying in the noose.[1] Try to die <em>outside</em> of the noose. That’s what’s really good. Don’t tie yourself down.</p>
+<p>It all comes from the mind, fabricating the idea that “This is mine, that’s mine, this property’s mine, this money, these possessions are mine, this clothing is mine, these homes are mine, these children and grandchildren are mine”: nothing but “me” and “mine.”</p>
+<p>To move even closer in: “These eyes are mine, these ears are mine, this nose is mine, this tongue is mine, this body is mine, this mind is mine”—but none of it’s true. How could it be yours? How can you depend on any of these things for long? You can’t even take your body with you. If these things really were yours, would you have your eyes go bleary? Would you have your ears go deaf? Your nose. Your body: Would you have it be in pain? Would you have it get too hot or too cold? If it really were yours, you wouldn’t do any of these things. So contemplate this. Don’t be deluded and infatuated. This body is the body of Māra—the Māras of the aggregates.</p>
+<p>The Māras of the aggregates aren’t anything else: They’re form, feelings, perceptions, fabrications, consciousness. These are the Māras of the aggregates. Form is your body sitting right here. Feelings are feelings of pleasure or pain. Perceptions are labels and meanings. Fabrications are thoughts you put together. Consciousness is awareness. All of these things are Māras.</p>
+<p>The Buddha taught that Māras don’t come down from the sky, that they don’t live in jungles or towns. People are afraid of Māras, but what are they afraid of? And where are these Māras? People just say, “Māra,” but what kind of being is it? Nothing else but people. When we’re in the womb, we’re already Māras. When the Māras come out, they’re people. What do you say to that? Māras are human beings. When a person is in a swollen womb, it’s already a Māra.[2] When it comes out, it’s a person, isn’t it? To be a person is to be a Māra, a Māra of the aggregates: the aggregate of form, the aggregate of feeling, the aggregate of perception, the aggregate of fabrications, the aggregate of consciousness. They’re all Māras. Contemplate them so that you’re not infatuated with them or deluded by them.</p>
+<p>In the <em>Saṁvega Gāthā</em> we chant every morning, we say, <em>Rūpaṁ aniccaṁ:</em> Form is inconstant. Think about it. <em>Vedanā aniccā:</em> Feelings are inconstant. See them in that way. <em>Saññā aniccā:</em> Perceptions and labels are all inconstant. <em>Saṅkhārā aniccā:</em> Fabrications are all inconstant. <em>Viññāṇaṁ aniccaṁ:</em> When is consciousness ever constant? First it’s one thing and then it’s another. It can be all kinds of things, consciousness. We have to separate things out. And when we see these things in this way, how can we say that they’re our self?</p>
+<p>This takes us to the second round: Whatever’s inconstant is not-self, it’s <em>anattā</em>. <em>Rūpaṁ anattā, vedanā anattā, saññā anattā, saṅkhārā anattā, viññāṇaṁ anattā.</em> They’re all not-self. We have to focus on contemplating them like this. Why view them as your self? They tend toward illness. Why do they tend toward illness? Why do they tend toward aging? Why do they tend toward death? They’re not-self. So focus on seeing them.</p>
+<p>When you contemplate them, you’ll be able to let go of self-identity views, uncertainty about the body and the world, groping around, saying that this is your child, that’s your husband, that’s your wife, that’s your brother or sister—or groping around saying that virtue is over there, the Dhamma is over there. You can stop groping. You see things clearly and distinctly right inside you.</p>
+<p>You may not believe it, but these are the teachings of the Buddha. So why do you keep on being infatuated with the body? Why do you keep on being infatuated with the world? Focus on in! Are you still deluded? The Dhamma warns us so that we’ll know and see this. Like me: I’m sick, do you see it? It’s becoming hard to get around. There are pains everywhere. Try to know these things.</p>
+<p>So to see whether these things are true, sit and meditate to watch them. Get into position. Take what you’ve heard and apply it inside you, so that you can know and see for yourselves. I’ve already explained it, so sit and look inside. Look inside. Whether there’s pain or not, sit and watch it. It won’t have to be long—just 30 minutes. Try putting the thread into the needle. You’ve listened, so try to know and see it for yourselves. Make it for sure. Is suffering true or not true? Do things really die? What dies?</p>
+<p>Focus on meditating. You’ve already contemplated. Meditate and contemplate. Separate things out within your mind. Get into concentration. Repeat “<em>Buddho, Dhammo, Saṅgho,”</em> to yourself. Then close your eyes, close your mouth, and focus on watching your mind, watching your body: That’s all you’ve got. When you’re born, it’s just this body, this mind. That’s all.</p>
+<p>This body, when it’s without consciousness, <em>Niratthaṁ va kaliṅgaraṁ:</em> It’s like a piece of kindling wood. There’s nothing to it—nothing of any substance or essence. But at the moment, there’s still consciousness in charge. It can still speak, come and go and do all kinds of things. When it’s bereft of consciousness, it’s like a log of wood. It can’t do anything at all. Its mouth is like the mouth of an oven. Its ears are like ears of corn. They just stay motionless. The eyes are like the eyes of a potato. They’re of no use at all. Contemplate this. When there’s no more consciousness, the legs, feet, and hands can’t do anything. They feel no pain. When you put them in a cremation fire, they don’t react. They don’t moan or complain.</p>
+<p>So turn and look at consciousness. What level is it on? Watch it to see if it’s on the level of sensuality, the level of form, or the level of formlessness. The level of sensuality is where it travels around in sights, sounds, smells, tastes, and tactile sensations. These come in two sorts. When the mind is unskillful, it’s on the levels of deprivation. When the mind is clear and bright, it’s on the levels of the six sensual heavens. I’ve already explained these things in the past. No matter what the level, wherever there’s birth, aging, illness, and death, then there’s suffering and stress.</p>
+<p>So focus on the level of form. Don’t send the mind anywhere else. When you see that the form of the body has no essence to it, you can let it go. When you let go of form, there’s nothing left but formlessness, nothing left but the mind at one: That’s the level of the Brahmās. Everything is empty. When you see that that’s true, you realize that it, too, has no essence to it. It’s inconstant. That’s when you can be done with it. When you see that all levels of becoming are inconstant, that’s when you can go to unbinding.</p>
+<p>The problem lies with our attachments. What are you still holding onto at the moment? You don’t have to worry about the past or the future. Focus in on the present moment to see if the mind is experiencing pleasure or pain. Is it dark or is it bright? Watch what’s going on. Is it experiencing pleasure or pain? This inner sensitivity is what you can depend on. No one else can create it for you. It has to arise within you.</p>
+<p>So keep watching. Whatever sound you hear in the forest won’t harm you. I promise. You don’t have to worry. Just keep watch on your mind.</p>
+<hr />
+<h3>Notes</h3>
+<ol>
+<li>This is a play on words, in which the Thai word <em>huang</em> (low tone) can mean either “worried” or “noose.”</li>
+<li>This is another play on words, in which <em>maan</em>—a homonym with Māra in Thai—means “dropsy.”</li>
+</ol>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="02._Come_&_See.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">02</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">02. Come & See</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>
