@@ -12,7 +12,7 @@ A digital collection dedicated to the teachings of Phra Ajaan Funn Ācāro (1899
 
 ### The Path to the Forest
 
-| <img src="./static/ajahn_funn_home.jpg" width="500" alt="Venerable Ajahn Funn Ācāro"> | Originally destined for government service, a young Ajaan Funn’s encounter with the "fleeting and corrupting nature of status" led him instead to the robes. Under the guidance of Ajaan Mun Bhūridatto, he became a master of concentration and a beacon of Dhamma for all of Thailand.<br><br>His journey spanned forty years of wandering through the wilds, eventually settling at Wat Paa Udomsomphorn and serving as a spiritual guide to the highest levels of Thai society.<br><br>[Read his Biography →](https://meormine.github.io/ajahn-funn/biography.html) |
+| <img src="./static/ajahn_funn_home.jpg" width="800" alt="Venerable Ajahn Funn Ācāro"> | Originally destined for government service, a young Ajaan Funn’s encounter with the "fleeting and corrupting nature of status" led him instead to the robes. Under the guidance of Ajaan Mun Bhūridatto, he became a master of concentration and a beacon of Dhamma for all of Thailand.<br><br>His journey spanned forty years of wandering through the wilds, eventually settling at Wat Paa Udomsomphorn and serving as a spiritual guide to the highest levels of Thai society.<br><br>[Read his Biography →](https://meormine.github.io/ajahn-funn/biography.html) |
 | --- | --- |
 
 ---
