@@ -1,6 +1,8 @@
 # Ajahn Funn Ācāro Archive
 
-[![Dhamma Wheel](./static/logo.svg)](https://meormine.github.io/ajahn-funn/)
+<a href="https://meormine.github.io/ajahn-funn/">
+  <img src="./static/logo.svg" alt="Dhamma Wheel" width="100">
+</a>
 
 A digital collection dedicated to the teachings of Phra Ajaan Funn Ācāro (1899–1977), a pillar of the Thai Wilderness Tradition known for his profound kindness and strength of character.
 
