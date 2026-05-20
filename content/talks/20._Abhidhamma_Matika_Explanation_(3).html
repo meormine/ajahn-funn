@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20. Abhidhamma Matika Explanation (3)</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="19._Abhidhamma_Matika_Explanation_(2).html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(19)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+    </div>
+</div>
+
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>20. Abhidhamma Matika Explanation (3)</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<h3>25. <em>Dassanena Pahātabbahetukā Dhammā</em></h3>
+<p>Next, I shall explain the twenty-fifth section according to the Pali: <em>dassanena pahātabbahetukā dhammā</em>. Meaning: states that have a cause for abandoning defilements through seeing. Explanation: states have supporting and nourishing conditions first, then defilements are abandoned through seeing. Seeing is of two types: seeing with the eye and then abandoning defilements; and seeing with wisdom and then abandoning defilements.</p>
+<p>Seeing with the eye and then abandoning defilements refers to a person who sees others experiencing various kinds of suffering, then becomes stricken with spiritual urgency, fearing that such danger may come to him. Example: There were two sisters. The elder sister married first. When she reached full term, she gave birth, experiencing extreme, unbearable suffering, and died. The younger sister, seeing her elder sister die, became stricken with spiritual urgency and refused to marry thereafter, fearing such danger might happen to her. This is called abandoning defilements through seeing with the eye.</p>
+<p>Seeing with wisdom and then abandoning defilements means: a person who sees mind-and-form (<em>nāma-rūpa</em>) with the knowledge of the three characteristics (<em>tilakkhaṇa</em>) — that these two, form and mind, are impermanent (<em>anicca</em>), suffering (<em>dukkha</em>), and not-self (<em>anattā</em>) — then becomes disenchanted with the five aggregates. This is called abandoning defilements through wisdom. Therefore it accords with the Pali: <em>dassanena pahātabbahetukā dhammā</em>.</p>
+<h3>26. <em>Bhāvanāya Pahātabbahetukā Dhammā</em></h3>
+<p>In the twenty-sixth section: <em>bhāvanāya pahātabbahetukā dhammā</em>. Meaning: states that have supporting and nourishing conditions for abandoning defilements through development (<em>bhāvanā</em>). Explanation: mundane states (<em>lokiya dhamma</em>) are supporting conditions for supramundane states (<em>lokuttara dhamma</em>). Morality (<em>sīla</em>) is a supporting condition for concentration (<em>samādhi</em>). <em>Sīla</em> means restraint of body and speech and patience. <em>Samādhi</em> means <em>bhāvanā</em> (development/meditation). Therefore this Dhamma text is called mundane Dhamma as a condition for the arising of <em>bhāvanā</em>. <em>Sīla</em> is of two types: mundane <em>sīla</em> and supramundane <em>sīla</em>. <em>Bhāvanā</em> is also of two types: mundane <em>bhāvanā</em> and supramundane <em>bhāvanā</em>.</p>
+<p>Mundane <em>sīla</em> is a supporting condition only for mundane <em>bhāvanā</em>; it cannot support supramundane <em>bhāvanā</em>. Why? Because mundane <em>sīla</em> suppresses defilements only temporarily; later, defilements can arise again. Like a stone pressing down on grass. As long as the stone presses on the grass, the grass cannot grow. The stone represents <em>sīla</em>, the grass represents defilements. When a person does not carefully protect the factors of <em>sīla</em> and allows <em>sīla</em> to break, defilements arise again as before. Like a person cutting down a tree but not cutting the root. In time, when rain falls, the tree grows again. Therefore, one who observes only mundane <em>sīla</em> does not desire to cut off defilements; he only desires to gain merit and wholesomeness. Like tree roots clinging to the earth; when rain falls, they grow again. Similarly, mundane <em>sīla</em> is still connected with clinging (<em>upādāna</em>), and defilements depend on <em>upādāna</em> to arise. Therefore the Pali states: <em>upādānapaccayā bhavo</em> — with clinging as condition, becoming arises. Thus mundane <em>sīla</em> still allows defilements to arise. That <em>sīla</em> is called mundane <em>sīla</em>.</p>
+<p>Regarding supramundane <em>sīla</em>: it does not allow defilements to arise. Explanation: supramundane <em>sīla</em> does not need to be undertaken, does not need to be guarded; defilements cannot arise. Like a person who cuts down a tree and also digs up the root. No matter how much rain falls, it cannot grow again. Or like a person who cuts the top of a palmyra palm or coconut palm; once cut, it cannot grow again. Supramundane <em>sīla</em> is similar.</p>
+<p>One who observes supramundane <em>sīla</em>, through wisdom, sees that the five aggregates and all phenomena are entirely impermanent, suffering, and not-self. Therefore he has neither love nor hatred; defilements cannot arise. Defilements arise because of a mind that loves and hates. When the mind does not love or hate, where could defilements arise? Like fire: for fire to ignite, it depends on existing fuel. If there is no fuel, fire cannot ignite. Likewise, the mind of noble, virtuous persons has no fuel, i.e., no <em>upādāna</em>, because it is dried up by the knowledge of the three characteristics constantly present in their mental continuum. When the fuel of <em>upādāna</em> is absent, defilements do not arise, like the fuel for fire.</p>
+<p>Therefore supramundane <em>sīla</em> does not need to be undertaken or guarded; using only wisdom, it conquers all defilements. Having abandoned all defilements, it becomes supramundane <em>sīla</em>, requiring no undertaking or guarding. Mundane <em>bhāvanā</em>, when it arises, then disappears; it is not stable and permanent. Like a mind that has attained one-pointedness (<em>ekaggatā</em>) then returns to initial and sustained application (<em>vitakka</em> and <em>vicāra</em>). Or like a person who climbs a tree, picks the fruit, then climbs down to pile it at the base, then climbs up again to pick more. Or like a man who ordained under Sāriputta and learned <em>bhāvanā</em>, attaining mundane knowledge and the ability to fly. Later, he saw a woman's form and became attached, desiring her as his wife; his <em>bhāvanā</em> degenerated. Later, he engaged in theft, was caught, and sentenced to death. Sāriputta, his preceptor, heard of this and went to remind him to practice <em>bhāvanā</em>. The man recollected, practiced, regained his former knowledge, and flew away to safety. Therefore mundane <em>bhāvanā</em> is not durable or stable; when it arises, it disappears because it is impermanent and can regress, unlike supramundane <em>bhāvanā</em>. Supramundane <em>bhāvanā</em> is stable, permanent, true, not changing or reversing like mundane <em>bhāvanā</em>.</p>
+<p>Supramundane <em>bhāvanā</em> is like a person swimming amid waves; upon reaching the shore, he is free from the water and waves. Explanation: <em>bhāvanā</em> that, once arisen, does not disappear or vanish — that is called supramundane <em>bhāvanā</em>. It is like a person entering a cave at dusk. One who first develops <em>bhāvanā</em> is still in darkness. When <em>bhāvanā</em> arises, there is light and no further darkness. The person who entered the cave at dusk, when the moon shines down, receives moonlight to walk by. Relying on the moonlight, he can go to various places, but he cannot go beyond the moon. Wherever he goes, the moon follows him. Likewise, one who develops supramundane <em>bhāvanā</em> — once it arises, it follows him all the way until he enters <em>Nibbāna</em>. Therefore it accords with the Pali: <em>bhāvanāya pahātabbahetukā dhammā</em>.</p>
+<h3>27. <em>Nevadassanena Na Bhāvanāya Pahātabbahetukā Dhammā</em></h3>
+<p>In the twenty-seventh section: <em>nevadassanena na bhāvanāya pahātabbahetukā dhammā</em>. Meaning: states that are supporting conditions for abandoning defilements neither through seeing nor through development. Explanation of the first section: abandoning defilements through seeing. Second section: abandoning defilements through development. In this third section: without needing to see or develop, defilements are abandoned through one's own natural disposition. Like a fruit tree: sometimes fruit falls by itself, sometimes by wind, sometimes by being knocked down by a person, sometimes by animals like bats eating it. But this Dhamma text falls by its own nature, not by being knocked down by a person, wind, or any animal. Therefore it is called <em>nevadassanena na bhāvanāya pahātabbahetukā dhammā</em>. The <em>Sakkavadi</em> asked: "Sir, I have heard that those who attain path, fruit, and special Dhamma do so through seeing and developing meditation — such as seeing bubbles of water, mirages, etc., in the 30 <em>kammaṭṭhāna</em> and 10 <em>vipassanā</em> — that is, through seeing and developing. Your statement about not needing to see or develop — I am doubtful because I have never heard it. Please give an example of a person for further understanding." The <em>Paravadi</em> then brought up the story of Ānanda as an illustration.</p>
+<p>"Listen, <em>Sakkavadi</em> Teacher: When Ānanda accompanied the Buddha to Kusinārā, Ānanda learned that the Buddha would enter final <em>Nibbāna</em> and was filled with sorrow and grief. The Buddha then said to Ānanda: <em>Mā socayi</em> — 'Do not grieve, Ānanda. When I, the Tathāgata, have passed away, Mahākassapa will recite the Vinaya, Suttanta, and Abhidhamma at the council. At that time, you will attain the destruction of the taints and become an <em>arahant</em> with taints destroyed.' Later, on the day of the council, all the noble <em>Saṅgha</em> admonished Ānanda: '<em>Svan san nipāto</em> — tomorrow the <em>Saṅgha</em> will assemble for the council. <em>Tavattavā sekkho</em> — you are still a learner (<em>sekkha</em>), not worthy to join the assembly. <em>Appamatto hohi</em> — therefore do not be negligent.' When Ānanda heard this admonition, he withdrew to a secluded place, practiced the ascetic's duty, and reflected with wisdom, clearly seeing: 'I will surely attain path, fruit, and special Dhamma, cut off defilements, and become an <em>arahant</em> — the Buddha's words are not two.' Yet, O <em>Sakkavadi</em>, Ānanda did not attain any path, fruit, or special Dhamma from that seeing.</p>
+<p>Later, Ānanda practiced mindfulness of the body (<em>kāyagatāsati kammaṭṭhāna</em>), contemplating the 32 parts, seeing them with the knowledge of the three characteristics until dawn. Still, Ānanda did not attain any path, fruit, or special Dhamma because he was thinking: 'Why have I not attained <em>arahantship</em>? <em>Saṅkhārasamattho</em> — perhaps my effort is too strong. I will calm the formations a little to become comfortable, then continue practicing.' Thus Ānanda abandoned that seeing and <em>bhāvanā</em> and lay down. Before his head touched the pillow and before his feet left the ground, Ānanda attained the destruction of the taints, becoming an <em>arahant</em> with analytical knowledge (<em>paṭisambhidā-ñāṇa</em>), in between the four postures. Therefore it accords with the Pali: <em>nevadassanena na bhāvanāya pahātabbahetukā dhammā</em>. Wise people with discernment should infer and understand the profound and detailed words of the Buddha. This concludes the brief explanation of the twenty-seventh <em>tika matika</em>.</p>
+<h3>28. <em>Ācayagāmino Dhammā</em></h3>
+<p>Next, I shall explain the twenty-eighth <em>tika matika</em> according to the Pali: <em>ācayagāmino dhammā</em>. Meaning: states that are the cause for beings to experience happiness through the accumulation of merit. To travel a long road, one must first accumulate sufficient provisions to have comfort on that long journey. Otherwise, like a general leading troops into battle: he must first prepare ample provisions and weapons before marching into battle. Likewise, a person who wishes to encounter happiness must first accumulate meritorious and wholesome actions. As stated in the Devatā Saṃyutta Buddha word: <em>Puññassa uccayo</em> — the accumulation of merit brings happiness. Therefore it accords with the Pali: <em>ācayagāmino dhammā</em>.</p>
+<h3>29. <em>Apacayagāmino Dhammā</em></h3>
+<p>In the twenty-ninth section: <em>apacayagāmino dhammā</em>. Meaning: states that are the cause for beings to experience suffering because they have not accumulated merit and wholesomeness. Explanation: A person becomes poor, destitute, and suffering because he lacks various necessities such as money, clothing, blankets, etc., due to not having accumulated merit and wholesomeness. Like a wretched, poor person who wanders begging from others to sustain his life. Some days he gets food, some days not. The days he does not get are more numerous than the days he does, because he has nothing of his own, thus he suffers. Example: There was a wealthy man named Ananda. This wealthy man never performed acts of merit or giving to anyone. When he died, he was conceived in the womb of a beggar woman. From the moment the child was conceived, he caused his parents to become even poorer. They begged with great difficulty. When he was born and could walk, his parents took him begging, but they got nothing. If they went without him, they got just enough to survive. So the mother abandoned him far from home, then went begging easily and well.</p>
+<p>The child wandered begging. When other children saw him, they chased and beat him to death, then threw him on a rubbish heap. That morning, the Blessed Buddha went on alms round. Seeing the dead child on the rubbish heap, he said to Ānanda: 'This child lying dead on the rubbish heap is that same Ananda the wealthy man. Because he did not perform wholesome deeds, he has come to such a miserable state.' Therefore it accords with the Pali: <em>apacayagāmino dhammā</em>.</p>
+<h3>30. <em>Nevācayagāmino Nāpacayagāmino Dhammā</em></h3>
+<p>In the thirtieth section, the Pali states: <em>nevācayagāmino nāpacayagāmino dhammā</em>. Meaning: states that are the cause for beings to attain happiness neither through accumulation nor through non-accumulation. Explanation: accumulating only merit, not accumulating demerit. But this Dhamma text means neither merit nor demerit. Like a sleeping person, neither happy nor unhappy. Or like a hot person seeking coolness; having escaped from the heat but not yet reached coolness, remaining in between. As an example: the Elder who told the jeweler that there is still danger in the world for a person — because he himself was neither happy nor unhappy, remaining in between, neither hot nor cool. The full details are clear in the Dhammapada; I have presented only the summary here to accord with the Pali: <em>nevācayagāmino nāpacayagāmino dhammā</em>.</p>
+<h3>31. <em>Sekkhā Dhammā</em></h3>
+<p>Next, I shall explain the thirty-first <em>tika matika</em> according to the Pali: <em>sekkhā dhammā</em>. Meaning: states that require training. The states requiring training are three: higher morality training (<em>adhisīla-sikkhā</em>), higher mind training (<em>adhicitta-sikkhā</em>), and higher wisdom training (<em>adhipaññā-sikkhā</em>). The <em>Sakkavadi</em> asked: "How must these three states be trained to be called higher morality, higher mind, and higher wisdom?" The <em>Paravadi</em> explained: Among the three trainings, they are: training for higher morality, training for higher mind, training for higher wisdom. Explanation: Morality (<em>sīla</em>) has three levels: low morality, medium morality, and refined morality. Some who observe morality utter the vow: 'I will observe morality, not do evil with body or speech.' But when evil comes to them, they have no intention to maintain that morality; they commit that evil with body and speech. That is called low morality. Some who observe morality set the intention: 'I will not do evil with body or speech.' When evil comes to them, they reflect: 'I observe morality; I should not commit evil with body or speech.' That is called medium morality. Some who observe morality observe fully with body and speech, truly not doing evil, until they see the four noble truths. That is called higher morality. Furthermore, a virtuous person who observes the five precepts purely, not satisfied in faith, then observes the eight precepts more highly. Having observed the eight precepts purely, still not satisfied, he renounces the lay life, ordains as a novice observing the ten precepts more highly, until he receives full ordination as a monk observing the 227 precepts. This is called training in morality, i.e., <em>adhisīla-sikkhā</em>. The <em>Sakkavadi</em> then asked for a simile. The <em>Paravadi</em> gave this simile: A person who plants a tree hoping for fruit will guard it carefully, regularly watering and loosening the soil, not letting it wither and die, watching over it daily without fail, until the tree grows, flowers, and bears fruit as desired. Likewise, a person with the intention of restraint who observes morality, hoping for happiness, sets his intention to guard and prevent defilements from overwhelming his morality, and makes his morality increasingly perfect, like the person planting a tree. Next, I shall explain the higher mind training.</p>
+<p>A person wishing to develop higher mind should think: 'I will give alms according to my ability.' Seeing the result of his giving, he thinks: 'I will observe morality.' Seeing that morality has greater fruit than giving, he thinks: 'I will develop meditation.' Seeing that meditation has greater fruit than giving and morality, he thinks: 'I will listen to the true Dhamma teaching.' Seeing the benefit of listening to the Dhamma as having greater fruit than giving, morality, and meditation, he strives to listen to the Dhamma with reverence, setting his mind to receive the essential practice. This is called training in higher mind — <em>adhicitta-sikkhā</em>. Next, I shall explain the higher wisdom training.</p>
+<p>A person wishing to develop higher wisdom should know how to practice giving, observe morality, develop meditation, and listen to the true Dhamma, just as with higher morality and higher mind. Explanation: The wisdom that is the common characteristic — knowing that conditioned phenomena (<em>saṅkhāra dhamma</em>) are impermanent, suffering, and not-self — this common wisdom is called <em>pariyatti</em> (learning/theoretical understanding). When one knows <em>pariyatti</em> by way of this common characteristic, there arises the knowledge of disenchantment (<em>nibbidā-ñāṇa</em>), penetrating understanding in practice. Practice (<em>paṭipatti</em>) is superior to <em>pariyatti</em> — disenchantment with all conditioned phenomena. When one knows that one's mind is disenchanted, that practice is superior to <em>pariyatti</em>. This wisdom that is the knowledge of disenchantment is called <em>paṭipatti</em>. When one knows and understands practice through <em>nibbidā-ñāṇa</em>, there arises the knowledge of desire for deliverance (<em>muñcitukamyatā-ñāṇa</em>), penetrating the cause in realization (<em>paṭivedha</em>). <em>Paṭivedha</em> is liberation, extracting oneself from defilements, which is superior to <em>pariyatti</em> and <em>paṭipatti</em>. This <em>paṭivedha</em> is called <em>adhipaññā-sikkhā</em>. Therefore it accords with the Pali: <em>sekkhā dhammā</em>.</p>
+<h3>32. <em>Asekkhā Dhammā</em></h3>
+<p>Next, I shall explain the thirty-second <em>tika matika</em> according to the Pali: <em>asekkhā dhammā</em>. Explanation: The states of non-training are laziness, causing the decline of higher morality, higher mind, and higher wisdom day and night. Like a person who plants a tree hoping for fruit but is lazy, not guarding it carefully, not watering or loosening the soil, causing the tree to wither and die. Compare to beings in the four lower realms. Beings in the four lower realms were originally human, but humans lacking good and proper morality, concentration, and wisdom must endure suffering, as seen. What is the original cause? It is the failure to maintain morality, concentration, and wisdom. The <em>Sakkavadi</em> asked: "What is the danger of non-training, and what kind of people does it apply to?" The <em>Paravadi</em> answered: A person who is negligent, lazy, not training in the path of morality, concentration, and wisdom, and not seeking happiness for himself, has many kinds of danger. Compare to two people traveling a remote, water-scarce road. One is lazy and does not try to continue walking; the other has effort and walks on. As they walk, they become very thirsty. The lazy one says to his companion: 'I cannot go on; I am very tired.' The determined companion urges: 'Make an effort to walk a little further; you will find a gooseberry tree to eat and quench your thirst. Beyond that, you will find a starfruit tree. Beyond that, you will find a pond to bathe and drink as you please.' The lazy one says: 'I cannot go on; I have had no water for three days. I will take shelter and rest here.' Then he lies down in that place. The determined, non-lazy ones walk on to the gooseberry tree, eat its fruit, gain strength, walk to the starfruit tree, eat its fruit, gain strength, and reach the pond, bathing and drinking at their pleasure, attaining joy as they wished. The lazy person dies in that place.</p>
+<p>Therefore, one who does not train is subject to the danger of birth and death in the suffering of <em>saṃsāra</em> without fixed number of lives, with hardship, difficulty, and various torments. As the Buddha's decree states: <em>Idha tappati pecca tappati, idha modati pecca modati</em> — meaning: a person experiences torment in the four lower realms because he did not perform wholesome good conduct and did not train in morality, concentration, and wisdom as a refuge for himself in the past. Therefore he encounters only unpleasant objects (<em>aniṭṭhārammaṇa</em>) — torment in both this world and the next. One who is not tormented, but has delight in this world and also goes on to delight in the next world — that is because he performed wholesome good conduct and trained in morality, concentration, and wisdom as a refuge for himself in the past. Therefore he encounters only pleasant objects (<em>iṭṭhārammaṇa</em>) — delight in both this world and the next.</p>
+<h3>33. <em>Nevasekkhā Nāsekkhā Dhammā</em></h3>
+<p>Next, I shall explain the thirty-third <em>tika matika</em> according to the Pali: <em>nevasekkhā nāsekkhā dhammā</em>. Meaning: states that are neither training nor non-training. Explanation: They are achieved spontaneously according to one's disposition, without needing to train. Example: Prince Siddhattha achieved all knowledge without training; whatever knowledge, he succeeded in everything. Or like a tree that grows spontaneously without being planted — not everywhere, but only in suitable soil. Likewise, path, fruit, and special Dhamma can arise only in suitable disposition. They do not arise with defilements, nor without defilements, but only in those with mature perfections (<em>pāramī</em>). The meaning here refers to a person with the predisposition (<em>upanissaya</em>) from previous practice. Therefore it is translated as neither training nor non-training. An example: When Kumāra Kassapa heard the fifteen prophetic statements in the Anthill Sutta (<em>Vammika Sutta</em>), he memorized them precisely, developed and practiced meditation for a long time, but had not yet attained any path or fruit. Later, the Great Brahmā came and asked him those questions. Kumāra Kassapa then asked the Blessed Buddha about them. The Buddha explained all fifteen prophetic statements from beginning to end. At the conclusion, Kumāra Kassapa attained <em>arahantship</em> with analytical knowledge (<em>paṭisambhidā-ñāṇa</em>), appearing in the Buddha's dispensation.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="19._Abhidhamma_Matika_Explanation_(2).html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">19</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">19. Abhidhamma Matika Explanation (2)</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

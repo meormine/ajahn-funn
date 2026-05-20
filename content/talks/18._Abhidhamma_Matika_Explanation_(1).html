@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18. Abhidhamma Matika Explanation (1)</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="17._New_Year's_Day.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(17)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex justify-center items-center" title="Return to Dhamma Talks">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="19._Abhidhamma_Matika_Explanation_(2).html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(19)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>18. Abhidhamma Matika Explanation (1)</strong></p>
+<p><strong>By Phra Ajahn Funn Ācāro</strong></p>
+<p><strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong></p>
+<p><em>Karunā viya sattesu paññāyassa mahesino, ñeyyadhammesu sabbesu pavattittha yathāruci; dayāya tāya sattesu samussāhitamānaso ... abhidhammakathaṃ kathesīti.</em></p>
+<p>Now I shall provide an explanation of the first twenty-two <em>tikas</em> of the Abhidhamma <em>Matika</em>, in order to honor the faith of the virtuous laypeople, as appropriate to the time and place. Because this Abhidhamma <em>Matika</em> is difficult to explain, interpret, and translate in detail. It is generally only used as a <em>matika</em> <em>pamsukula</em> (funeral cloth) for the deceased. Moreover, it is in the Pali language, making it hard to understand. What translations exist are only of the seven books of the Abhidhamma; the Abhidhamma <em>Matika</em> itself has not been extensively translated. The first twenty-two <em>tikas</em> of the Abhidhamma <em>Matika</em> were expounded by the Blessed Teacher, the Lord Buddha, when he ascended to the Tavatimsa heaven during the rains retreat. He taught the seven books of the Abhidhamma for the benefit of the devas, with his mother as the chief. "Desiring to speak," he acted as both the interlocutor and the respondent, questioning and answering for each book in turn.</p>
+<p>Hereafter, I shall explain the Abhidhamma <em>Matika</em> by means of questions and answers according to the Buddha's decree, in order to increase your faith, devotion, and confidence in the virtues of the Triple Gem.</p>
+<p><strong>The Concluding Phrase</strong></p>
+<p>Once upon a time, there was a teacher named the <em>Sakkavadi</em> (the Orthodox) Teacher. He reflected to himself: "When the Blessed Supreme Buddha was about to teach the Dhamma for the benefit of his mother, he had already selected and arranged the three Piṭakas—Vinaya, Suttanta, and Abhidhamma—yet he saw that none of them was equal to the virtue of his mother. Only this Abhidhamma <em>Matika</em>, he saw, would be worthy of his mother's virtue. The Pali of this Abhidhamma <em>Matika</em> appears as twenty-two <em>tikas</em>, each <em>tika</em> having three items, totaling sixty-six topics. How can I know and understand the meaning of this Abhidhamma <em>Matika</em>?"</p>
+<p>Having thus reflected, the <em>Sakkavadi</em> Teacher went to the <em>Paravadi</em> (the Heterodox) Teacher and requested the opportunity to ask about the Pali and its meaning for clarification. The <em>Paravadi</em> Teacher then recited the Pali: "<em>kusalā dhammā</em>" — wholesome states are one; "<em>akusalā dhammā</em>" — unwholesome states are another; "<em>abyākatā dhammā</em>" — indeterminate states are another.</p>
+<h3>1. <em>Kusalā Dhammā</em></h3>
+<p>Regarding wholesome states: they are the "qualities of a wise person" — they cut off evil so that it does not arise in one's character. It is like planting a mango tree: one protects it so that parasitic growths do not appear on the trunk, fearing the mango tree will become unsightly and bear little fruit. Likewise, the body of a wise person: a wise person naturally guards against bodily misconduct, verbal misconduct, and mental misconduct, so that they are not defiled.</p>
+<p>Then the <em>Sakkavadi</em> Teacher asked: "In the first <em>matika</em>, <em>kusalā dhammā</em>, you have correctly translated according to the letter and even added further explanation. I understand it, but I still have doubts and concerns for those who are even more foolish than I — there are many. Therefore, I ask for a little more guidance."</p>
+<p>The <em>Paravadi</em> Teacher continued: "<em>Eko kira puriso</em>" — Listen, O <em>Sakkavadi</em>: as I have heard, there was a wise man who saw a boat drifting to his own landing. He reflected: 'This boat is a pirate boat. The pirates have taken all the goods and left the boat at my landing. If I do not push it away from my landing, when the owner comes looking and finds it here, he will accuse me of being a thief who stole his boat.'</p>
+<p>Or compare to a farmer. One day, thieves took a bag of treasure and left it by his field. At that time, the Blessed Buddha was passing by with Ānanda. The Buddha saw the bag of treasure and said to Ānanda: 'A poisonous snake is here.' The farmer heard the Buddha's words and thought it really was a snake; he did not think that thieves had left a bag of treasure on his field. The Buddha and Ānanda departed elsewhere. Later, the owner of the treasure arrived, saw his bag left on the farmer's field, and firmly believed the farmer was a thief, so he arrested him.</p>
+<p>A person with discernment, seeing such causes and effects, would push his boat away and let it drift with the current. Such a person is called wise because he can cut off danger. Otherwise, compare to a cowherd. When the owner of the cows sees a royal bull mingling with his own cattle, he thinks: 'If the village headman or district officer sees this royal bull in my pen, they will say I stole it and arrest me for various punishments.' Thinking thus, he opens the gate and chases the royal bull away from his property. That is called a wise person who cuts off the danger of royal punishment.</p>
+<p>Another story: When our Blessed Buddha was born as Kuḍāla Paṇḍita, he cultivated corn and <em>rājamāsa</em> beans by the ocean shore. When summer came, he ordained as a hermit; in the rainy season, he disrobed and continued farming. He did this seven times. Later, he thought: 'I have endured so much physical hardship, ordaining and disrobing, all because of my attachment to this hoe and corn.' Having realized this, he wrapped the seeds and the hoe in a cloth and threw them into the ocean. Free from attachment, he then resolved to develop meditative absorption and attained mundane <em>jhana</em>. Upon passing away from that life, he was reborn in the Brahma world.</p>
+<p>These similes are to show that your bodies, the five aggregates (<em>pañcakkhandhā</em>), as long as one still delights in and loves them, one will continue to experience only suffering — just as one delights in the danger of the king of death and the danger of thieves, with delusion following. As the Buddha said: "<em>Pañcupādānakkhandhā dukkhā</em>" — The five aggregates subject to clinging are suffering. The meaning is that all beings suffer because they cling to these five aggregates as 'mine.' Regarding wholesomeness (<em>kusala</em>): the Buddha's intention is to use wisdom to cut off attachment to the five aggregates, seeing them as <em>anattā</em>, not-self, because the five aggregates are not under anyone's control. Therefore they are called <em>kusalā dhammā</em> — they cut off evil. <em>Sīla</em> (morality) means cutting off evil from body and speech so it does not adhere to one's character. <em>Paṭipatti</em> (practice) means turning evil bodily, verbal, and mental actions into merit and wholesomeness. Hence they are called <em>sīla</em>, <em>vinaya</em>, and <em>paṭipatti</em>.</p>
+<h3>2. <em>Akusalā Dhammā</em></h3>
+<p>Next, I shall explain the second section: <em>akusalā dhammā</em>. These are the states that are objects of the mind, sustaining unwholesome mind. <em>Akusalā dhammā</em> means the qualities of an unwise person, or not cutting off evil from body, speech, and mind.</p>
+<p>The explanation: A fool does not guard against evil that will come to him. Some, even before evil has come to them, go looking for evil to bring upon themselves. The <em>Sakkavadi</em> Teacher asked: "What is 'evil that will come to a person'? And what is 'going looking for evil to bring upon oneself before it arrives'? Please, O <em>Paravadi</em>, explain this so I may have understanding."</p>
+<p>The <em>Paravadi</em> explained: Evil comes to a person when the mind begins to get agitated — for example, hearing a sound or encountering a stick, a clod of earth, etc. A person becomes agitated because he does not guard or shield himself well, allowing that sound to penetrate his ear or his body. That person is called a fool, unwise, not cutting off evil, not guarding against evil that will come to him. Otherwise, compare to a person whose house is on fire. He sees the fire from afar but does not protect his own house. When the fire spreads and burns his house, he experiences various sufferings because of his failure to guard against fire and cut off the fuel at the start. Hence he is called a fool, unwise. As for 'going looking for evil to bring upon oneself' — this refers to a person who sets up spikes and snares for animals to get caught. That is called going looking for evil to bring upon oneself.</p>
+<p>The phrase 'not cutting off evil' is explained by this: There was a banyan tree, not very large, with pure leaves and branches in the Himavanta forest. One day, a flock of birds flew to eat vine berries elsewhere, then later came and perched on that banyan tree, defecating beneath it. When the rainy season came, those vine seeds sprouted and grew under the tree. A certain wind told the banyan tree: 'These vines, having sprouted here, if left to grow large, will cover you and cause your death.' The banyan tree replied: 'They won't have time to grow. Animals like rabbits and pigs will eat them, and the vines will die before they can climb up.'</p>
+<p>But as time passed, the vines grew large without any harm from animals, until they climbed up to the fork of the tree. Another wind warned the banyan: 'Why did you allow the vines to climb this far? Soon they will cover your top, and you will suffer and die.' The banyan answered: 'Don't worry, the vines won't survive. When timber cutters see them, they will cut them to make ropes for dragging logs, and the vines will die.' Yet later, the vines covered the banyan's top, causing it to die and fall to the ground.</p>
+<p>This is shown to illustrate the danger of negligence, of not constantly thinking to cut off evil in body, speech, and mind. Hence one suffers later like this. The <em>Sakkavadi</em> asked: "The person who does not cut off evil — after death, he goes to experience suffering in the four lower realms including hell. What kind of person is that?" The <em>Paravadi</em> then cited a story from the Dhammapada: There were four brothers, sons of a wealthy man. After seeing another's wife, they became attached and committed adultery. When they died, they fell into the <em>Lohakumbhi</em> hell (cauldron of molten metal) for about sixty thousand years. When the water in that hellish cauldron boiled up to the rim, they floated up to the rim and regained mindfulness. They wished to proclaim their past deeds. Each said one word: the first said <em>dusano</em> (I am evil), the second said <em>sanotha</em> (I have been here sixty thousand years), the third said <em>phuttha</em> (I see no end of my kamma), the fourth said <em>alava</em> (I will not do it again). But before they could finish, the water swept them back to the bottom, and they continued to suffer until their evil kamma was exhausted. Because they did not cut off the evil of adultery according to its results, these four beings, when human, were foolish and unwise, not cutting off evil kamma. Therefore they became pretas suffering in the <em>Lohakumbhi</em> hell.</p>
+<h3>3. <em>Abyākatā Dhammā</em></h3>
+<p>Next, I will explain the third section according to the Pali: <em>abyākatā dhammā</em>. It means the states that are objects of the indeterminate mind. It means states that the Buddha did not declare as merit or demerit. The explanation: neither pleased nor displeased, neither gladdened nor saddened — that is called <em>abyākata</em> (indeterminate).</p>
+<p>Like a lotus leaf on which both good and bad water fall; the water rolls off and does not stay. Or like a post made of heartwood buried in the ground; no matter how much dust or ash blows onto it, it all falls away without sticking. An indeterminate mind, whether someone worships it with good or bad, is neither pleased nor displeased. The <em>Sakkavadi</em> asked for another simile: "Sir, what you have explained is already correct according to the Pali. I have heard it and am delighted in every way. But please give me another simile." The <em>Paravadi</em> then gave this simile: "Listen, <em>Sakkavadi</em> — <em>nagara dovārikapuriso viya</em> (like a city gatekeeper). An indeterminate mind is like a gatekeeper of a city. A wholesome mind is like people entering the city gate. An unwholesome mind is like people leaving the city gate. The gatekeeper does not question those entering or leaving; he only knows, only sees, but does not interrogate them. That is called <em>abyākata</em>."</p>
+<p>Alternatively, like a vessel filled with water. No matter how much more water is poured in, it overflows and cannot stay inside. Likewise, the indeterminate mind that the Buddha did not declare as merit or demerit — there is no merit or demerit. Even if merit and demerit exist, they cannot stick or remain. The simile is like a vessel full of water.</p>
+<p>This indeterminate mind belongs only to the noble ones (<em>ariya</em>), not to ordinary worldlings (<em>puthujjana</em>). Worldlings have only meritorious and demeritorious minds, both kinds; they do not have an indeterminate mind. Therefore an indeterminate mind does not arise in worldlings. The <em>Sakkavadi</em> then asked: "A person with a wholesome mind but without unwholesome and indeterminate; a person with an unwholesome mind but without wholesome and indeterminate; a person with only an indeterminate mind but without wholesome and unwholesome — what of these, Venerable Sir?"</p>
+<p>The <em>Paravadi</em> answered: A person with an unwholesome, demeritorious mind is like a hunter who constantly thinks only of hunting game and killing fish. Wholesome and indeterminate minds do not arise in that hunter. A person with a wholesome, meritorious mind is like a noble, virtuous person who constantly thinks of giving alms, observing precepts, cultivating loving-kindness meditation, and listening to the true Dhamma. Unwholesome and indeterminate minds do not arise in him.</p>
+<p>Therefore, the indeterminate mind arises only in <em>arahants</em>. When an <em>arahant</em> enters the attainment of cessation (<em>nirodhasamāpatti</em>), neither meritorious nor demeritorious mind arises in him.</p>
+<p>Thus I conclude my explanation of the first three <em>matika</em> sections.</p>
+<h3>4. <em>Sukhāya Vedanāya Sampayuttā Dhammā</em></h3>
+<p>Next, I shall explain the fourth <em>tika matika</em> according to the Pali: <em>sukhāya vedanāya sampayuttā dhammā</em> — states associated with pleasant feeling. The meaning: experiencing an object pleasantly. Explanation: states associated with experiencing a pleasant object — that is, eye, ear, nose, tongue, body, mind, when they contact forms, sounds, smells, tastes, tactile objects, and mental phenomena, all of which are desirable and pleasing. That is, they do not agitate the mind; there is only gladness and delight when contacting the sense doors such as the eye door. Therefore the Blessed Teacher called these <em>sukhāya vedanāya sampayuttā dhammā</em>.</p>
+<p>The <em>Sakkavadi</em> asked for a simile: "Please, venerable sir, explain more extensively."</p>
+<p>A person who is cold puts on a blanket; a person who is hot bathes; a hungry person eats food — all alleviate old feelings and prevent new feelings from arising. Such contact is called pleasant feeling.</p>
+<p>Alternatively, compare to a poor, destitute person who gains some status or wealth; he becomes extremely joyful. Like a mahout who was originally poor but later got a job feeding elephants, enough to feed himself happily — he becomes very delighted.</p>
+<p>Or compare to King Sakka Mandhata. Originally he was destitute, finding even one meal difficult, without even clothes to wear, having to cover himself with leaves. Later he became a supreme king, a universal monarch, and experienced great happiness and comfort.</p>
+<h3>5. <em>Dukkhāya Vedanāya Sampayuttā Dhammā</em></h3>
+<p>Next, I shall explain the fifth section: <em>dukkhāya vedanāya sampayuttā dhammā</em>. Meaning: states associated with unpleasant feeling — states associated with experiencing an object painfully. Explanation: states that sustain the mind of a person who experiences only difficulty — that is, poor, destitute people, those afflicted by various diseases, those subject to royal punishment, thieves, fire, flood, etc. These are called <em>dukkhāya vedanāya</em>. There is also another kind of painful feeling: the suffering of beings in hell, of pretas, of demons, of animals, and the suffering of wandering on in birth and death. That is called painful feeling. The <em>Sakkavadi</em> asked: "Who experiences the painful feelings you have shown? Give an example."</p>
+<p>The <em>Paravadi</em> Teacher then gave an example: There was a woman named Suppavāsā who demonstrated extreme, unbearable suffering. She was the mother of Sīvalī. She carried him in her womb for seven years, seven months, seven days. Later, she explained her unbearable suffering: her belly was overly large; sitting was painful, lying down was painful, standing and walking were painful. Therefore it is called <em>dukkhavedanā</em> (painful feeling). <em>Dukkha</em> means difficulty; difficulty means the evil one has done poorly. Therefore the Blessed Buddha taught: <em>Sabbapāpassa akaraṇaṃ</em> — not doing any evil. The Buddha's intention was to prevent beings from doing any evil out of compassion, so that beings would not experience painful feeling, hoping that all beings would experience ever greater pleasant feeling.</p>
+<h3>6. <em>Adukkhamasukhāya Vedanāya Sampayuttā Dhammā</em></h3>
+<p>Next, I shall explain the sixth section: <em>adukkhamasukhāya vedanāya sampayuttā dhammā</em>. Meaning: states associated with neutral feeling (neither painful nor pleasant). Explanation: Suffering depends on the five aggregates, and happiness also depends on the five aggregates. When one sees that the five aggregates are not self, or sees them as other, not 'me', then clinging does not approach. Therefore there is neither suffering nor happiness.</p>
+<p>As for the object, we are equanimous (<em>upekkhā</em>). <em>Upekkhā</em> means seeing the five aggregates as arising and ceasing, disappearing. Knowledge and vision do not mix with the five aggregates. Therefore there is neither happiness nor suffering. The <em>Sakkavadi</em> asked: "What is the object that is neither happy nor painful? Is it mundane or supramundane?"</p>
+<p>The <em>Paravadi</em> discriminated: The state of neither happiness nor pain can be mundane or supramundane. Like an object that is hot, and one wishes to go from that heat to coolness, but has not yet reached the coolness.</p>
+<p>The <em>Paravadi</em> then asked back: "What do you consider a hot or cool object?" The <em>Sakkavadi</em> answered: "That object is hot." The <em>Paravadi</em> asked: "How is it hot?" The <em>Sakkavadi</em> answered: "If one's own object is hot, then that object is cool." The <em>Paravadi</em> said: "How can it be cool when it has not yet reached coolness?" The <em>Sakkavadi</em> answered: "If so, then that object is neither cool nor hot." The <em>Paravadi</em> agreed: "That is precisely the state associated with neutral feeling." The <em>Sakkavadi</em> was still doubtful and asked: "Who can achieve that mundane state? Please bring an example of a mundane person here to serve as a model and to dispel my doubt."</p>
+<p>The <em>Paravadi</em> then gave an example: There was a certain elder monk who went to practice the ascetic's duty in a remote forest, contemplating conditioned phenomena as impermanent, suffering, and not-self, until his mind was neither happy nor painful, remaining neutral. At that time, a large tiger grabbed that elder monk and began to eat him. Initially, it ate from his feet up to his thighs. The venerable one was neither pained nor pleased; his mind was still mundane. Indeed, he was still a worldling, having not yet attained anything. When the tiger ate up to his waist and lower abdomen, he still had not attained any path, fruit, or special Dhamma; his mind remained neutral, not agitated. When the tiger ate into his heart, he then attained <em>arahantship</em>, cutting off defilements completely and passing into <em>Nibbāna</em> in the tiger's mouth.</p>
+<p>Wise people with discernment should infer and understand according to the profound and detailed words of the Buddha. I have given this explanation of the sixth <em>matika</em> section as time allows.</p>
+<h3>7. <em>Vipākā Dhammā</em></h3>
+<p>Now I shall explain the seventh <em>tika matika</em> in sequence according to the Pali: <em>vipākā dhammā</em>. Meaning: states that are various results. The result of meritorious kamma is called <em>kusala vipāka</em>; the result of demeritorious kamma is called <em>akusala vipāka</em>; also <em>khandha vipāka</em> (aggregate result) and <em>paññā vipāka</em> (wisdom result). Kamma result is divided into two categories: the threefold bad conduct results and the threefold good conduct results.</p>
+<p>The three bad conducts are: bodily misconduct, verbal misconduct, mental misconduct. These three are on the side of unwholesome result (<em>akusala vipāka</em>).</p>
+<p>The three good conducts are: bodily good conduct, verbal good conduct, mental good conduct. These three are on the side of wholesome result (<em>kusala vipāka</em>). When there is happiness, the results differ.</p>
+<p>The three bad conducts produce various sufferings for beings: for example, affliction with diseases, poverty, lack of resources, dullness, and causing beings to fall into the four lower realms. This is called the first <em>akusala vipāka</em>.</p>
+<p>The second kamma, the three good conducts, produces various comforts for beings: for example, freedom from disease, abundant wealth, and causing beings to enjoy the pleasures of the six-sense-sphere heavens. This is called <em>kusala vipāka</em>.</p>
+<p>The third, <em>khandha vipāka</em>, is the result that causes the body to weaken, teeth to fall out, hair to gray, skin to wrinkle, ears to become dull, eyes to become blind, the body to stoop forward, and to be tormented by various diseases. This is called <em>khandha vipāka</em>.</p>
+<p>The fourth, <em>paññā vipāka</em>, is the result that enables beings to know merit and demerit, good and evil, benefit and harm, and to have capable wisdom to know all mundane and supramundane phenomena. This is called <em>paññā vipāka</em>.</p>
+<p>The <em>Sakkavadi</em> was pleased and asked to hear examples of four persons as illustrations: Who exemplifies <em>akusala vipāka</em>, <em>kusala vipāka</em>, <em>khandha vipāka</em>, and <em>paññā vipāka</em>?</p>
+<p>The <em>Paravadi</em> then explained: <em>Akusala vipāka</em> is exemplified by the foolish layman who was beheaded; <em>kusala vipāka</em> by King Mahājambupati; <em>khandha vipāka</em> by the Elder Pūtikatissa. Thus I conclude the explanation of the seventh <em>matika</em> section.</p>
+<h3>8. <em>Vipākadhammadhammā</em></h3>
+<p>Next, I shall explain the eighth <em>tika matika</em>: <em>vipākadhammadhammā</em>. Meaning: states that arise from result (vipāka). They include cause and condition. Like a dry coconut that can sprout from the coconut fruit. When a person plants it in the ground, the coconut tree grows large and eventually produces tender and ripe coconuts. The growing coconut tree is the cause; the person who planted it is the condition; the tender and ripe coconuts that can be consumed are the result.</p>
+<p>Another interpretation: Unwholesome kamma is like a poisonous tree; when its fruit ripens, it harms the consumer. Wholesome result is like a non-poisonous tree; when its fruit ripens, it benefits all beings. Therefore, evil is the cause, suffering is the result; merit is the cause, happiness is the result.</p>
+<p>Thus the Blessed Buddha taught <em>vipākadhammadhammā</em>. The meaning: states that are the supporting conditions for special happiness, like the ripening of all fruits such as mangoes and others. Moreover, ignorance itself is a <em>vipākadhamma</em> because the arising of formations, consciousness, name-and-form depends on ignorance as the original cause. Alternatively, it depends on the six roots: three wholesome roots and three unwholesome roots. These six roots are the cause of merit and demerit. Therefore they are called <em>vipākadhammadhammā</em>.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="17._New_Year's_Day.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">17</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">17. New Year's Day</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../dhamma_talks.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Dhamma Talks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Dhamma Talks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="19._Abhidhamma_Matika_Explanation_(2).html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">19</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">19. Abhidhamma Matika Explanation (2)</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>
