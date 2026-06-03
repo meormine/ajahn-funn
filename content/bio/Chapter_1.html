@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+
+<a href="../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../biography.html" class="group flex justify-center items-center" title="Return to Biography">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="Chapter_2.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(2)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>Biography Chapter 1</strong></p>
+<p><strong>Phra Ajahn Funn Ācāro</strong><br />
+<strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong>  </p>
+<hr />
+<p>Phra Ajahn Funn Ācāro was born on Sunday, the 14th day of the waxing moon of the 9th lunar month, Year of the Pig, corresponding to August 20, 1899, at Ban Muang Khai, Phanna Subdistrict, Phanna Nikhom District, Sakon Nakhon Province, in the “Suwannarong” family, the rulers of Phanna Nikhom.</p>
+<p>His father was Chao Chaiyakumman (Mao), who was the grandson of Phra Senanarong (Nuan) and the nephew of Phra Senanarong (Suwan)—the 2nd and 4th rulers of Phanna Nikhom respectively.</p>
+<p>His mother was named Nuay, daughter of Luang Prachanurak.</p>
+<p>There were altogether eight siblings born of the same parents. Two died young. The remaining six were:</p>
+<ol>
+<li>Nang Kongkaew Uppaphong  </li>
+<li>Thao Kun  </li>
+<li>Nang Fueang  </li>
+<li>Phra Ajahn Funn  </li>
+<li>Thao Khamphan  </li>
+<li>Nang Khamphan  </li>
+</ol>
+<p>However, all of them have now passed away to the heavenly realm, leaving only their descendants who continue the family line to this day.</p>
+<hr />
+<p>When all the children had grown up to become nobles, Chao Chaiyakumman (Mao), the father, together with several other families, migrated from Ban Muang Khai to establish a new village, which they named Ban Ba Thong, because there was a large golden shower tree (<em>Cassia fistula</em>) there. Today that large tree has long since died and decayed. The reason for moving away from Ban Muang Khai was that the new location was more fertile, suitable for rice farming, gardening, raising livestock such as cattle and water buffalo, and especially ideal for sericulture, as the area was flanked by two streams: Huay Un to the south and Huay Pla to the north.</p>
+<p>Before moving from Ban Muang Khai, Chao Chaiyakumman (Mao), Phra Ajahn Funn’s father, had already served as village headman, governing the villagers with peace and happiness. After settling in the new village of Ban Ba Thong, he was again trusted to be the village headman, because the villagers respected him as a person who had long shown kindness, generosity, and a calm, composed nature.</p>
+<p>As for Phra Ajahn Funn, when he was young, he was well-behaved and gentle, with a calm and generous disposition like his father. He was also diligent, persevering through obstacles, taking on heavy tasks and lightening others’ burdens, helping his parents and relatives without any regard for difficulty or hardship.</p>
+<p>In terms of education, Phra Ajahn Funn began studying while still at Ban Muang Khai, attending Wat Phothichai. The textbooks he learned to read and write were <em>Mūnlapap Phok</em> volumes 1–2, which were the most excellent textbooks of that era. Anyone who completed them became proficient in reading and writing. His teachers at that time were Phra Ajahn Tan (father of Major Doctor Tong Wutthisan) and Mr. Hun (father of Mr. Buadi Chaiyachomphu, Deputy District Officer of Phanna Nikhom).</p>
+<p>He was exceptionally diligent in his studies and could read and write faster than other children, to the extent that the teachers trusted him to teach the younger children in their absence.</p>
+<p>Later, Phra Ajahn Funn continued his studies with Mr. Khian Uppaphong, his brother-in-law, who was the Right Deputy District Officer of Mueang District, Khon Kaen Province. Mr. Khian later transferred to be Right Deputy District Officer of Kut Pong District, Loei Province.</p>
+<p>After completing his studies and becoming highly proficient in reading and writing, Phra Ajahn Funn initially intended to enter government service, as it was a prestigious occupation that commanded respect in those days. However, he later completely changed his mind.</p>
+<p>The reason he came to dislike government service was that while studying with his brother-in-law in Khon Kaen, he was often sent to deliver food in a <em>pintoh</em> (stackable food container) to prisoners. One of the prisoners was Phraya Yanarong, the ruler of Khon Kaen, who had been convicted of manslaughter and was imprisoned according to the customary law. There were also other imprisoned officials, such as Mr. Viraphong, the Left Deputy District Officer. Later, when his brother-in-law transferred to be Right Deputy District Officer of Kut Pong District, Loei Province, Phra Ajahn Funn went to visit and found that his brother-in-law was again involved in a murder case. Having seen high-ranking officials—even those who had received royal titles as high as Phraya—facing punishment, he changed his mind and no longer wanted to enter government service like others. He immediately took leave of his brother-in-law and returned to Sakon Nakhon. At that time, the only transportation was by land: from Loei Province through Udon Thani to Sakon Nakhon. He had to walk barefoot and sleep overnight on the road for ten nights.</p>
+<p>The sight of the prisoners—both those with heavy and light sentences—remained vividly in his mind from that time onward. This can be counted as one of the reasons he learned to let go and realized the uncertainty of life.</p>
+<p>When he returned from Loei Province to his home village, in the year (1918, at age 19), he was ordained as a novice (<em>sāmaṇera</em>) at Wat Phon Thong, Ban Ba Thong. While still a novice, he was very attentive and strict in the Dhamma and Vinaya, to the extent that his grandmother predicted:</p>
+<p>"In the future, he will go to live in the 'wild turmeric forest' for his entire life. During that time, he will accumulate only sublime and invaluable virtue. He will be pure and radiant. People of all classes, from the highest to the lowest, of every race and religion, who hear his Dhamma teachings, will feel great faith in him and in the taste of the Dhamma he teaches."</p>
+<p>When he reached the age of 20, he was ordained as a <em>bhikkhu</em> at the <em>uposatha</em> hall of Wat Sitthibangkhom, Ban Hai, Rai Subdistrict, Phanna Nikhom District, Sakon Nakhon Province. Phra Khru Pong (Nontasen) served as his preceptor (<em>upajjhāya</em>). Phra Ajahn Sang and Phra Ajahn Nuan served as the <em>kammavācācariya</em> (reciting monks). During the rains retreat (<em>vassa</em>) at Wat Sitthibangkhom, he completely memorized the Seven Chronicles (<em>jed tamnan</em>). At the same time, his preceptor also taught him the method of practicing <em>kammaṭṭhāna</em> (meditation) throughout the retreat.</p>
+<p>After the retreat ended that year, he returned to stay at Wat Phon Thong, where Phra Ajahn Khru Thamma was the abbot (later elevated to the ecclesiastical rank of Phra Khru Sakon Samonakit, the Ecclesiastical Governor of Sakon Nakhon Province). Phra Ajahn Khru Thamma regularly trained the resident monks in <em>kammaṭṭhāna</em>. After the retreat, between the first and fourth lunar months, he would lead the monks on <em>dhutaṅga</em> (ascetic) pilgrimages to practice meditation in the forests, mountains, caves, and charnel grounds that were secluded places. Phra Ajahn Funn accompanied him.</p>
+<p>In those days, meditation practice involved calming the mind by counting beads. That is, one would string 108 <em>makhwaen</em> seeds (or beads) into a necklace or bracelet. When practicing <em>Buddhānussati kammaṭṭhāna</em>—whether sitting, lying down, standing, or walking—one would recite "Buddho, Buddho" while counting each bead, one by one. That is, one would recite "Buddho" 108 times per bead. When reaching the recitation of <em>Dhammo</em> and <em>Saṅgho</em>, the same method was used. If one miscounted or got distracted, it meant the mind was not calm, and one had to go back and start over at the first "Buddho." This might seem easy on the surface, but when practiced seriously, it proved not to be as easy as one thought, because one had to recite continuously with a concentrated mind, except while sleeping or eating.</p>
+<p>In 1920, the third lunar month, waxing moon, Phra Ajahn Funn met Phra Ajahn Mun Bhūridatto and asked to become his disciple. From that time onward, he remained his student.</p>
+<p>The circumstances of their meeting were as follows. At that time, Phra Ajahn Mun, along with several other <em>bhikkhus</em> and novices, were on a <em>dhutaṅga</em> pilgrimage and staying at Wat Pa Phu Thai Samakkhi, Ban Muang Khai, Phanna Subdistrict, Phanna Nikhom District, Sakon Nakhon Province. The laypeople of Ban Muang Khai gathered to pay homage and listen to his Dhamma teachings. Among the monks who came to listen were Phra Ajahn Khru Di, Phra Ajahn Ku, and Phra Ajahn Funn.</p>
+<p>Phra Ajahn Mun gave a Dhamma discourse beginning with the topics of giving (<em>dāna</em>), observing precepts (<em>sīla</em>), and practicing meditation (<em>bhāvanā</em>), according to the level of the listeners. He explained that for giving, precept-observing, and meditation to yield great fruits, one must first abandon wrong views and adopt right views. He illustrated this with a very relatable example: most of the people of Ban Muang Khai took refuge in spirits, ghosts, deities, and tree-nymphs, which he said was absurd and baseless. He presented several factual arguments to refute these beliefs and gave a profound Dhamma discourse until the villagers saw the truth, abandoned their wrong views, and from then on stopped worshipping ghosts and spirits.</p>
+<p>One layman, Akkhā Khun Phichan (Boonmak) Suwannarong, assistant chief accountant of Phanna Nikhom District, who was the son of Phra Senanarong (Suwan), the 4th ruler of Phanna Nikhom, and also the first district officer of Phanna Nikhom in the reign of King Rama V, asked Phra Ajahn Mun: “Why is it that when giving or receiving precepts, we must first say ‘<em>namo</em>’ every time? Can’t we just recite the offering and precept-taking words directly?” Phra Ajahn Mun gave a profound explanation of the word <em>namo</em>.</p>
+<p>He explained: "Why is it that scholars, whether chanting, receiving precepts, or performing any meritorious deed, must always begin with <em>namo</em> and cannot omit it? Therefore, <em>namo</em> must be something important. When we investigate, we find that '<em>na</em>' is the water element, '<em>mo</em>' is the earth element. And there is the <em>gāthā</em>:</p>
+<p><em>mātāpettikasambhavo odanakummāsapaccayo</em></p>
+<p>'Born of mother and father, conditioned by cooked rice and cooked bread.'</p>
+<p>"'<em>Na</em>' is the element of the mother, '<em>mo</em>' is the element of the father. So when these two elements combine and are 'cooked' by the mother's fire element, they become '<em>kalala</em>'—a single drop of oil. At that point, the rebirth-linking consciousness takes hold, and thus the mind takes rebirth in that '<em>namo</em>' element.</p>
+<p>"When the mind has taken up residence, the <em>kalala</em> gradually develops into '<em>ambuja</em>' (a blood clot), then into '<em>ghana</em>' (a solid mass) and '<em>pesī</em>' (a piece of flesh), then expands like a gecko, becoming '<em>pañcasākhā</em>' (five branches): two arms, two legs, and one head.</p>
+<p>"As for the elements '<em>ba</em>' (air) and '<em>dha</em>' (fire), they come to dwell afterward because the mind does not hold onto them. If the mind lets go of the <em>kalala</em>, the <em>kalala</em> would be abandoned or empty. Then air and fire would not exist. When a person dies, air and fire cease and disappear. Therefore they are called dependent elements. The essential point lies in the two original elements: '<em>namo</em>'.</p>
+<p>"Later, after birth, one depends on '<em>na</em>' (mother) and '<em>mo</em>' (father) to nurture and raise one, providing cooked rice, bread, and so on, as well as teaching all that is good.</p>
+<p>"Therefore, parents are called '<em>pubbācariyā</em>'—the first teachers, before anyone else. The compassion of parents toward their children is immeasurable. The inheritance they bestow is this very physical body. All external wealth and property come from this body. If there is no body, nothing can be done; there is nothing at all.</p>
+<p>"For this reason, our entire body is the 'original inheritance' from our parents. Thus their virtue is incalculable, and the wise never abandon it.</p>
+<p>"We must first establish our self—that is, '<em>namo</em>'—and then perform the act of bowing down. '<em>Namo</em>' is translated as 'homage,' but that translation only covers the action, not the origin of the action.</p>
+<p>"This original inheritance is the capital for training and practicing. One need not be poor in resources for practice.</p>
+<p>"<em>Namo</em> as just two elements is incomplete. One must transpose the vowels: take the vowel '-a' from '<em>na</em>' and put it on '<em>ma</em>'; take the vowel '-o' from '<em>ma</em>' and put it on '<em>na</em>', then move '<em>ma</em>' to the front of '<em>no</em>' to become '<em>mano</em>', which means 'mind'. Thus we have both body and mind, complete and suitable as the basis for practice.</p>
+<p>"<em>Mano</em>—the mind—is the original, the great foundation. Whatever one does or says arises from this mind, as the Buddha’s word says:</p>
+<p><em>manopubbaṅgamā dhammā manoseṭṭhā manomayā</em></p>
+<p>'All phenomena are preceded by mind, have mind as their chief, are made of mind.'</p>
+<p>"The Blessed One’s establishment of Dhamma and Vinaya all came from the mind—this great foundation.</p>
+<p>"Therefore, when a disciple investigates until he thoroughly understands '<em>namo</em>', then '<em>mano</em>' transcends all conventional designations (<em>paññatti</em>).</p>
+<p>"All possessions in this world come from this '<em>namo</em>'. Each person has their own '<em>khoan</em>' (essence). They take this '<em>khoan</em>' as their possession, designating it according to the flow of the flood (<em>ogha</em>), until it becomes ignorance (<em>avijjā</em>) that constructs rebirths and existences, due to not knowing, due to deluded grasping that 'I' and 'mine' are everything."</p>
+<p>When the discourse ended, the laypeople, young and old, all believed and had great faith. They took the Three Refuges (<em>tisaraṇagamana</em>) from that time onward up to the present. As for Phra Ajahn Khru Di, Phra Ajahn Ku, and Phra Ajahn Funn, after hearing the discourse, they felt great joy and inspiration. They all felt a strong determination to attain the same profound understanding as Phra Ajahn Mun. They discussed among themselves: Phra Ajahn Mun had studied advanced texts—<em>sandhi</em>, <em>Mūlakaccāyana</em>, <em>Pathamakappa</em>, <em>Pathamamūla</em>—and had completed them in Ubon. That was why he could teach Dhamma so profoundly and fluently, like flowing water. They thought they should follow his example by going to study in Ubon first, before they could interpret the Dhamma like him. After discussion, they asked to become Phra Ajahn Mun’s disciples, adopted his rules of practice, strictly observed the <em>dhutaṅga</em> practices, and asked to accompany him. But Phra Ajahn Mun could not wait, because the three monks were not yet ready with their <em>dhutaṅga</em> requisites. So he left first. The three monks hurriedly prepared their <em>dhutaṅga</em> requisites and then set out after him.</p>
+<p>It was later speculated that Phra Ajahn Mun left without waiting because he felt the three had decided too hastily; he wanted them to reflect carefully for a while. But the three had already developed such strong faith in Phra Ajahn Mun that they could not turn back, so they did not abandon their intention.</p>
+<p>During that time, Phra Ajahn Dune Atulo (Phra Rattanakorn Wisutthi, currently the Ecclesiastical Governor of the Dhammayuttika Order in Surin Province) was also searching for Phra Ajahn Mun. He traveled on <em>dhutaṅga</em> along the Mekong River until he reached Ban Muang Khai, then stayed at Wat Phothichai. When Phra Ajahn Khru Di, Phra Ajahn Ku, and Phra Ajahn Funn met Phra Ajahn Dune at that monastery, they studied basic Dhamma with him for a while. Since all of them wanted to find Phra Ajahn Mun, the four monks together went on a <em>dhutaṅga</em> pilgrimage to follow him, with Phra Ajahn Dune acting as guide.</p>
+<p>When they traveled on <em>dhutaṅga</em> to Ban Kham Bok, Nong Sung District (now Khamcha-i District), Nakhon Phanom Province, they learned that Phra Ajahn Mun was at Ban Huai Sai and was continuing on to Sawang Daen Din District, Sakon Nakhon Province. The four monks hurriedly followed and caught up with Phra Ajahn Mun at Ban Tal Kon, Tan Neung Subdistrict, Sawang Daen Din District.</p>
+<p>The four monks studied Dhamma with Phra Ajahn Mun for three days. Then they went to pay homage to Phra Ajahn Sao at Ban Nong Din Dam, and then to Phra Ajahn Sing at Ban Nong Wai in the same subdistrict, studying Dhamma with him for seven days. After that, they returned to stay at Ban Tan Neung and continued to listen to Dhamma from Phra Ajahn Mun regularly.</p>
+<p>Later, Phra Ajahn Funn, together with a novice named Phrom Suwannarong (his nephew), went on <em>dhutaṅga</em> to Ban Phue District, Udon Thani Province, and practiced meditation at Tham Phra Bot (Phra Bot Cave). Before traveling to this cave, someone had told them that the cave was very haunted. In particular, at the cave’s entrance, there was a large, tall ironwood tree with vines hanging messily, creating a dark and terrifying atmosphere. Those who were not afraid of ghosts, when they went to meditate in that cave, were many times scared by ghosts—for instance, ghosts would throw dirt to bother them, or sometimes shake the trees loudly, etc.</p>
+<p>Phra Ajahn Funn, hearing this, said that in his whole life he had never seen a ghost nor been scared by one. People only talked about ghosts, but there had never been a case where a ghost actually broke someone’s neck and ate them raw. If it were a tiger or other fierce animal, that would be a different matter. He then took Novice Phrom and continued on until they reached Tham Phra Bot at about 5 p.m.</p>
+<p>After helping each other clean the cave entrance and the cave itself, they went to bathe in a nearby stone basin, then returned to set up their mosquito nets and prepare hot water and provisions. Afterwards, they began walking <em>caṅkama</em> (walking meditation). Phra Ajahn Funn walked <em>caṅkama</em> east of his net, while Novice Phrom walked east of his. They walked with calm and steady minds. Nothing unusual disturbed them the whole night.</p>
+<p>On the second night, however, something unusual did happen during meditation inside the net, just as they had been told. They heard the sound of trees shaking loudly intermittently. The first time they heard it, both Phra Ajahn Funn and Novice Phrom had goosebumps from fright. But they intensified their meditation to calm their minds. Eventually, the goosebumps disappeared, their minds returned to normal, and they became courageous. Phra Ajahn Funn and Novice Phrom left their nets to investigate what was causing the loud shaking sound. It was a moonlit night, so they saw three large flying squirrels, each as big as a cat, flying around near the large ironwood tree. Sometimes they would flutter up along the vines and playfully shake the ironwood branches. The dry twigs and leaves that fell off looked exactly like ghosts shaking the tree.</p>
+<p>On subsequent nights, the shaking continued, but Phra Ajahn Funn and Novice Phrom now knew the truth, so they paid no further attention.</p>
+<p>While practicing meditation at Tham Phra Bot, they received almsfood only from an elderly childless couple—a farmer and his wife—who had built a hut in the middle of the forest, about 100 <em>sen</em> (approx. 2 km) from the cave. They made a living by growing rice, chili, and cotton. Each alms round yielded only a handful of rice, some chili, and salt. In the evening, he consumed a medicinal decoction of <em>samo</em> (Terminalia chebula) fruits fermented in his own urine in a bamboo tube, then heated over a fire.</p>
+<p>After 15 days, Phra Ajahn Funn took Novice Phrom and continued on his <em>dhutaṅga</em> pilgrimage, intending to go all the way to Khao Khwai (Buffalo Mountain) in Laos. But after crossing the Mekong, he changed his mind. Upon inquiring with some <em>bhikkhus</em> and locals about the way to Khao Khwai, he learned that the French authorities were strictly controlling entry into the country. He considered that he had no passport and had not brought his identification papers. If a problem arose, it would be difficult, and there were no lay supporters to help him because he was far from home. Moreover, if he went astray in meditation, there would be no teacher to consult, as he would be far from his masters. So he decided to turn back. However, he did not return by the same route. This time, he walked north along the Mekong bank, following a narrow path with dense forest on both sides. The path showed both old and fresh tiger scratch marks frequently. Especially when the sun went down, tiger roars echoed all around. Even though he meditated all the way, his mind could not help but waver. Sometimes he would recite incorrectly because he was not sure when a tiger might pounce.</p>
+<p>To strengthen his courage, Phra Ajahn Funn exclaimed a Lao/Isan saying that he often used when he was still a layman:</p>
+<p><em>“Suea kin kho, kin khwai, phoen cha kai; suea kin ai, phoen cha kai.”</em><br />
+(If a tiger eats cattle or buffalo, the rumor spreads slowly; if a tiger eats a person, the rumor spreads far.)</p>
+<p>He later explained this to his disciples: If a tiger eats a cow or buffalo, the news does not spread far because it is ordinary; it remains only in that village. But if a tiger eats a person—especially a meditation monk—people will talk about it far and wide.</p>
+<p>This saying helped him overcome fear in his mind. At the same time, he became brave and ready to face any situation. If a <em>kammaṭṭhāna</em> monk is afraid of wild animals, then he is no <em>kammaṭṭhāna</em> monk.</p>
+<p>In addition to the above saying, he continued:</p>
+<p>This saying means that the 1,500 defilements (<em>kilesa</em>) and 108 cravings (<em>taṇhā</em>) are deeply embedded in one’s disposition, just like a crocodile that lies still under the water. Occasionally it surfaces and lies with its mouth open on the bank. When flies come to lay eggs, it will slide back into the water and open its mouth at the water’s surface so that the fly eggs flow out as fish bait. When small or large fish come to eat the eggs in its mouth, it snaps them up and swallows them. As for the <em>krathang</em> (a small animal, metaphorically for restlessness), it is like a squirrel that constantly twitches its head and tail. Therefore, if you can firmly grasp the crocodile’s throat and the <em>krathang’s</em> neck—not letting the crocodile thrash its tail, not letting the <em>krathang</em> twitch—then the mind will become calm and normal, without fear of danger. Even if a tiger carries you away to eat, you will not become agitated and suffer.</p>
+<p>He also told Novice Phrom at that time: When we have mindfulness (<em>sati</em>) and know things thoroughly,</p>
+<p><em>“Death—even if one dies face down, one is not dismayed; even if one dies face up, one is not distressed.”</em></p>
+<p>That is, no matter how one dies, a good rebirth is always possible.</p>
+<p>After successfully suppressing his fear of tigers, the <em>dhutaṅga</em> pilgrimage became completely free and easy. Before long, Phra Ajahn Funn and Novice Phrom reached a ferry landing where boats regularly crossed. They called for a boat and crossed back to the Thai side.</p>
+<p>After resting for a short while on the shore, Phra Ajahn Funn took Novice Phrom and went to pay homage to Phra Ajahn Mun at Ban Na Sida, Klang Yai Subdistrict, Ban Phue District, Udon Thani Province. After paying respects to Phra Ajahn Mun,</p>
+<p>Even though Phra Ajahn Funn had not yet told Phra Ajahn Mun about their experiences, Phra Ajahn Mun miraculously knew.</p>
+<p>Because in one conversation, Phra Ajahn Mun said offhandedly:</p>
+<p>“Fan, it is good that Novice Phrom has taken ghosts and tigers as teachers. Ghosts and tigers teach one how to establish concentration (<em>samādhi</em>) firmly. They teach one to steady the mind, to know fear thoroughly—what fears ghosts, what fears tigers. If the mind fears, when does a tiger eat a person’s mind? It eats the body. That is why people say: ‘One who is not afraid of death does not die. One who is afraid of death will die and become animal food.’ As for you, Fan, using various sayings as skillful means to remind the mind to stay aware while hearing tiger roars—that is good.”</p>
+<p>After that, Phra Ajahn Mun asked Phra Ajahn Funn whether he really intended to go study the “big books”—<em>Pathamakappa</em>, <em>Pathamamūla</em>, and <em>Mūlakaccāyana</em>—as he had planned. Phra Ajahn Funn replied that he did indeed have that intention. Seeing Phra Ajahn Funn’s resolute determination, Phra Ajahn Mun said: “Fan, you don’t need to go all the way to Ubon. Just stay here with me. I will teach you until you are full to bursting. If you are still not satisfied, you can go study later. As for Novice Phrom, he can go to Ubon if he wishes.”</p>
+<p>Thus Novice Phrom parted from Phra Ajahn Funn at the end of 1921.</p>
+<p>Novice Phrom went down to Ubon with Phra Ajahn Sing, while Phra Ajahn Funn stayed to study the “big books” with Phra Ajahn Mun. Sometimes he went out to meditate alone, and whenever he had doubts about any Dhamma meaning or point, he would return to ask Phra Ajahn Mun.</p>
+<p>Later, Phra Ajahn Funn went on <em>dhutaṅga</em> to Waritchaphum District. While staying at Wat Pa Ban Nong Saeng, he fell ill with a fever and cold, which greatly hindered his meditation practice. His mind became turbulent both day and night. The skillful means he had previously known were all forgotten. It was like walking in the forest and encountering a large fallen log blocking the way. To step over it, it was too high; to crawl under, it was too low; to go left or right, the log moved to block him each time. For three nights, he was unable to overcome the obstacle.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../biography.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Biography">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Biography</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="Chapter_2.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">2</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">Chapter 2</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

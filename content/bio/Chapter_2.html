@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+
+<a href="../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="Chapter_1.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(1)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../biography.html" class="group flex justify-center items-center" title="Return to Biography">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="Chapter_3.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(3)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>Biography Chapter 2</strong></p>
+<p><strong>Phra Ajahn Funn Ācāro</strong><br />
+<strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong>  </p>
+<hr />
+<p>The next morning, Phra Ajahn Funn went on alms round. Upon returning, he could only eat a little. Nevertheless, he decided to continue his <em>dhutaṅga</em> journey. He arranged his requisites, carrying his bowl on one shoulder and his <em>krod</em> (mosquito net) on the other, and set out despite still being unwell. Along the way, he saw a dog gnawing on a bone. When it saw him, it ran away, but then it came back and continued gnawing. This happened three times. Suddenly, he felt a strong sense of spiritual urgency (<em>dhammasaṃvega</em>) and deep disenchantment. He asked himself: “At this moment, are you a layperson or a <em>kammaṭṭhāna</em> monk? If you are a layperson, you are just like that dog gnawing on a bone. No matter how much flesh is on the bone, at best you only get saliva down your throat. But you are a <em>kammaṭṭhāna</em> monk. The reason you have failed to succeed in meditation for three nights is because you want to build the world, build realms of existence, build rebirths, build <em>saṃsāra</em>—your thoughts are endless. You want a house, a home, fields, rice paddies, cattle, buffalo. You want a wife, children, grandchildren. You cannot create any goodness anywhere because you are attached to your possessions and your family.” At the same time, Phra Ajahn Funn uttered a saying:</p>
+<p><em>“Taṇhā</em> loving a wife is like a rope around the neck; <em>taṇhā</em> loving children and grandchildren is like jute rope binding the elbows; <em>taṇhā</em> loving material things is like jute rope tying the feet.”</p>
+<p>All the wealth and possessions one has accumulated—when one dies, no one carries them away. Only one’s goodness and evil follow one. Phra Ajahn Funn reflected: “If I am a <em>kammaṭṭhāna</em> monk, I should not think of building the world of <em>saṃsāra</em> like that. I should meditate single-mindedly to know and see that all things in this world are impermanent (<em>anicca</em>), suffering (<em>dukkha</em>), and not-self (<em>anattā</em>).”</p>
+<p>Once he had resolved his mind like this, the fever and cold, as well as all the obstacles that had arisen during his illness, completely disappeared. He developed mindfulness and clear comprehension (<em>satisampajañña</em>), knowing the state of his mind with every in-breath and out-breath.</p>
+<p>Later, Phra Ajahn Funn went on <em>dhutaṅga</em> back to pay homage to Phra Ajahn Mun at Wat Mahachai, Nong Bua Lamphu District, Udon Thani Province.</p>
+<p>When he arrived and had finished paying respects to Phra Ajahn Mun, he was again filled with wonder, just like the previous time when he returned from the Lao side. For Phra Ajahn Mun suddenly laughed and said to Phra Ajahn Funn:</p>
+<p>“Fan, last time you heard a tiger roar and your mind became calm. This time you have taken a dog gnawing a bone as your teacher again, and so you have mindfulness and full understanding of the Dhamma. You, Fan, have taken the dog gnawing a bone as a skillful means to change your mind and calm it, until you were able to clearly realize that Dhamma. You are truly a disciple of the Buddha. Seeing something and then bringing it in to investigate within the mind—this is a proper way of practice.”</p>
+<hr />
+<p>It is noteworthy that once Phra Ajahn Funn had trained his mind to be strong and stable, able to practice meditation steadily without any obstacles disturbing him, he decided to request re-ordination (<em>ñatti</em>) as a <em>bhikkhu</em> in the Dhammayuttika Nikāya on May 21, 1925, at 3:22 p.m., at Wat Phothisomphon, Udon Thani Province. His preceptor (<em>upajjhāya</em>) was Chao Khun Phra Thammachedi (Chum Phanthulo), at that time holding the rank of Phra Khru Sangkhawuttikorn; Phra Rath served as the <em>kammavācācariya</em>; and Phra Muk served as the <em>anussavanācariya</em>.</p>
+<p>Before that, in January 1925, two other monks had already re-ordained as Dhammayuttika: Phra Ajahn On Ñāṇasiri and Phra Ajahn Un.</p>
+<p>In addition, there was Phra Ajahn Kwa Sumano, who, upon reaching the proper age, was ordained as a Dhammayuttika <em>bhikkhu</em> just a few days after Phra Ajahn Funn.</p>
+<p>After re-ordination, Phra Ajahn Funn traveled to Phra Ajahn Mun at Wat Aranyavāsī, Tha Bo District, Nong Khai Province, and stayed there for the rains retreat (<em>vassa</em>).</p>
+<p>The various monks who spent the retreat together that same year (1925) included:</p>
+<ul>
+<li>Phra Ajahn Mun Bhūridatto</li>
+<li>Phra Ajahn Ku Dhammadinno</li>
+<li>Phra Ajahn On Ñāṇasiri</li>
+<li>Phra Ajahn San</li>
+<li>Phra Ajahn Funn Ācāro</li>
+<li>Phra Ajahn Kwa Sumano</li>
+</ul>
+<p>and other <em>bhikkhus</em> and novices totaling 16 persons.</p>
+<p>During that rains retreat, Phra Ajahn Funn fell ill with malaria. Even after the retreat ended, he had not fully recovered. Despite having recurring fevers, whenever there was a meeting to listen to Phra Ajahn Mun’s instruction, he never tired or missed a single session. Moreover, he always joined the other monks and novices in the communal duties—drawing water, sweeping the monastery grounds, cleaning the lodgings. Even when asked to rest, he refused. By acting as if he were not ill and using his mental power to fight the sickness, he turned his illness into a lesson on the Four Noble Truths (<em>ariyasacca</em>). Eventually, Phra Ajahn Mun praised him: “Fan has gained a lot of strength of mind this <em>vassa</em>.”</p>
+<p>Near the end of the rains retreat, Phra Ajahn Mun gathered his disciples to prepare for going on <em>dhutaṅga</em> to seek secluded places. He divided the disciples into groups. Phra Ajahn Ku, Phra Ajahn On, and Phra Ajahn Funn were put in the same group because he saw that they had very compatible temperaments. The others were divided into several other groups.</p>
+<p>Before departing, Phra Ajahn Mun instructed that each group should travel along the mountain ranges, practicing meditation in seclusion along those mountains. He also said that the groups need not stay together the whole time. If any monk wished to go off alone to a secluded place, such as a cave along the way, he could do so, as long as he informed his companions so that they could arrange to meet up ahead and continue together.</p>
+<p>After the retreat ended, Phra Ajahn Ku and Phra Ajahn On went off toward Phra Phutthabat Bua Bok (the Buddha’s Footprint at Bua Bok), Ban Phue District, Udon Thani Province. Phra Ajahn Funn went toward Ban Na Bong, Sam Kha Subdistrict (now Kong Nang Subdistrict), Tha Bo District, Nong Khai Province, and then went to practice at an abandoned monastery.</p>
+<p>Phra Ajahn Funn stayed at that abandoned monastery for several days, then continued his <em>dhutaṅga</em> pilgrimage along the Mekong River. When he entered the Sri Chiang Mai area, one day as he was traveling until dusk, he came across a spirit shrine (<em>san phu ta</em>) on the riverbank. It was a shelter half a <em>wa</em> (1 meter) wide, one <em>wa</em> (2 meters) long, about one <em>sok</em> (50 cm) high off the ground, roofed with small wooden tiles like shingles, open on three sides. He went in to take shelter. At dawn, a person rowed a boat to the riverbank right by that spirit shrine, raised his hands in prayer, and exclaimed loudly: “Please, Lady Nang Ua, grant me good fortune in business, wealth, and happiness.” Phra Ajahn Funn was amused and, on behalf of the spirit, said out loud, “Yes, take it.” The man was so startled that he quickly rowed away.</p>
+<p>Leaving the spirit shrine, he continued on and stopped at Wat Pha Chan (Wat Aranyapabbata), also near the river. After staying several days, he went on to Hin Mak Peng, stayed there for a while, and then turned back to meet Phra Ajahn Ku and Phra Ajahn On at Phra Phutthabat Bua Bok, as previously arranged. But when he reached Ban Phak Bung, at the foot of the Bua Bok mountain, he learned that the two monks had already left on <em>dhutaṅga</em> to Ban Kho. So he stayed at Ban Phak Bung for five days, finding a quiet place to practice <em>kammaṭṭhāna</em> on that mountain.</p>
+<p>While staying there, an unexpected incident occurred. One day, while walking up the mountain alone to seek a quiet spot, as he passed through a forested area, he suddenly froze because he heard an unusual sound not far away to the side. It sounded like an animal scratching the earth. His common sense told him it must be a large animal, possibly a dangerous beast, perhaps a tiger.</p>
+<p>As soon as he thought of a tiger, he stood stock-still. Then, in that instant, while he was composing his mind not to panic at what was about to happen, the animal raised its head above the thick grass.</p>
+<p>It was indeed a tiger. From the head that emerged, it was not a small one.</p>
+<p>Once he was sure it was a tiger, a chill ran down his spine. Large beads of sweat appeared on his face. His instinct told him: if he turned and ran, he was finished—the tiger would surely pounce. So he tried to steady his mind, to be resolute in facing the sudden situation. Every breath at that moment felt constricted and difficult, not easy as usual.</p>
+<p>He had made the right decision. The fierce tiger stared at him for just two or three moments, then roared throughout the forest and leaped back into the thicket, disappearing.</p>
+<p>The monks and novices down below heard the tiger’s roar and came running up, shouting to ask what had happened. When they learned the truth, everyone breathed a sigh of relief.</p>
+<hr />
+<p>After traveling to many places on <em>dhutaṅga</em>, Phra Ajahn Funn returned to Wat Aranyavāsī, Tha Bo District, Nong Khai Province—the monastery where he had spent the rains retreat. However, when he arrived, he found that Phra Ajahn Mun had already left on <em>dhutaṅga</em> to Nong Lat Subdistrict, Waritchaphum District, Sakon Nakhon Province. So he followed. When he reached Sawang Daen Din District, he fell ill again, which slowed his journey. He later learned that Phra Ajahn Koeṅ Adhimuttako and Phra Ajahn Sīlā Issaro had invited Phra Ajahn Mun to stay at Ban Sam Phong, Tha Uthen District (now in Si Songkhram District), Nakhon Phanom Province. Phra Ajahn Funn tried to follow until he found Phra Ajahn Mun, but his illness had not yet subsided. Phra Ajahn Mun told him to sit and investigate his own body throughout the night. Remarkably, by morning, his illness had disappeared as if cast off. He then resolved to spend the next rains retreat with Phra Ajahn Mun.</p>
+<p>In the 7th lunar month of 1926, Phra Ajahn Funn participated in the re-ordination (<em>ñattikamma</em>) of Phra Ajahn Koeṅ Adhimuttako and Phra Ajahn Sīlā Issaro, together with about 20 other <em>bhikkhus</em> who were their disciples. Among those monks was Phra Ajahn Sim Buddhācāro, who at that time was still a novice. The ceremony took place at the <em>udakukkhepasīmā</em> (water <em>sīmā</em>) at Nong Sam Phong. This water <em>sīmā</em> was constructed using two boats as a pontoon, covered with planks as a raft, but without a roof. The reason for building a water <em>sīmā</em> for this ecclesiastical act was that in the forest it was impossible to find a suitable <em>uposatha</em> hall conforming to the Vinaya. For this <em>ñattikamma</em>, they invited Chao Khun Phra Thammachedi (Chum Phanthulo), at that time holding the rank of Phra Khru Chino Wāt Thamrong, to serve as preceptor (<em>upajjhāya</em>). Seven days later, Phra Ajahn Khru Di, who had been one of Phra Ajahn Funn’s earlier teachers, also came to request re-ordination at the same place.</p>
+<p>About seven days before the rains retreat, the village headman (<em>kamnan</em>) of Ban Don Daeng Khok Chang, Tha Uthen District (now in Na Wa Subdistrict), Nakhon Phanom Province, together with several villagers who had great faith in this group of practicing monks, came to request Phra Ajahn Mun to spend the retreat at Ban Don Daeng Khok Chang. But Phra Ajahn Mun was unable to go. Instead, he asked Phra Ajahn Ku, Phra Ajahn Funn, and Phra Ajahn Kwa to go and spend the retreat at Ban Don Daeng Khok Chang as the villagers wished. This counted as the second <em>vassa</em> of Phra Ajahn Funn.</p>
+<p>After the retreat ended, Phra Ajahn Mun came to Ban Don Daeng Khok Chang with about 70 <em>bhikkhus</em> and novices. They held a meeting to discuss going to spread the Dhamma and teach the laypeople in Ubon. At the same time, they discussed moving Phra Ajahn Mun’s elderly mother to live in Ubon. After agreeing, they carried out the plan.</p>
+<p>After sending Phra Ajahn Mun’s mother to Ubon, they separated into groups. Phra Ajahn Funn traveled from Ban Don Daeng Khok Chang with Phra Ajahn Ku, Phra Ajahn On, Phra Ajahn Kwa, and two or three other monks and novices. They walked on <em>dhutaṅga</em> through forests and mountains, passing Ban Tan, Ban Na Wa, Ban Na Ngua, Ban Pho Thi Sawang, until they reached Ban Chiang Khruea. Then they stayed in Sakon Nakhon for seven days before continuing on <em>dhutaṅga</em> toward Na Kae District, cutting through the forest and crossing mountains to Ban Huai Sai, Khamcha-i District, Nakhon Phanom Province, and then walking into Ubon territory.</p>
+<p>While traveling together, Phra Ajahn On became anxious and said: “When we meet Phra Ajahn Mun in Ubon, there are many laypeople there who have studied the <em>Pariyatti</em> Dhamma and become scholars. If those people ask various Dhamma questions, Phra Ajahn Mun will certainly be able to answer without getting stuck. But if they ask us disciples, saying something like ‘Are you as skilled as Phra Ajahn Mun?’ we don’t know whether we’ll be able to answer.” Phra Ajahn Funn replied: “Why be afraid of that? All Dhammas arise at the mind and converge at the mind. We already know the convergence point of all Dhammas. We can answer them all day without ever being stumped. Don’t worry about it.” Hearing this, Phra Ajahn On gained confidence and his anxiety disappeared.</p>
+<p>They all traveled on <em>dhutaṅga</em> until they reached Ban Hua Wua, Kamat Subdistrict, Ubon Town (now in Kut Chum District, Yasothon Province). There they found Phra Ajahn Mun already waiting. When all the disciples had arrived, they continued on <em>dhutaṅga</em> together until they stopped at Ban Hua Taphan, Amnat Charoen District, Ubon Ratchathani Province. Phra Ajahn Mun, however, went separately to stay at Ban Nong Khon, about 50 <em>sen</em> (approx. 1 km) from Ban Hua Taphan. Phra Ajahn Funn followed him there to prepare his lodging.</p>
+<hr />
+<p>During that time, Somdet Phra Mahāwīrawong (Tissathera Uan), then holding the position of Phra Photiwong Ācariya, the Ecclesiastical Governor of the Monthon and the Dhammayuttika Ecclesiastical Governor for the Northeastern Region (Isan), heard that Phra Ajahn Mun’s group of <em>kammaṭṭhāna</em> monks had come to stay at Ban Hua Taphan. He ordered the district ecclesiastical officers of Mueang Sam Sip District and Amnat Charoen District, together with the district officer of Amnat Charoen, to expel all these monks. He also announced that anyone who offered alms to these <em>kammaṭṭhāna</em> monks would be arrested and jailed. But the villagers were not afraid and continued to offer alms as usual. When the district officer learned this, he went to see the monks again and informed them that, on behalf of the province, he was ordered to expel them. Phra Ajahn Sing, who was from Ubon Province, retorted: “I was born here, so I should be able to stay here.” The district officer refused. Phra Ajahn Funn also tried to negotiate, asking for some leniency, but the district officer would not yield. He then recorded the names of all the <em>kammaṭṭhāna</em> monks, including Phra Ajahn Mun, Phra Ajahn Sing, Phra Ajahn Mahā Pin, Phra Ajahn Thiang, Phra Ajahn On, Phra Ajahn Funn, Phra Ajahn Koeṅ, Phra Ajahn Sīlā, and so on—everyone. He also recorded the names of their parents, their birthplaces, and the monasteries where they had ordained. In total, there were over 50 <em>bhikkhus</em> and novices, plus nearly 100 white-robed lay disciples. The district officer took notes from midday until two <em>yama</em> (around midnight), not even stopping for lunch. Then he left.</p>
+<p>The monks held a meeting to discuss how to resolve the matter so that it would not escalate. Phra Ajahn On and Phra Ajahn Funn took responsibility for finding a solution.</p>
+<p>After the discussion, Phra Ajahn Funn hurried to see Phra Ajahn Mun at Ban Nong Khon, about 50 <em>sen</em> away. Phra Ajahn Mun, having learned of the situation, told Phra Ajahn Funn to sit in meditation. When he steadied his mind in <em>samādhi</em>, a vision (<em>nimitta</em>) appeared:</p>
+<p>“That piece of ground was split in two.”</p>
+<p>That is, it separated into two sides. The one side could not come over, the other side could not go across. Just then, dawn broke. Phra Ajahn Funn told Phra Ajahn Mun about the vision.</p>
+<p>That same morning, Phra Ajahn Mahā Pin and Phra Ajahn On traveled to Ubon town to meet the Provincial Ecclesiastical Governor. The Governor explained that he knew nothing about the matter. He then sent a letter to the district officer stating that he was not involved. The whole affair then came to an end.</p>
+<p>After that matter was peacefully resolved, Phra Ajahn Funn took leave of Phra Ajahn Mun and went on <em>dhutaṅga</em> back to visit Phra Ajahn Di Channo at Ban Kut Hae, Kut Chiang Mi Subdistrict, Loeng Nok Tha District (now part of Yasothon Province).</p>
+<p>Phra Ajahn Di enthusiastically welcomed Phra Ajahn Funn. In the course of their conversation, Phra Ajahn Di expressed a concern: He had taught Dhamma and meditation practices to many laypeople, but some of them, while practicing, had fallen into the defilements of insight (<em>vipassanūpakkilesa</em>), experiencing various strange phenomena. Some had left their meditation and arrived at a four-way junction, mistakenly thinking it was the path of the Buddha and the Arahants. They would kneel and worship there for a long time, then get up and walk a little further, only to do the same thing again at the next junction. Some, upon rising from meditation, would remove all their robes, completely naked, and walk right through the laypeople who were sitting in meditation, causing a great commotion. Some laypeople had come to Phra Ajahn Di, asking him to help resolve the situation, but he did not know how. He had been troubled for nearly a year. He therefore asked Phra Ajahn Funn to kindly help solve the problem. Phra Ajahn Funn reflected for a short while and then agreed. Phra Ajahn Di then sent a novice to announce throughout the village that all laypeople should come to the monastery in the evening to listen to Phra Ajahn Funn’s Dhamma instruction.</p>
+<p>At the appointed time, the laypeople gathered at the monastery. First, Phra Ajahn Funn had them take refuge in the Triple Gem (<em>tisaraṇagamana</em>). After paying homage to the Triple Gem, he taught them how to correct their own faults by themselves. Once they understood the method of correction, he led them into meditation. Whenever he saw someone’s mind going off track, he corrected them. At the same time, he also used his own mind to accompany and guide the minds of those laypeople. All those who had previously lost their way in meditation now returned to the proper path. When the meditation session ended, everyone expressed their appreciation, shouting <em>sādhu</em> with great joy. They bowed respectfully, saying that the teacher was very skillful in solving problems. If it had not been for him, they might have lost their sanity.</p>
+<p>Phra Ajahn Funn led the laypeople in meditation for four or five consecutive nights. When he saw that everyone was on the right path, he returned to inform Phra Ajahn Mun at Ban Nong Khon of what he had done.</p>
+<hr />
+<p>Phra Ajahn Funn intended to spend the rains retreat of that year together with Phra Ajahn Mun again. At the same time, Phra Ajahn Ku went to spend the retreat at Ban Bo Chaneng, in the same district. During that time, the rainfall was extremely heavy, and the <em>bhikkhus</em> encountered difficulties in gathering for the <em>uposatha</em>. In particular, at Ban Bo Chaneng, there was no monk who could recite the <em>Pātimokkha</em>. Therefore, Phra Ajahn Mun instructed Phra Ajahn Funn, who could recite the <em>Pātimokkha</em>, to go and spend the retreat at Ban Bo Chaneng to assist Phra Ajahn Ku.</p>
+<p>During that rains retreat at Ban Bo Chaneng, the preceptor (<em>upajjhāya</em>) Lui, the district ecclesiastical officer of Ban Kheng Yai, learned that Phra Ajahn Ku and Phra Ajahn Funn had established a forest monastery (<em>sānak song</em>) in his district. He came to expel them because he disliked <em>kammaṭṭhāna</em> monks. Phra Ajahn Upajjhāya Lui declared:</p>
+<p>“I have come here to chase you away, and I will not allow any <em>kammaṭṭhāna</em> monks to remain in this district. What have you to say?”</p>
+<p>Phra Ajahn Funn replied:</p>
+<p>“It is good that you have come to expel us. What is <em>kammaṭṭhāna</em>? <em>Kammaṭṭhāna</em> refers to <em>kesā</em> (hair of the head), <em>lomā</em> (hair of the body), <em>nakhā</em> (nails), <em>dantā</em> (teeth), and <em>taco</em> (skin). Your reverence is a preceptor. You teach <em>kammaṭṭhāna</em> to the clansmen who come to ordain and study as your disciples, don’t you? You must teach them this <em>kammaṭṭhāna</em>. So how exactly are you going to expel <em>kammaṭṭhāna</em>? Will you expel <em>kesā</em> and <em>lomā</em> by scalding them with hot water, like killing ducks and chickens, and then pulling them out with pliers and tweezers? And as for <em>nakhā</em>, <em>dantā</em>, and <em>taco</em>—will you expel them by hitting them with a hammer or a club? If you are going to expel <em>kammaṭṭhāna</em> in that way, I am happy to let you do so.”</p>
+<p>Phra Ajahn Upajjhāya Lui became very angry, could not speak, grabbed his bag, and left the <em>kuṭi</em> (hut) immediately.</p>
+<p>During that rains retreat, Phra Ajahn Ku and Phra Ajahn Funn taught and instructed the laypeople of Ban Bo Chaneng and nearby villages. The people became deeply devoted to their practices. Many sent their sons and daughters to ordain as monks, novices, and <em>māe chee</em> (nuns).</p>
+<p>After the retreat ended, Phra Ajahn Mun brought his <em>bhikkhus</em> and novices to Ban Bo Chaneng. They discussed traveling to the town of Ubon to teach the Dhamma to the public and to their faithful lay followers.</p>
+<p>After making arrangements, Phra Ajahn Funn traveled ahead with Phra Ajahn Mun. They stayed at Wat Suthat for two nights, Wat Liap for two nights, and then at Wat Burapha for ten nights.</p>
+<p>While staying at Wat Burapha, Phra Ajahn Mun brought his elderly mother from Ubon to live at Ban Bo Chaneng, as he had intended from the beginning. After arranging a dwelling for her, he entrusted Phra Ajahn Un with the responsibility of looking after her.</p>
+<p>After this retreat, Phra Ajahn Funn, together with three <em>bhikkhus</em> and novices and two white-robed lay disciples, took leave of Phra Ajahn Mun and went on <em>dhutaṅga</em> through forests and mountains until they reached Ban Nong Sung, Khamcha-i District, Nakhon Phanom Province.</p>
+<hr />
+<p>While searching for a meditation place, a layman told him about a cave in the area called Tham Champa (Champa Cave). He asked to be taken there. They first came to a large pond and stopped to rest. After catching their breath, they continued. They walked for a long time but still did not arrive. The guide became confused and said they might have passed it. So they turned back to the large pond. They went back and forth like this twice, wandering in circles, each time ending up back where they started. The guide insisted it was not the same place, but Phra Ajahn Funn pointed to the water from the mouthful he had spat while resting earlier, and the guide finally admitted his mistake. Then they continued on and eventually found Tham Champa around 5 p.m. They went inside to inspect the cave and prepared a place to stay.</p>
+<p>Phra Ajahn Funn asked the guide where the village was, so that he would know where to go for alms and where to find water. The guide replied that he did not know exactly where the village was, but the water was below the cave.</p>
+<p>That night, while sitting in meditation, Phra Ajahn Funn saw in a vision (<em>nimitta</em>) a path where people walked and heard the sound of cattle lowing. He followed that path in his mind for about 200 <em>sen</em> (approx. 4 km) from the cave, and then saw a rice granary and a village entrance nearby. The next morning, he set out for alms with the monks, novices, and one white-robed disciple. He led the way along the path. The route was through dense forest, thick with trees. Eventually they found the rice granary and the village entrance, exactly as in the vision. He led them into the village, which had about seven or eight households. On the way back, however, they all got lost. When they asked the villagers, no one knew Tham Champa at all. Those villagers had only recently moved there and established the village; they were not yet familiar with the area. When Phra Ajahn Funn asked about the large pond, they knew it well. So he asked them to guide him there, and from the pond he traced the way back to the cave. It was already 9 p.m. by the time they returned.</p>
+<p>Phra Ajahn Funn stayed at Tham Champa practicing effort (<em>padhāna</em>) for 20 days. Then he returned to Ban Bo Chaneng. When he arrived, he learned that Chao Khun Phra Panyā Phisān Thera (Nū Ṭhitapañño), abbot of Wat Saphatum, had taken Phra Ajahn Mun to Bangkok. Not finding Phra Ajahn Mun, he turned back and went again to Ban Nong Sung.</p>
+<hr />
+<p>In Phra Ajahn Funn’s fourth <em>vassa</em> (1928), he spent the rains retreat at the meditation center at Nong Nong, Ban Huai Sai, Khamcha-i District, Nakhon Phanom Province—a place where Phra Ajahn Mun had previously spent the <em>vassa</em> in 1921. During that retreat, he fell ill with a stomach ailment, which became very severe. However, after the retreat ended, he gradually recovered. He then traveled back to Amnat Charoen District, Ubon Province, again. He met with Phra Ajahn Sing and Phra Ajahn Mahā Pin at Ban Hua Wua to discuss the situation in Khon Kaen Province, which was not good. They agreed that they should go down to help Chao Khun Phra Phisān Aranyakhet (Chan Khemiyo), the Dhammayuttika Ecclesiastical Governor of Khon Kaen Province. After reaching agreement, they separated and set out, planning to meet again before the <em>vassa</em> in Khon Kaen. Phra Ajahn Funn wanted to visit his relatives in Phanna Nikhom District first, so he traveled via That Phanom, Na Kae, and arrived in Sakon Nakhon. When he reached Wat Phra That Choeng Chum, he saw a passenger bus. He had never seen a motor vehicle in his life, so he thought he would try riding in one.</p>
+<p>After sitting for a while, he became curious: “How does this bus run?” So he fixed his mind in contemplation, tracing it all the way to the engine.</p>
+<p>In just an instant, the engine died.</p>
+<p>The driver got out to check, but found no fault. He restarted the engine, and the bus ran normally. But after the bus had passed the army barracks (now the site of the Second Army Area) and gone a little further, Phra Ajahn Funn again fixed his mind on the engine. In an instant, the engine died a second time. The driver got out again, found no fault as before, got back in and restarted. After the bus had traveled a bit more, he fixed his mind on the engine again. The engine died a third time. This time he understood the cause and felt remorse that his curiosity had caused trouble and wasted others’ time. So he stopped his contemplation. The bus then ran smoothly to Phanna Nikhom.</p>
+<p>Phra Ajahn Funn got off at Ban Muang Khai and walked to stay at Ban Ba Thong. After visiting his relatives there as intended, he continued traveling toward Ban Rae, went out to Waritchaphum District, cut through forests and mountains to Nong Han District, Udon Thani Province, stopped at Ban Chiang Hiaw, headed toward Kumphawapi District, then walked until he reached Nam Phong District, Khon Kaen Province. From there, he took a train from Nam Phong to Khon Kaen town to meet Phra Ajahn Sing and the other monks and novices as arranged at Wat Lao Nga.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="Chapter_1.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">1</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">Chapter 1</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../biography.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Biography">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Biography</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="Chapter_3.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">3</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">Chapter 3</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

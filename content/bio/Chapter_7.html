@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7</title>
+	<link rel="icon" href="../../static/favicon.svg" type="image/x-icon">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #d03a3a; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../dhamma_talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Talks</span>
+                    </a>
+                   
+					<a href="../../dhamma_quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Dhamma Quotes</span>
+                    </a>
+					<a href="../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+
+<a href="../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                  
+                </div>
+
+                <a href="../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajahn Funn Ācāro</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://meormine.github.io/ajahn-funn/ajahnFunn.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="Chapter_6.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(6)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../biography.html" class="group flex justify-center items-center" title="Return to Biography">
+            <img src="../../static/logo.svg" class="w-6 h-6 opacity-100 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+    </div>
+</div>
+
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <p><strong>Biography Chapter 7</strong></p>
+<p><strong>Phra Ajahn Funn Ācāro</strong><br />
+<strong>Wat Paa Udomsomphorn, Sakon Nakorn, Thailand</strong>  </p>
+<hr />
+<p>After the retreat, he led the laypeople, who had finished their rice farming, to build a pond on top of the cave and to create a path for alms round by arranging to meet midway: the monks would walk down from the cave, the villagers would come out from the village to offer alms, and after offering, they would each return.</p>
+<p>In the dry season of 1955, Phra Ajahn Funn remarked to the laypeople who came to attend on him that the number of people coming to him increased daily. The existing Dhamma hall was not sturdy and was insufficient for lodging. It would be appropriate to build a permanent Dhamma hall as a dwelling. The laypeople agreed, so they helped gather construction materials, with Phra Ajahn Funn himself directing the construction.</p>
+<p>Transporting construction materials up the mountain that time was extremely difficult. Monks, novices, and villagers all had to use their physical strength to carry various materials up. Some pillars were as long as 11–12 meters. Yet no one tired. When villagers heard that Phra Ajahn Funn was going to build a Dhamma hall, they flocked to help, and the transport of materials was completed without anyone minding the hardship.</p>
+<p>On the day of raising the pillars, villagers from near and far came up to help together, and under Phra Ajahn Funn's direction, the raising of the pillars was miraculously accomplished.</p>
+<p>It was miraculous because the ground for the hall was uneven—high and low, cluttered with rocks. Each pillar placed on a rock had to be of different lengths. After Phra Ajahn Funn ordered them to cut and notch the pillars to receive the beams, they raised all the pillars at once.</p>
+<p>Every pillar stood perfectly in place, without any adjustment or shifting. Moreover, even though they stood on rock, every pillar was as firm as if buried a meter deep in soil.</p>
+<p>The villagers helping were afraid the pillars would fall and crush them, but Phra Ajahn Funn reassured them: "It's all right, just do it." He did not allow them to put up support braces. He said: "If you don't believe me, try pushing them—will they fall?" Some villagers went to push and shake them. Seeing that every pillar stood firmly on rock, they were astonished. No one dared say anything; they just looked at each other.</p>
+<p>After raising the pillars, it was evening. Some laypeople went down the mountain, but most stayed overnight to continue work the next day.</p>
+<p>That night, Phra Ajahn Funn went down to do his chanting, gave a Dhamma talk, and advised them to practice <em>Buddho</em> and not sleep too much. After instructing them, he told them to rest. Late at night, three or four laypeople staying in the cave heard hundreds of people talking, echoing throughout the cave—though they couldn't make out the words. At first, they thought some villagers had gotten up to talk, but when they looked around, everyone was asleep. They became suspicious and frightened. They couldn't sleep; they huddled together listening until about 5 a.m., then went to ask a <em>bhikkhu</em> what the noise was. The <em>bhikkhu</em> didn't answer but told them to ask Phra Ajahn Funn themselves, then invited those three or four laypeople to do walking meditation with him on top of the cave.</p>
+<p>That morning, Phra Ajahn Funn came up to the hall and greeted them immediately: "How was it? Did you sit up all night scared, unable to sleep? You heard the <em>devatās</em> coming to rejoice and say <em>sādhu</em>, didn't you? They came to rejoice in great numbers." The three or four laypeople who had experienced the previous night just looked at each other in amazement—how did Phra Ajahn Funn know that they had been too scared to sleep?</p>
+<p>In the end, the permanent Dhamma hall, under Phra Ajahn Funn's direction, was completed. On this occasion, a new <em>kuṭi</em> for Phra Ajahn Funn was also built, along with a large pond on top of the cave to store rainwater, which remains to the present day. This has greatly benefited his disciples and laypeople alike.</p>
+<p>Another incident worth recording here: before starting construction of the said Dhamma hall, the laypeople faced a problem: how could they bring the main Buddha image—which the sponsors had sent to Ban Kham Kha—up to Tham Kham? At that time, there was no road for climbing. Even the walking paths were very difficult. But Phra Ajahn Funn told them it was not difficult; they should just carry it up, with people clearing the path ahead. If they waited to finish clearing the path first, it would take at least five days. Moreover, Phra Ajahn Funn had to leave Tham Kham for the annual meeting of Phra Ajahn Mun's disciples at Wat Pa Sutthawas and did not have time to wait. The villagers followed his intention, dividing into two groups: the first group went ahead to clear the path, the second group carried the Buddha image up. When they actually started, the path-clearing group couldn't keep up because the forest was dense and full of thorns. The group carrying the Buddha image couldn't wait because the image was very heavy—setting it down or lifting it each time was extremely difficult on steep, rocky terrain. They had to overtake the path-clearing group and then continue without stopping, as the slope was constantly steep. The path-clearing group then put down their machetes and took turns helping to carry the image. In the end, they successfully brought the Buddha image up to Tham Kham in just a few hours.</p>
+<p>Notably, while the villagers were carrying the Buddha image up, people were jostling and falling all the time. Many fell into thorn bushes and should have been injured, but miraculously, no one was hurt at all.</p>
+<p>That same year, another notable thing: many disciples from Bangkok came up to Tham Kham to pay homage to Phra Ajahn Funn. Despite the difficulty, they made the effort. Some hired oxcarts to the mountain and then walked up; many had to rest overnight. The road built for cars up to Tham Kham today was made by an engineer who ordained and spent the retreat at Tham Kham in 1964. Near the end of the retreat, he made a resolution to build a road for vehicles up and down Tham Kham. He surveyed the back of the cave and constructed the road, which remains usable to the present day.</p>
+<hr />
+<p>In the retreat of 1955, Phra Ajahn Funn again stayed at Tham Kham with four <em>bhikkhus</em> and three novices, the same as the previous retreat. In the dry season that year, the main task was building a pond. The pond on Tham Kham had to be built twice. The first time, after it was completed and filled with water, it cracked, and the water seeped out. So they had to redo it, moving the location slightly. This time, the walls were made of reinforced concrete, making it sturdy and permanent, as it remains today. In the following year, Phra Ajahn Funn built another pond on higher ground, so there are two in total.</p>
+<p>Throughout this period, Phra Ajahn Funn continued to lead his disciples in practice with unwavering consistency. Alms food was still meager, but the monks and novices staying with him did not tire of the hardship. The villagers were attentive, coming to offer alms at the foot of the mountain. The monks and novices would walk down from the mountain, receive alms, and walk back up, not getting to eat until nearly 9:30 a.m. Meanwhile, more <em>kuṭis</em> for the monks and novices were gradually built through the faith of his disciples, as more and more monks and novices came to stay and spend the retreat there.</p>
+<p>Another notable thing: when Phra Ajahn Funn first went up to stay at Tham Kham, the foothills were overgrown forest, a haunt of elephants, tigers, and various wild animals. Today, they are banana groves and farm gardens.</p>
+<p>This happened because Phra Ajahn Funn encouraged the villagers to clear the land for their livelihood and economic benefit. One day, while teaching the laypeople to be diligent in their work, he advised them to plant more bananas and sugar cane so that they would have food and not go hungry. One layman objected, saying the area was infertile; anything planted would die—even if a <em>devatā</em> came to plant, it wouldn't grow. Phra Ajahn Funn asked if he had tried planting. The man said no. Phra Ajahn Funn then taught: "It is precisely because you are all lazy that you suffer hunger and scarcity. You only talk and think that it can't be done, without ever having tried. How will you know whether it grows or not? If it really wouldn't grow, how could all these trees exist? Even on this mountain, if you plant, it will grow." Then he had the laypeople get banana suckers and plant them on the mountain to see if they would grow. He also took the laypeople, including the one who had objected, to clear the area that is now a banana grove. Over time, they carried up one or two banana suckers each day. Eventually, the bananas grew and flourished into the present-day banana grove. Farm gardens around Tham Kham also proliferated. Phra Ajahn Funn truly pioneered bringing development to that village.</p>
+<hr />
+<p>In the retreat of 1956, Phra Ajahn Funn went down to spend the retreat at Wat Pa Phuthon Phithak because his disciples begged him to. After the retreat, he returned to Tham Kham and led his disciples in further restoration and construction.</p>
+<p>In the retreat of 1957, there were seven monks and novices with him, the same as the previous year. The following year, the number remained the same. In 1959, the number increased to nine. In 1960, it increased to fifteen, exceeding the supporters' capacity and causing hardship for the monks and novices mid-retreat. So in subsequent retreats, he reduced the number: in 1961, nine; in 1962, six.</p>
+<p>After the retreat of 1962, he went down to stay at Wat Pa Udom Samorn. In the dry season of 1962, he led the laypeople in developing the road from Ban Muang Khai School to Ban Nong Dok, closely supervising and encouraging the villagers for 5–6 days. This exertion, at a time when his body was already deteriorating, caused him to fall seriously ill, requiring hospitalization at Sakon Nakhon Provincial Hospital. After about two weeks, when his condition improved, he returned to convalesce at Wat Pa Phuthon Phithak and spent the retreat of 1963 there. By then, he was old and afflicted with illness. The medical team and his disciples felt that climbing up and down Tham Kham required too much exertion and could be dangerous to his health, so they begged him to stay at Wat Pa Phuthon Phithak for the time being.</p>
+<p>Nevertheless, even though he was staying there to convalesce, laypeople from near and far continued to come and pay homage. He received them kindly and gave Dhamma talks without regard for his own fatigue, which was very detrimental to his health.</p>
+<p>In addition, he had the duty of training monks and novices, especially newly ordained monks. He also led the development of the monastery by dredging and expanding Nong Waeng pond into a large pond, and building a water <em>ubosoth</em> that was functional and in accordance with the Vinaya, completely avoiding elaborate decoration. <em>Kuṭis</em> were built only as needed.</p>
+<hr />
+<p>In 1964, Phra Ajahn Thate Desaraṅsī, who had been teaching Dhamma to people in the southern region for 15 consecutive years, returned to the Northeast and stopped to visit Phra Ajahn Funn at Phanna Nikhom. One day, he walked up to Tham Kham and was delighted with its condition, so he stayed in seclusion and spent the retreat there. During that retreat, he was able to practice effort fully because the monks and novices who joined him were all disciples of Phra Ajahn Funn, each already well trained, so it was no burden for him to worry about or continue their training. The suitability of Tham Kham for seclusion and practice was also appreciated by Phra Ajahn Khao Anālayo. One day, when he brought his disciples up to visit Phra Ajahn Thate, he even asked to exchange places—for Phra Ajahn Thate to go and take care of Wat Tham Klong Phlo instead, while he himself would stay at Tham Kham—but it did not happen.</p>
+<hr />
+<p>In subsequent years, Phra Ajahn Funn continued to move between Wat Pa Udom Samorn, Wat Pa Phuthon Phithak, and Wat Pa Tham Kham. But wherever he stayed, crowds of people came to pay homage to him. He received everyone equally—children and adults, rich and poor, nobles and commoners—all received the same kindness. Throughout his life, he never showed particular eagerness to receive anyone specially, nor was he ever weary of taking the trouble to instruct, teach, and give Dhamma talks to people of all kinds.</p>
+<p>He was a "builder of people"—he made people into complete human beings. He successfully corrected many who had been unruly, troublesome, oppressive, or who misused their authority to harm others, as well as those addicted to various vices, causing them to repent and abandon their wrongful ways.</p>
+<p>His <em>mettā</em> virtue grew ever greater. Each passing year, the number of people who flocked to pay homage to him increased endlessly. Toward the end, his disciples and doctors pleaded with him repeatedly to reduce receiving guests so that he could have more rest, as his body had greatly deteriorated and he frequently fell ill. But he would not comply. Everyone understood the reason: it would go against the <em>mettā</em> virtue he had practiced all his life.</p>
+<hr />
+<p>This very exertion in spreading the Dhamma was the main cause of his sudden illness on September 15, 1976. He was admitted to Sakon Nakhon Hospital, but his condition did not improve, so he was admitted to Chulalongkorn Hospital in Bangkok for a period, under the royal patronage of His Majesty the King and Her Majesty the Queen.</p>
+<p>After some time, he asked to return to the monastery. Upon his return, his disciples built a new <em>kuṭi</em> for him, raised above Nong Waeng pond next to the water <em>ubosoth</em>, with a fence to prevent people from disturbing him.</p>
+<p>But his condition did not improve; it fluctuated constantly. Finally, on January 4, 1977, severe and sudden complications arose. He then passed away peacefully, relinquishing his aggregates, at 7:50 p.m. that same day.</p>
+<p>News of his passing spread quickly. Disciples and laypeople flocked to pay respects to his body. Everyone met with somber faces. Many described their feelings with tears, not knowing how else to fully express their sorrow.</p>
+<hr />
+<p>Now, a <em>bhikkhu</em> who was a disciple of the Blessed One... Phra Ajahn Funn Ācāro, who practiced well, practiced directly, practiced properly, practiced rightly, who knew and saw the true Dhamma, who had made an end of suffering, has laid down the conditioned aggregates and passed away, free from the world.</p>
+<p>What remains is the trace of his sublime <em>mettā</em> virtue, which will be inscribed in the memory of his disciples and Buddhists everywhere, never to be forgotten.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="Chapter_6.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">6</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">Chapter 6</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../biography.html" class="group flex flex-col items-center">
+            <img src="../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Biography">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Biography</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>
