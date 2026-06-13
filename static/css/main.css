@@ -1685,6 +1685,9 @@ video {
 .dark\:hover\:bg-stone-800\/40:hover:is(.dark *) {
   background-color: rgb(41 37 36 / 0.4);
 }
+.dark\:hover\:bg-stone-800\/50:hover:is(.dark *) {
+  background-color: rgb(41 37 36 / 0.4);
+}
 .dark\:hover\:text-dhamma-saffron:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(208 58 58 / var(--tw-text-opacity, 1));
